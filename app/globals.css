@@ -198,6 +198,21 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #003d70;
   }
+
+  /* Landscape phone optimizations */
+  @media (orientation: landscape) and (max-height: 500px) {
+    .section-title {
+      @apply mb-4 sm:mb-6;
+    }
+
+    .metric-card {
+      @apply p-3 sm:p-4 md:p-6;
+    }
+
+    .metric-value {
+      @apply text-2xl sm:text-3xl md:text-4xl;
+    }
+  }
 }
 
 @layer utilities {
