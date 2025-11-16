@@ -5,8 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Austin Multifamily Investment Summary',
-  description: 'Q2 2025 Market Intelligence Report - Strategic positioning at market inflection point',
+  title: 'Q3 2025',
+  description: 'Q3 2025 Market Intelligence Report - Strategic positioning at market inflection point',
 }
 
 export default function RootLayout({

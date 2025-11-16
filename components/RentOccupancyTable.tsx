@@ -1,125 +1,284 @@
+'use client'
+
+import { useEffect, useRef } from 'react'
+import { Chart, registerables } from 'chart.js'
+
+Chart.register(...registerables)
+
 export default function RentOccupancyTable() {
+  const rentChartRef = useRef<HTMLCanvasElement>(null)
+  const occupancyChartRef = useRef<HTMLCanvasElement>(null)
+  const rentChartInstance = useRef<Chart | null>(null)
+  const occupancyChartInstance = useRef<Chart | null>(null)
+
+  useEffect(() => {
+    // Rent Chart - Bar Chart
+    if (rentChartRef.current) {
+      if (rentChartInstance.current) {
+        rentChartInstance.current.destroy()
+      }
+
+      const ctx = rentChartRef.current.getContext('2d')
+      if (!ctx) return
+
+      const rentData = {
+        labels: ['Q1 2025', 'Q2 2025', 'Q3 2025'],
+        datasets: [
+          {
+            label: 'Class A',
+            data: [2028, 2034, 2085],
+            backgroundColor: '#005395',
+            borderColor: '#005395',
+            borderWidth: 1
+          },
+          {
+            label: 'Class B',
+            data: [1398, 1393, 1360],
+            backgroundColor: '#1a202c',
+            borderColor: '#1a202c',
+            borderWidth: 1
+          },
+          {
+            label: 'Class C',
+            data: [1249, 1205, 1187],
+            backgroundColor: '#4a5568',
+            borderColor: '#4a5568',
+            borderWidth: 1
+          },
+          {
+            label: 'Austin Total',
+            data: [1461, 1453, 1441],
+            backgroundColor: '#e53e3e',
+            borderColor: '#e53e3e',
+            borderWidth: 2
+          }
+        ]
+      }
+
+      const rentOptions = {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            position: 'top' as const,
+            labels: {
+              padding: 15,
+              usePointStyle: true
+            }
+          },
+          title: {
+            display: true,
+            text: 'Effective Rent Trends by Property Class',
+            font: {
+              size: 16,
+              weight: 'bold' as const
+            },
+            color: '#005395',
+            padding: {
+              bottom: 20
+            }
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context: any) {
+                return `${context.dataset.label}: $${context.parsed.y.toLocaleString()}`
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            grid: {
+              display: false
+            }
+          },
+          y: {
+            beginAtZero: false,
+            min: 1000,
+            grid: {
+              display: false
+            },
+            ticks: {
+              callback: function(value: any) {
+                return '$' + value.toLocaleString()
+              }
+            }
+          }
+        }
+      }
+
+      rentChartInstance.current = new Chart(ctx, {
+        type: 'bar',
+        data: rentData,
+        options: rentOptions
+      })
+    }
+
+    // Occupancy Chart - Line Chart
+    if (occupancyChartRef.current) {
+      if (occupancyChartInstance.current) {
+        occupancyChartInstance.current.destroy()
+      }
+
+      const ctx = occupancyChartRef.current.getContext('2d')
+      if (!ctx) return
+
+      const occupancyData = {
+        labels: ['Q1 2025', 'Q2 2025', 'Q3 2025'],
+        datasets: [
+          {
+            label: 'Class A',
+            data: [93.10, 93.80, 95.00],
+            borderColor: '#005395',
+            backgroundColor: 'transparent',
+            borderWidth: 3,
+            pointRadius: 6,
+            pointBackgroundColor: '#005395',
+            pointBorderColor: '#ffffff',
+            pointBorderWidth: 2,
+            tension: 0.3
+          },
+          {
+            label: 'Class B',
+            data: [92.40, 93.20, 93.50],
+            borderColor: '#1a202c',
+            backgroundColor: 'transparent',
+            borderWidth: 3,
+            pointRadius: 6,
+            pointBackgroundColor: '#1a202c',
+            pointBorderColor: '#ffffff',
+            pointBorderWidth: 2,
+            tension: 0.3
+          },
+          {
+            label: 'Class C',
+            data: [93.00, 93.90, 92.70],
+            borderColor: '#4a5568',
+            backgroundColor: 'transparent',
+            borderWidth: 3,
+            pointRadius: 6,
+            pointBackgroundColor: '#4a5568',
+            pointBorderColor: '#ffffff',
+            pointBorderWidth: 2,
+            tension: 0.3
+          },
+          {
+            label: 'Austin Total',
+            data: [94.00, 95.10, 93.50],
+            borderColor: '#e53e3e',
+            backgroundColor: 'transparent',
+            borderWidth: 4,
+            borderDash: [8, 4],
+            pointRadius: 7,
+            pointBackgroundColor: '#e53e3e',
+            pointBorderColor: '#ffffff',
+            pointBorderWidth: 2,
+            tension: 0.3
+          }
+        ]
+      }
+
+      const occupancyOptions = {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            position: 'top' as const,
+            labels: {
+              padding: 15,
+              usePointStyle: true
+            }
+          },
+          title: {
+            display: true,
+            text: 'Occupancy Trends by Property Class',
+            font: {
+              size: 16,
+              weight: 'bold' as const
+            },
+            color: '#005395',
+            padding: {
+              bottom: 20
+            }
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context: any) {
+                return `${context.dataset.label}: ${context.parsed.y.toFixed(2)}%`
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            grid: {
+              display: false
+            }
+          },
+          y: {
+            beginAtZero: false,
+            min: 90,
+            max: 96,
+            grid: {
+              display: false
+            },
+            ticks: {
+              callback: function(value: any) {
+                return value + '%'
+              }
+            }
+          }
+        }
+      }
+
+      occupancyChartInstance.current = new Chart(ctx, {
+        type: 'line',
+        data: occupancyData,
+        options: occupancyOptions
+      })
+    }
+
+    return () => {
+      if (rentChartInstance.current) {
+        rentChartInstance.current.destroy()
+      }
+      if (occupancyChartInstance.current) {
+        occupancyChartInstance.current.destroy()
+      }
+    }
+  }, [])
+
   return (
     <section className="mb-12">
       <h3 className="section-title">Effective Rent & Occupancy Trends by Property Class</h3>
       
-      {/* New Clean Table Design */}
-      <div className="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
-        {/* Table Header */}
-                 <div className="bg-gradient-to-r from-primary-600 to-primary-700 text-white">
-           <div className="grid grid-cols-4 gap-0">
-             <div className="p-4 font-bold text-left">Property Class</div>
-             <div className="p-4 font-bold text-center">Q1 2025</div>
-             <div className="p-4 font-bold text-center">Q2 2025</div>
-             <div className="p-4 font-bold text-center">QoQ Change</div>
-           </div>
-           <div className="grid grid-cols-4 gap-0 border-t border-primary-500">
-             <div className="p-2"></div>
-             <div className="grid grid-cols-2 gap-0 p-2">
-               <div className="text-center text-sm opacity-90">Rent</div>
-               <div className="text-center text-sm opacity-90">Occupancy</div>
-             </div>
-             <div className="grid grid-cols-2 gap-0 p-2">
-               <div className="text-center text-sm opacity-90">Rent</div>
-               <div className="text-center text-sm opacity-90">Occupancy</div>
-             </div>
-             <div className="grid grid-cols-2 gap-0 p-2">
-               <div className="text-center text-sm opacity-90">Rent</div>
-               <div className="text-center text-sm opacity-90">Occupancy</div>
-             </div>
-           </div>
-         </div>
+      {/* Rent Chart - Bar Chart */}
+      <div className="bg-white border border-gray-200 rounded-xl shadow-sm p-6 mb-8">
+        <div className="relative" style={{ height: '400px' }}>
+          <canvas ref={rentChartRef} />
+        </div>
+      </div>
 
-                 {/* Table Body */}
-         <div className="divide-y divide-gray-100">
-           {/* Class A Row */}
-           <div className="grid grid-cols-4 gap-0 hover:bg-gray-50 transition-colors">
-             <div className="p-4 font-semibold text-primary-700 bg-gray-50">Class A</div>
-             <div className="grid grid-cols-2 gap-0 p-4">
-               <div className="text-center font-medium">$2,028</div>
-               <div className="text-center text-sm text-gray-600">93.10%</div>
-             </div>
-             <div className="grid grid-cols-2 gap-0 p-4">
-               <div className="text-center font-medium">$2,034</div>
-               <div className="text-center text-sm text-gray-600">93.80%</div>
-             </div>
-             <div className="grid grid-cols-2 gap-0 p-4">
-               <div className="text-center text-green-600 font-semibold">+$6</div>
-               <div className="text-center text-green-600 font-semibold">+0.70%</div>
-             </div>
-           </div>
-
-           {/* Class B Row */}
-           <div className="grid grid-cols-4 gap-0 hover:bg-gray-50 transition-colors">
-             <div className="p-4 font-semibold text-primary-700 bg-gray-50">Class B</div>
-             <div className="grid grid-cols-2 gap-0 p-4">
-               <div className="text-center font-medium">$1,398</div>
-               <div className="text-center text-sm text-gray-600">92.40%</div>
-             </div>
-             <div className="grid grid-cols-2 gap-0 p-4">
-               <div className="text-center font-medium">$1,393</div>
-               <div className="text-center text-sm text-gray-600">93.20%</div>
-             </div>
-             <div className="grid grid-cols-2 gap-0 p-4">
-               <div className="text-center text-red-600 font-semibold">-$5</div>
-               <div className="text-center text-green-600 font-semibold">+0.80%</div>
-             </div>
-           </div>
-
-           {/* Class C Row */}
-           <div className="grid grid-cols-4 gap-0 hover:bg-gray-50 transition-colors">
-             <div className="p-4 font-semibold text-primary-700 bg-gray-50">Class C</div>
-             <div className="grid grid-cols-2 gap-0 p-4">
-               <div className="text-center font-medium">$1,249</div>
-               <div className="text-center text-sm text-gray-600">93.00%</div>
-             </div>
-             <div className="grid grid-cols-2 gap-0 p-4">
-               <div className="text-center font-medium">$1,205</div>
-               <div className="text-center text-sm text-gray-600">93.90%</div>
-             </div>
-             <div className="grid grid-cols-2 gap-0 p-4">
-               <div className="text-center text-red-600 font-semibold">-$44</div>
-               <div className="text-center text-green-600 font-semibold">+0.90%</div>
-             </div>
-           </div>
-
-           {/* Austin Total Row */}
-           <div className="grid grid-cols-4 gap-0 bg-primary-50 border-t-2 border-primary-200">
-             <div className="p-4 font-bold text-primary-800">Austin Total</div>
-             <div className="grid grid-cols-2 gap-0 p-4">
-               <div className="text-center font-bold">$1,461</div>
-               <div className="text-center text-sm font-medium text-primary-700">94.00%</div>
-             </div>
-             <div className="grid grid-cols-2 gap-0 p-4">
-               <div className="text-center font-bold">$1,453</div>
-               <div className="text-center text-sm font-medium text-primary-700">95.10%</div>
-             </div>
-             <div className="grid grid-cols-2 gap-0 p-4">
-               <div className="text-center text-red-600 font-bold">-$8</div>
-               <div className="text-center text-green-600 font-bold">+1.10%</div>
-             </div>
-           </div>
-         </div>
+      {/* Occupancy Chart - Line Chart */}
+      <div className="bg-white border border-gray-200 rounded-xl shadow-sm p-6 mb-8">
+        <div className="relative" style={{ height: '400px' }}>
+          <canvas ref={occupancyChartRef} />
+        </div>
       </div>
 
       {/* Key Observations Section */}
       <div className="mt-8 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-6">
-        <h4 className="text-lg font-bold text-primary-700 mb-4 flex items-center">
-          <span className="w-2 h-2 bg-primary-500 rounded-full mr-3"></span>
+        <h4 className="text-lg font-bold text-primary-700 mb-4">
           Key Observations
         </h4>
         <div className="space-y-3">
           <div className="flex items-start">
             <span className="text-green-600 font-bold mr-2">•</span>
-            <span className="text-gray-700"><strong>Occupancy:</strong> Rose from 93.0% → 93.9%</span>
+            <span className="text-gray-700">Class A remains a standout performer, posting two consecutive quarters of rent and occupancy gains.</span>
           </div>
           <div className="flex items-start">
             <span className="text-blue-600 font-bold mr-2">•</span>
-            <span className="text-gray-700"><strong>Rents:</strong> Flat/slightly down overall, but Class A rents more resilient in Q2</span>
-          </div>
-          <div className="flex items-start">
-            <span className="text-primary-600 font-bold mr-2">•</span>
-            <span className="text-gray-700">Overall <strong>occupancy improvement of 1.10%</strong> across Austin demonstrates strong demand fundamentals</span>
+            <span className="text-gray-700">Class B & C show signs of bottoming, with trends stabilizing and positioning these segments for gradual improvement.</span>
           </div>
         </div>
       </div>

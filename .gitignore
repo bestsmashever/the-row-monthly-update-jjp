@@ -29,4 +29,6 @@ node_modules/
 # Build outputs (if you add any build process later)
 dist/
 build/
+.next/
+out/
 

@@ -20,18 +20,18 @@ export default function SupplyDemandChart() {
     if (!ctx) return
 
     const data = {
-      labels: ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', 'H1 2025'],
+      labels: ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', 'YTD 2025'],
       datasets: [
         {
           label: 'Supply',
-          data: [9176, 9510, 9953, 9000, 9009, 10496, 12252, 14128, 14571, 30607, 9550],
+          data: [8988, 9182, 10384, 9049, 9009, 10442, 12087, 14128, 14489, 30528, 13316],
           backgroundColor: '#1a202c',
           borderColor: '#1a202c',
           borderWidth: 1
         },
         {
           label: 'Demand',
-          data: [8181, 7595, 7130, 10471, 9697, 6104, 20357, 4303, 9088, 28841, 12453],
+          data: [7960, 7113, 7590, 10506, 9772, 6071, 20190, 4348, 8989, 28753, 14718],
           backgroundColor: '#005395',
           borderColor: '#005395',
           borderWidth: 1
@@ -55,13 +55,12 @@ export default function SupplyDemandChart() {
         legend: {
           position: 'top' as const,
           labels: {
-            usePointStyle: true,
             padding: 20
           }
         },
         title: {
           display: true,
-          text: 'H1 2025: +2,903 Units Net Absorption',
+          text: 'YTD 2025: +1,402 Units Net Absorption',
           font: {
             size: 16,
             weight: 'bold' as const
