@@ -23,11 +23,11 @@
 
 @layer components {
   .section-title {
-    @apply text-3xl md:text-4xl font-bold text-black mb-8 uppercase tracking-wide border-b-3 border-primary-500 pb-3;
+    @apply text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-6 sm:mb-8 uppercase tracking-wide border-b-3 border-primary-500 pb-2 sm:pb-3;
   }
 
   .metric-card {
-    @apply bg-white text-black border-2 border-primary-500 p-8 text-center transition-all duration-300 shadow-lg hover:transform hover:-translate-y-1 hover:shadow-xl hover:bg-primary-500 hover:text-white;
+    @apply bg-white text-black border-2 border-primary-500 p-4 sm:p-6 md:p-8 text-center transition-all duration-300 shadow-lg hover:transform hover:-translate-y-1 hover:shadow-xl hover:bg-primary-500 hover:text-white;
   }
 
   .metric-card:hover .metric-value,
@@ -40,7 +40,7 @@
   }
 
   .metric-value {
-    @apply text-4xl md:text-5xl font-bold text-primary-500 mb-3 tracking-tight transition-colors duration-300;
+    @apply text-3xl sm:text-4xl md:text-5xl font-bold text-primary-500 mb-2 sm:mb-3 tracking-tight transition-colors duration-300;
   }
 
   .metric-label {
@@ -64,7 +64,7 @@
   }
 
   .chart-container {
-    @apply bg-white border-2 border-primary-500 p-6 shadow-lg mb-5;
+    @apply bg-white border-2 border-primary-500 p-4 sm:p-6 shadow-lg mb-4 sm:mb-5;
   }
 
   .chart-container h4 {
@@ -72,7 +72,7 @@
   }
 
   .comparison-table-container {
-    @apply bg-white border-2 border-primary-500 p-8 mb-8 shadow-lg overflow-x-auto rounded-lg;
+    @apply bg-white border-2 border-primary-500 p-4 sm:p-6 md:p-8 mb-6 sm:mb-8 shadow-lg overflow-x-auto rounded-lg;
   }
 
   .comparison-table {

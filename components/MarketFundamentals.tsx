@@ -2,10 +2,10 @@ import Image from 'next/image'
 
 export default function MarketFundamentals() {
   return (
-    <section className="mb-12">
+    <section className="mb-8 sm:mb-10 md:mb-12">
       <h3 className="section-title">Market Fundamentals</h3>
       
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
         <div className="metric-card enhanced">
           <div className="metric-value">33.3%</div>
           <div className="metric-label">POPULATION GROWTH</div>
@@ -48,25 +48,25 @@ export default function MarketFundamentals() {
         </div>
       </div>
       
-      <h3 className="section-title mt-12">Employer Expansion & Economic Momentum</h3>
+      <h3 className="section-title mt-8 sm:mt-10 md:mt-12">Employer Expansion & Economic Momentum</h3>
       
-      <div className="mt-10">
-        <h4 className="text-3xl font-bold text-primary-700 mb-10 text-center">Tesla: Anchoring Austin's Next Innovation Wave</h4>
+      <div className="mt-6 sm:mt-8 md:mt-10">
+        <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary-700 mb-6 sm:mb-8 md:mb-10 text-center">Tesla: Anchoring Austin's Next Innovation Wave</h4>
         
-        <div className="space-y-10">
+        <div className="space-y-6 sm:space-y-8 md:space-y-10">
           {/* Giga Factory */}
           <div className="bg-white border-2 border-gray-200 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
             <div className="grid md:grid-cols-2 gap-0">
-              <div className="p-8 flex flex-col justify-center">
-                <h5 className="text-2xl font-bold text-primary-700 mb-4 flex items-center gap-3">
-                  <span className="text-4xl">⚡</span>
+              <div className="p-4 sm:p-6 md:p-8 flex flex-col justify-center">
+                <h5 className="text-xl sm:text-2xl font-bold text-primary-700 mb-3 sm:mb-4 flex items-center gap-2 sm:gap-3">
+                  <span className="text-2xl sm:text-3xl md:text-4xl">⚡</span>
                   <span>20,000+ Employees and Counting</span>
                 </h5>
-                <p className="text-lg leading-relaxed text-gray-700">
+                <p className="text-base sm:text-lg leading-relaxed text-gray-700">
                   Giga Texas is already one of Austin's largest employers — and continues scaling with new lines, R&D, and strategic hires.
                 </p>
               </div>
-              <div className="relative w-full h-80 md:h-auto min-h-[320px]">
+              <div className="relative w-full h-48 sm:h-64 md:h-80 lg:h-auto min-h-[192px] sm:min-h-[256px] md:min-h-[320px]">
                 <Image
                   src="/Tesla Giga Factory.png"
                   alt="Tesla Giga Factory"
@@ -81,15 +81,15 @@ export default function MarketFundamentals() {
           <div className="bg-white border-2 border-gray-200 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
             <div className="grid md:grid-cols-2 gap-0">
               <div className="p-8 flex flex-col justify-center">
-                <h5 className="text-2xl font-bold text-primary-700 mb-4 flex items-center gap-3">
-                  <span className="text-4xl">🤖</span>
+                <h5 className="text-xl sm:text-2xl font-bold text-primary-700 mb-3 sm:mb-4 flex items-center gap-2 sm:gap-3">
+                  <span className="text-2xl sm:text-3xl md:text-4xl">🤖</span>
                   <span>Optimus Robot Factory Underway</span>
                 </h5>
-                <p className="text-lg leading-relaxed text-gray-700">
+                <p className="text-base sm:text-lg leading-relaxed text-gray-700">
                   Tesla is preparing a dedicated manufacturing facility at Giga Texas for its humanoid robot Optimus, a multi-billion-dollar bet that positions Austin at the center of robotics and AI-driven automation.
                 </p>
               </div>
-              <div className="relative w-full h-80 md:h-auto min-h-[320px]">
+              <div className="relative w-full h-48 sm:h-64 md:h-80 lg:h-auto min-h-[192px] sm:min-h-[256px] md:min-h-[320px]">
                 <Image
                   src="/Tesla Optimus.jpg"
                   alt="Tesla Optimus Robot"
@@ -104,15 +104,15 @@ export default function MarketFundamentals() {
           <div className="bg-white border-2 border-gray-200 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
             <div className="grid md:grid-cols-2 gap-0">
               <div className="p-8 flex flex-col justify-center">
-                <h5 className="text-2xl font-bold text-primary-700 mb-4 flex items-center gap-3">
-                  <span className="text-4xl">🚕</span>
+                <h5 className="text-xl sm:text-2xl font-bold text-primary-700 mb-3 sm:mb-4 flex items-center gap-2 sm:gap-3">
+                  <span className="text-2xl sm:text-3xl md:text-4xl">🚕</span>
                   <span>Robotaxi Launch: Austin Leads the Future of Mobility</span>
                 </h5>
-                <p className="text-lg leading-relaxed text-gray-700">
+                <p className="text-base sm:text-lg leading-relaxed text-gray-700">
                   In June 2025, Tesla launched its first robotaxi fleet in Austin — with plans to scale to 500+ autonomous vehicles by year-end and remove safety drivers in select zones.
                 </p>
               </div>
-              <div className="relative w-full h-80 md:h-auto min-h-[320px]">
+              <div className="relative w-full h-48 sm:h-64 md:h-80 lg:h-auto min-h-[192px] sm:min-h-[256px] md:min-h-[320px]">
                 <Image
                   src="/Tesla Robotaxi.jpg"
                   alt="Tesla Robotaxi"
@@ -127,15 +127,15 @@ export default function MarketFundamentals() {
           <div className="bg-white border-2 border-gray-200 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
             <div className="grid md:grid-cols-2 gap-0">
               <div className="p-8 flex flex-col justify-center">
-                <h5 className="text-2xl font-bold text-primary-700 mb-4 flex items-center gap-3">
-                  <span className="text-4xl">🧠</span>
+                <h5 className="text-xl sm:text-2xl font-bold text-primary-700 mb-3 sm:mb-4 flex items-center gap-2 sm:gap-3">
+                  <span className="text-2xl sm:text-3xl md:text-4xl">🧠</span>
                   <span>AI Chip Partnership with Samsung</span>
                 </h5>
-                <p className="text-lg leading-relaxed text-gray-700">
+                <p className="text-base sm:text-lg leading-relaxed text-gray-700">
                   In a groundbreaking $16.5B deal, Tesla selected Samsung's new Taylor, TX fab to produce its next-generation AI6 chips — cementing Austin's position as a national hub for AI semiconductor manufacturing and reshoring.
                 </p>
               </div>
-              <div className="relative w-full h-80 md:h-auto min-h-[320px]">
+              <div className="relative w-full h-48 sm:h-64 md:h-80 lg:h-auto min-h-[192px] sm:min-h-[256px] md:min-h-[320px]">
                 <Image
                   src="/Tesla AI5 Chip.jpg"
                   alt="Tesla AI Chip"
@@ -150,15 +150,15 @@ export default function MarketFundamentals() {
           <div className="bg-white border-2 border-gray-200 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
             <div className="grid md:grid-cols-2 gap-0">
               <div className="p-8 flex flex-col justify-center">
-                <h5 className="text-2xl font-bold text-primary-700 mb-4 flex items-center gap-3">
-                  <span className="text-4xl">🍽️</span>
+                <h5 className="text-xl sm:text-2xl font-bold text-primary-700 mb-3 sm:mb-4 flex items-center gap-2 sm:gap-3">
+                  <span className="text-2xl sm:text-3xl md:text-4xl">🍽️</span>
                   <span>Tesla Diner: Expanding Austin's Lifestyle Footprint</span>
                 </h5>
-                <p className="text-lg leading-relaxed text-gray-700">
+                <p className="text-base sm:text-lg leading-relaxed text-gray-700">
                   Tesla is reportedly exploring a new "Tesla Diner" location near its Austin campus — a retro-futuristic restaurant concept with Supercharger stalls, drive-in movie screens, and ordering via Tesla vehicle interfaces. While it remains an announced intention rather than a confirmed build-out, the diner concept reinforces Tesla's strategy of making its Austin footprint more than just manufacturing — it's becoming a consumer-facing and lifestyle anchor as well.
                 </p>
               </div>
-              <div className="relative w-full h-80 md:h-auto min-h-[320px]">
+              <div className="relative w-full h-48 sm:h-64 md:h-80 lg:h-auto min-h-[192px] sm:min-h-[256px] md:min-h-[320px]">
                 <Image
                   src="/Tesla Diner.png"
                   alt="Tesla Diner"
@@ -171,25 +171,25 @@ export default function MarketFundamentals() {
         </div>
 
         {/* NVIDIA Section */}
-        <div className="mt-16">
-          <h4 className="text-3xl font-bold text-primary-700 mb-10 text-center">NVIDIA</h4>
+        <div className="mt-8 sm:mt-12 md:mt-16">
+          <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary-700 mb-6 sm:mb-8 md:mb-10 text-center">NVIDIA</h4>
           
           <div className="bg-white border-2 border-gray-200 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
             <div className="grid md:grid-cols-2 gap-0">
-              <div className="p-8 flex flex-col justify-center">
-                <div className="space-y-4">
-                  <p className="text-lg leading-relaxed text-gray-700">
+              <div className="p-4 sm:p-6 md:p-8 flex flex-col justify-center">
+                <div className="space-y-3 sm:space-y-4">
+                  <p className="text-base sm:text-lg leading-relaxed text-gray-700">
                     NVIDIA is doubling its Austin presence with a ~100,000 sq ft lease at One Uptown, expanding its engineering and R&D footprint near The Domain.
                   </p>
-                  <p className="text-lg leading-relaxed text-gray-700">
+                  <p className="text-base sm:text-lg leading-relaxed text-gray-700">
                     The company announced over 1 million sq ft of U.S. manufacturing capacity (including Texas sites) to produce AI supercomputers and Blackwell chips — positioning Austin as a crucial node for domestic AI hardware production.
                   </p>
-                  <p className="text-lg leading-relaxed text-gray-700">
+                  <p className="text-base sm:text-lg leading-relaxed text-gray-700">
                     Texas leadership has publicly welcomed NVIDIA's strategic investment, reinforcing the state's rise as an AI and next-gen computing hub.
                   </p>
                 </div>
               </div>
-              <div className="relative w-full h-80 md:h-auto min-h-[320px]">
+              <div className="relative w-full h-48 sm:h-64 md:h-80 lg:h-auto min-h-[192px] sm:min-h-[256px] md:min-h-[320px]">
                 <Image
                   src="/NVIDIA AI Supercomputer.jpg"
                   alt="NVIDIA AI Supercomputer"
@@ -202,25 +202,25 @@ export default function MarketFundamentals() {
         </div>
 
         {/* Apple Inc. Section */}
-        <div className="mt-10">
-          <h4 className="text-3xl font-bold text-primary-700 mb-10 text-center">Apple Inc.</h4>
+        <div className="mt-6 sm:mt-8 md:mt-10">
+          <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary-700 mb-6 sm:mb-8 md:mb-10 text-center">Apple Inc.</h4>
           
           <div className="bg-white border-2 border-gray-200 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
             <div className="grid md:grid-cols-2 gap-0">
-              <div className="p-8 flex flex-col justify-center">
-                <div className="space-y-4">
-                  <p className="text-lg leading-relaxed text-gray-700">
+              <div className="p-4 sm:p-6 md:p-8 flex flex-col justify-center">
+                <div className="space-y-3 sm:space-y-4">
+                  <p className="text-base sm:text-lg leading-relaxed text-gray-700">
                     Apple announced a $600 billion U.S. investment plan, with a significant portion directed to Texas — including ongoing expansion in Austin.
                   </p>
-                  <p className="text-lg leading-relaxed text-gray-700">
+                  <p className="text-base sm:text-lg leading-relaxed text-gray-700">
                     Apple's second Austin campus is under construction, supporting more than 13,000 team members across hardware, software, and silicon engineering teams.
                   </p>
-                  <p className="text-lg leading-relaxed text-gray-700">
+                  <p className="text-base sm:text-lg leading-relaxed text-gray-700">
                     Recent rezoning activity at the original Riata Campus signals potential mixed-use redevelopment, creating additional opportunities for tech-driven community building.
                   </p>
                 </div>
               </div>
-              <div className="relative w-full h-80 md:h-auto min-h-[320px]">
+              <div className="relative w-full h-48 sm:h-64 md:h-80 lg:h-auto min-h-[192px] sm:min-h-[256px] md:min-h-[320px]">
                 <Image
                   src="/Apple Campus Austin.jpg"
                   alt="Apple Campus Austin"
@@ -233,25 +233,25 @@ export default function MarketFundamentals() {
         </div>
 
         {/* Samsung Electronics Section */}
-        <div className="mt-10">
-          <h4 className="text-3xl font-bold text-primary-700 mb-10 text-center">Samsung Electronics</h4>
+        <div className="mt-6 sm:mt-8 md:mt-10">
+          <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary-700 mb-6 sm:mb-8 md:mb-10 text-center">Samsung Electronics</h4>
           
           <div className="bg-white border-2 border-gray-200 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
             <div className="grid md:grid-cols-2 gap-0">
-              <div className="p-8 flex flex-col justify-center">
-                <div className="space-y-4">
-                  <p className="text-lg leading-relaxed text-gray-700">
+              <div className="p-4 sm:p-6 md:p-8 flex flex-col justify-center">
+                <div className="space-y-3 sm:space-y-4">
+                  <p className="text-base sm:text-lg leading-relaxed text-gray-700">
                     Samsung's Taylor facility—a $40B+ (potentially up to $44B with expansions) advanced chip manufacturing campus—is in the final stages of construction, with operations ramping up in late 2026.
                   </p>
-                  <p className="text-lg leading-relaxed text-gray-700">
+                  <p className="text-base sm:text-lg leading-relaxed text-gray-700">
                     The Texas Semiconductor Innovation Fund awarded Samsung a $250 million grant in 2025 to accelerate build-out.
                   </p>
-                  <p className="text-lg leading-relaxed text-gray-700">
+                  <p className="text-base sm:text-lg leading-relaxed text-gray-700">
                     The first phase includes a new office building and migration of up to 1,000 employees by late 2025, with thousands more expected as production scales.
                   </p>
                 </div>
               </div>
-              <div className="relative w-full h-80 md:h-auto min-h-[320px]">
+              <div className="relative w-full h-48 sm:h-64 md:h-80 lg:h-auto min-h-[192px] sm:min-h-[256px] md:min-h-[320px]">
                 <Image
                   src="/Samsung Plant Taylor.png"
                   alt="Samsung Plant Taylor"
@@ -264,25 +264,25 @@ export default function MarketFundamentals() {
         </div>
 
         {/* Compal USA Technology Inc. Section */}
-        <div className="mt-10">
-          <h4 className="text-3xl font-bold text-primary-700 mb-10 text-center">Compal USA Technology Inc.</h4>
+        <div className="mt-6 sm:mt-8 md:mt-10">
+          <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary-700 mb-6 sm:mb-8 md:mb-10 text-center">Compal USA Technology Inc.</h4>
           
           <div className="bg-white border-2 border-gray-200 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
             <div className="grid md:grid-cols-2 gap-0">
-              <div className="p-8 flex flex-col justify-center">
-                <div className="space-y-4">
-                  <p className="text-lg leading-relaxed text-gray-700">
+              <div className="p-4 sm:p-6 md:p-8 flex flex-col justify-center">
+                <div className="space-y-3 sm:space-y-4">
+                  <p className="text-base sm:text-lg leading-relaxed text-gray-700">
                     Compal announced a $94 million U.S. expansion, leasing 600,000 sq ft across Taylor and Georgetown to localize device assembly and supply-chain operations near major customers like Dell, Tesla, and Apple.
                   </p>
-                  <p className="text-lg leading-relaxed text-gray-700">
+                  <p className="text-base sm:text-lg leading-relaxed text-gray-700">
                     The project is expected to create up to 1,000 high-tech jobs, supporting the reshoring of server and AI hardware manufacturing.
                   </p>
-                  <p className="text-lg leading-relaxed text-gray-700">
+                  <p className="text-base sm:text-lg leading-relaxed text-gray-700">
                     This move highlights Austin's appeal as a strategic site for Asian electronic manufacturers adapting to U.S. supply-chain policy shifts.
                   </p>
                 </div>
               </div>
-              <div className="relative w-full h-80 md:h-auto min-h-[320px]">
+              <div className="relative w-full h-48 sm:h-64 md:h-80 lg:h-auto min-h-[192px] sm:min-h-[256px] md:min-h-[320px]">
                 <Image
                   src="/Compal.webp"
                   alt="Compal USA Technology"
@@ -295,25 +295,25 @@ export default function MarketFundamentals() {
         </div>
 
         {/* Pegatron Corporation Section */}
-        <div className="mt-10">
-          <h4 className="text-3xl font-bold text-primary-700 mb-10 text-center">Pegatron Corporation</h4>
+        <div className="mt-6 sm:mt-8 md:mt-10">
+          <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary-700 mb-6 sm:mb-8 md:mb-10 text-center">Pegatron Corporation</h4>
           
           <div className="bg-white border-2 border-gray-200 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
             <div className="grid md:grid-cols-2 gap-0">
-              <div className="p-8 flex flex-col justify-center">
-                <div className="space-y-4">
-                  <p className="text-lg leading-relaxed text-gray-700">
+              <div className="p-4 sm:p-6 md:p-8 flex flex-col justify-center">
+                <div className="space-y-3 sm:space-y-4">
+                  <p className="text-base sm:text-lg leading-relaxed text-gray-700">
                     Pegatron is establishing its first U.S. manufacturing facility in Georgetown, acquiring a 168,000 sq ft building at Blue Springs Business Park.
                   </p>
-                  <p className="text-lg leading-relaxed text-gray-700">
+                  <p className="text-base sm:text-lg leading-relaxed text-gray-700">
                     The company is investing at least $35 million and plans to hire 100+ employees in the first three years, with further growth expected as it ramps AI and electronics production.
                   </p>
-                  <p className="text-lg leading-relaxed text-gray-700">
+                  <p className="text-base sm:text-lg leading-relaxed text-gray-700">
                     Pegatron's U.S. footprint will support major clients like Apple, Dell, and Tesla — illustrating the deepening tech manufacturing ecosystem in the Austin MSA.
                   </p>
                 </div>
               </div>
-              <div className="relative w-full h-80 md:h-auto min-h-[320px]">
+              <div className="relative w-full h-48 sm:h-64 md:h-80 lg:h-auto min-h-[192px] sm:min-h-[256px] md:min-h-[320px]">
                 <Image
                   src="/Pegatron.jpg"
                   alt="Pegatron Corporation"

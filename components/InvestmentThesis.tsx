@@ -2,10 +2,10 @@
 
 export default function InvestmentThesis() {
   return (
-    <section className="mb-12">
+    <section className="mb-8 sm:mb-10 md:mb-12">
       <h3 className="section-title">Austin Market Overview</h3>
       
-      <ul className="text-lg leading-relaxed mb-7 text-gray-700 pl-5 space-y-5">
+      <ul className="text-base sm:text-lg leading-relaxed mb-6 sm:mb-7 text-gray-700 pl-4 sm:pl-5 space-y-4 sm:space-y-5">
         <li>
           <strong>Rent & Occupancy:</strong> Austin's rental market shows early signs of stabilization despite a slight pullback in Q3. Metro occupancy dipped modestly from 93.9% in Q2 to 93.5% in Q3, while average effective rents edged down from $1,453 to $1,441 (-0.8% QoQ). Notably, Class A rents increased QoQ, bucking the broader trend and reflecting strong demand in amenitized, newer product—especially in Downtown Austin, where rents jumped nearly 9% this quarter. With Class A rents only down -0.4% YoY, this segment continues to outperform and signals that the market is laying the groundwork for a broader recovery.
         </li>
