@@ -212,6 +212,11 @@
     .metric-value {
       @apply text-2xl sm:text-3xl md:text-4xl;
     }
+
+    /* Force 2-column layout for company cards in landscape phones */
+    .company-card-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
   }
 }
 

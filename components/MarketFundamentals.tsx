@@ -56,7 +56,7 @@ export default function MarketFundamentals() {
         <div className="space-y-4 sm:space-y-6 md:space-y-8 lg:space-y-10">
           {/* Giga Factory */}
           <div className="bg-white border-2 border-gray-200 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-            <div className="grid sm:grid-cols-2 gap-0">
+            <div className="grid md:grid-cols-2 gap-0 company-card-grid">
               <div className="p-4 sm:p-6 md:p-8 flex flex-col justify-center">
                 <h5 className="text-xl sm:text-2xl font-bold text-primary-700 mb-3 sm:mb-4 flex items-center gap-2 sm:gap-3">
                   <span className="text-2xl sm:text-3xl md:text-4xl">⚡</span>
@@ -79,7 +79,7 @@ export default function MarketFundamentals() {
 
           {/* Optimus Robot */}
           <div className="bg-white border-2 border-gray-200 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-            <div className="grid sm:grid-cols-2 gap-0">
+            <div className="grid md:grid-cols-2 gap-0 company-card-grid">
               <div className="p-8 flex flex-col justify-center">
                 <h5 className="text-xl sm:text-2xl font-bold text-primary-700 mb-3 sm:mb-4 flex items-center gap-2 sm:gap-3">
                   <span className="text-2xl sm:text-3xl md:text-4xl">🤖</span>
@@ -102,7 +102,7 @@ export default function MarketFundamentals() {
 
           {/* Robotaxi */}
           <div className="bg-white border-2 border-gray-200 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-            <div className="grid sm:grid-cols-2 gap-0">
+            <div className="grid md:grid-cols-2 gap-0 company-card-grid">
               <div className="p-8 flex flex-col justify-center">
                 <h5 className="text-xl sm:text-2xl font-bold text-primary-700 mb-3 sm:mb-4 flex items-center gap-2 sm:gap-3">
                   <span className="text-2xl sm:text-3xl md:text-4xl">🚕</span>
@@ -125,7 +125,7 @@ export default function MarketFundamentals() {
 
           {/* AI Chip */}
           <div className="bg-white border-2 border-gray-200 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-            <div className="grid sm:grid-cols-2 gap-0">
+            <div className="grid md:grid-cols-2 gap-0 company-card-grid">
               <div className="p-8 flex flex-col justify-center">
                 <h5 className="text-xl sm:text-2xl font-bold text-primary-700 mb-3 sm:mb-4 flex items-center gap-2 sm:gap-3">
                   <span className="text-2xl sm:text-3xl md:text-4xl">🧠</span>
@@ -148,7 +148,7 @@ export default function MarketFundamentals() {
 
           {/* Tesla Diner */}
           <div className="bg-white border-2 border-gray-200 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-            <div className="grid sm:grid-cols-2 gap-0">
+            <div className="grid md:grid-cols-2 gap-0 company-card-grid">
               <div className="p-8 flex flex-col justify-center">
                 <h5 className="text-xl sm:text-2xl font-bold text-primary-700 mb-3 sm:mb-4 flex items-center gap-2 sm:gap-3">
                   <span className="text-2xl sm:text-3xl md:text-4xl">🍽️</span>
@@ -175,7 +175,7 @@ export default function MarketFundamentals() {
           <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary-700 mb-4 sm:mb-6 md:mb-8 lg:mb-10 text-center">NVIDIA</h4>
           
           <div className="bg-white border-2 border-gray-200 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-            <div className="grid sm:grid-cols-2 gap-0">
+            <div className="grid md:grid-cols-2 gap-0 company-card-grid">
               <div className="p-4 sm:p-6 md:p-8 flex flex-col justify-center">
                 <div className="space-y-3 sm:space-y-4">
                   <p className="text-base sm:text-lg leading-relaxed text-gray-700">
@@ -206,7 +206,7 @@ export default function MarketFundamentals() {
           <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary-700 mb-4 sm:mb-6 md:mb-8 lg:mb-10 text-center">Apple Inc.</h4>
           
           <div className="bg-white border-2 border-gray-200 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-            <div className="grid sm:grid-cols-2 gap-0">
+            <div className="grid md:grid-cols-2 gap-0 company-card-grid">
               <div className="p-4 sm:p-6 md:p-8 flex flex-col justify-center">
                 <div className="space-y-3 sm:space-y-4">
                   <p className="text-base sm:text-lg leading-relaxed text-gray-700">
@@ -237,7 +237,7 @@ export default function MarketFundamentals() {
           <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary-700 mb-4 sm:mb-6 md:mb-8 lg:mb-10 text-center">Samsung Electronics</h4>
           
           <div className="bg-white border-2 border-gray-200 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-            <div className="grid sm:grid-cols-2 gap-0">
+            <div className="grid md:grid-cols-2 gap-0 company-card-grid">
               <div className="p-4 sm:p-6 md:p-8 flex flex-col justify-center">
                 <div className="space-y-3 sm:space-y-4">
                   <p className="text-base sm:text-lg leading-relaxed text-gray-700">
@@ -268,7 +268,7 @@ export default function MarketFundamentals() {
           <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary-700 mb-4 sm:mb-6 md:mb-8 lg:mb-10 text-center">Compal USA Technology Inc.</h4>
           
           <div className="bg-white border-2 border-gray-200 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-            <div className="grid sm:grid-cols-2 gap-0">
+            <div className="grid md:grid-cols-2 gap-0 company-card-grid">
               <div className="p-4 sm:p-6 md:p-8 flex flex-col justify-center">
                 <div className="space-y-3 sm:space-y-4">
                   <p className="text-base sm:text-lg leading-relaxed text-gray-700">
@@ -299,7 +299,7 @@ export default function MarketFundamentals() {
           <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary-700 mb-4 sm:mb-6 md:mb-8 lg:mb-10 text-center">Pegatron Corporation</h4>
           
           <div className="bg-white border-2 border-gray-200 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-            <div className="grid sm:grid-cols-2 gap-0">
+            <div className="grid md:grid-cols-2 gap-0 company-card-grid">
               <div className="p-4 sm:p-6 md:p-8 flex flex-col justify-center">
                 <div className="space-y-3 sm:space-y-4">
                   <p className="text-base sm:text-lg leading-relaxed text-gray-700">
