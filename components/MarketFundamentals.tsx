@@ -3,52 +3,21 @@ import Image from 'next/image'
 export default function MarketFundamentals() {
   return (
     <section className="mb-8 sm:mb-10 md:mb-12">
-      <h3 className="section-title">Market Fundamentals</h3>
+      <h3 className="section-title">Del Via Multifamily</h3>
       
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-        <div className="metric-card enhanced">
-          <div className="metric-value">33.3%</div>
-          <div className="metric-label">POPULATION GROWTH</div>
-          <div className="metric-context">2015-2025 | #1 Nationally</div>
-          
-          <div className="metric-details">
-            <ul className="clean-list">
-              <li><strong>13,620 new young adults (20-34)</strong> added YoY, representing core renter demographic</li>
-              <li>Austin forecasted to reach <strong>3M population by 2033</strong></li>
-              <li>Continued strong in-migration from gateway markets experiencing net outflows</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div className="metric-card enhanced">
-          <div className="metric-value">48%</div>
-          <div className="metric-label">EMPLOYMENT GROWTH</div>
-          <div className="metric-context">10-year | Leading All Major US Cities</div>
-          
-          <div className="metric-details">
-            <ul className="clean-list">
-              <li>Robust employment base led by <strong>tech, government, and professional services</strong></li>
-              <li>Major employers: <strong>UT System (19,514), Dell (18,371), Apple (10,004), Amazon (8,294)</strong></li>
-              <li>Employment stability across economic cycles</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div className="metric-card enhanced">
-          <div className="metric-value">$104,066</div>
-          <div className="metric-label">MEDIAN HOUSEHOLD INCOME</div>
-          <div className="metric-context">25% Above National Average</div>
-          
-          <div className="metric-details">
-            <ul className="clean-list">
-              <li>Austin maintains <strong>lowest rent-to-income ratio</strong> among major US metros at <strong>16.8%</strong></li>
-              <li><strong>42% renter population</strong> provides substantial addressable market for multifamily investment strategies</li>
-            </ul>
-          </div>
+      <div className="chart-container mb-4">
+        <div className="relative w-full" style={{ height: '450px' }}>
+          <Image
+            src="/Del Via Multifamily.jpg"
+            alt="Del Via Multifamily"
+            fill
+            style={{ objectFit: 'contain' }}
+            className="rounded-lg"
+          />
         </div>
       </div>
       
-      <h3 className="section-title mt-8 sm:mt-10 md:mt-12">Employer Expansion & Economic Momentum</h3>
+      <h3 className="section-title mt-4 sm:mt-6 md:mt-8">Employer Expansion & Economic Momentum</h3>
       
       <div className="mt-6 sm:mt-8 md:mt-10">
         <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary-700 mb-4 sm:mb-6 md:mb-8 lg:mb-10 text-center">Tesla: Anchoring Austin's Next Innovation Wave</h4>
@@ -60,10 +29,10 @@ export default function MarketFundamentals() {
               <div className="p-4 sm:p-6 md:p-8 flex flex-col justify-center">
                 <h5 className="text-xl sm:text-2xl font-bold text-primary-700 mb-3 sm:mb-4 flex items-center gap-2 sm:gap-3">
                   <span className="text-2xl sm:text-3xl md:text-4xl">⚡</span>
-                  <span>20,000+ Employees and Counting</span>
+                  <span>20,000+ Employees. 10M SF Built. Another 5M SF on the Way.</span>
                 </h5>
                 <p className="text-base sm:text-lg leading-relaxed text-gray-700">
-                  Giga Texas is already one of Austin's largest employers — and continues scaling with new lines, R&D, and strategic hires.
+                  Tesla's footprint in Austin is massive and still accelerating. Giga Texas already spans roughly 10 million square feet, making it one of the largest manufacturing facilities in the world — and Tesla is now adding another 5 million square feet of new production and support space. This continued expansion reinforces Austin as a core hub for Tesla's long-term growth, innovation, and workforce scale.
                 </p>
               </div>
               <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-80 xl:h-auto min-h-[192px] sm:min-h-[224px] md:min-h-[256px] lg:min-h-[320px]">
@@ -162,6 +131,69 @@ export default function MarketFundamentals() {
                 <Image
                   src="/Tesla Diner.png"
                   alt="Tesla Diner"
+                  fill
+                  style={{ objectFit: 'cover' }}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* TDEM Section */}
+        <div className="mt-6 sm:mt-8 md:mt-10">
+          <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary-700 mb-4 sm:mb-6 md:mb-8 lg:mb-10 text-center">TDEM</h4>
+          
+          <div className="bg-white border-2 border-gray-200 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div className="grid md:grid-cols-2 gap-0 company-card-grid">
+              <div className="p-4 sm:p-6 md:p-8 flex flex-col justify-center">
+                <div className="space-y-3 sm:space-y-4">
+                  <p className="text-base sm:text-lg leading-relaxed text-gray-700">
+                    TDEM's $423M headquarters is opening in August 2026, expanding its presence in the Austin area and contributing to the region's growing economic momentum.
+                  </p>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-0">
+                <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-80 xl:h-auto min-h-[192px] sm:min-h-[224px] md:min-h-[256px] lg:min-h-[320px]">
+                  <Image
+                    src="/TDEM Interior.jpg"
+                    alt="TDEM Interior"
+                    fill
+                    style={{ objectFit: 'cover' }}
+                  />
+                </div>
+                <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-80 xl:h-auto min-h-[192px] sm:min-h-[224px] md:min-h-[256px] lg:min-h-[320px]">
+                  <Image
+                    src="/TDEM rendering.jpeg"
+                    alt="TDEM Rendering"
+                    fill
+                    style={{ objectFit: 'cover' }}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* ABIA Section */}
+        <div className="mt-6 sm:mt-8 md:mt-10">
+          <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary-700 mb-4 sm:mb-6 md:mb-8 lg:mb-10 text-center">ABIA</h4>
+          
+          <div className="bg-white border-2 border-gray-200 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div className="grid md:grid-cols-2 gap-0 company-card-grid">
+              <div className="p-4 sm:p-6 md:p-8 flex flex-col justify-center">
+                <div className="space-y-3 sm:space-y-4">
+                  <p className="text-base sm:text-lg leading-relaxed text-gray-700">
+                    Austin-Bergstrom International Airport is underway on a multi-year, $4–6 billion expansion known as "Journey With AUS," which includes new terminal infill projects, upgraded baggage systems, and major airfield work to support a new 20+ gate midfield Concourse B.
+                  </p>
+                  <p className="text-base sm:text-lg leading-relaxed text-gray-700">
+                    Early-phase construction—such as the West Infill terminal expansion, new outbound baggage system, and new parking facilities—is progressing through 2026, while the signature capacity upgrades, including the new Arrivals and Departures Hall and Concourse B, are in design and expected to open in the early 2030s.
+                  </p>
+                </div>
+              </div>
+              <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-80 xl:h-auto min-h-[192px] sm:min-h-[224px] md:min-h-[256px] lg:min-h-[320px]">
+                <Image
+                  src="/ABIA.png"
+                  alt="ABIA"
                   fill
                   style={{ objectFit: 'cover' }}
                 />

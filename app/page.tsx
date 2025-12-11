@@ -2,11 +2,10 @@
 
 import Header from '@/components/Header'
 import InvestmentThesis from '@/components/InvestmentThesis'
-import SupplyDemandChart from '@/components/SupplyDemandChart'
-import SupplyDemandRentChart from '@/components/SupplyDemandRentChart'
-import ConstructionChart from '@/components/ConstructionChart'
-import PipelineChart from '@/components/PipelineChart'
-import RentOccupancyTable from '@/components/RentOccupancyTable'
+import MasterPlan from '@/components/MasterPlan'
+import RetailDestination from '@/components/RetailDestination'
+import RetailCorePhasing from '@/components/RetailCorePhasing'
+import RetailCoreRendering from '@/components/RetailCoreRendering'
 import MarketFundamentals from '@/components/MarketFundamentals'
 import Footer from '@/components/Footer'
 
@@ -16,11 +15,13 @@ export default function Home() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Header />
         <InvestmentThesis />
-        <SupplyDemandChart />
-        <SupplyDemandRentChart />
-        <ConstructionChart />
-        <PipelineChart />
-        <RentOccupancyTable />
+        <MasterPlan />
+        <RetailDestination />
+        <section className="mb-8 sm:mb-10 md:mb-12">
+          <h3 className="section-title">RETAIL CORE</h3>
+        </section>
+        <RetailCorePhasing />
+        <RetailCoreRendering />
         <MarketFundamentals />
         <Footer />
       </div>
