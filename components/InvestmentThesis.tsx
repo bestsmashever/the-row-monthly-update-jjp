@@ -2,8 +2,13 @@
 
 import Image from 'next/image'
 import Block2Retail from '@/components/Block2Retail'
+import amazonImage from '@/public/Amazon.jpg'
+import debtAfterAmazonSaleImage from '@/public/Debt After Amazon Transaction.jpg'
+import debtMapImage from '@/public/The Row Debt Map_Oct 2025.jpg'
 
 export default function InvestmentThesis() {
+  const fullWidthSizes = '(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px'
+
   return (
     <section className="mb-8 sm:mb-10 md:mb-12">
       <h3 className="section-title">Overview</h3>
@@ -54,33 +59,33 @@ export default function InvestmentThesis() {
       
       <h3 className="section-title">Amazon</h3>
       <div className="chart-container mb-8 sm:mb-10 md:mb-12">
-        <div className="relative w-full" style={{ height: '800px' }}>
-          <Image
-            src="/Amazon.jpg"
-            alt="Amazon"
-            fill
-            style={{ objectFit: 'contain' }}
-            className="rounded-lg"
-          />
-        </div>
+        <Image
+          src={amazonImage}
+          alt="Amazon"
+          sizes={fullWidthSizes}
+          className="h-auto w-full rounded-lg object-contain"
+          loading="lazy"
+        />
       </div>
       
       <div className="bg-white border-2 border-primary-500 p-0 shadow-lg mb-8 sm:mb-10 md:mb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
-          <div className="relative w-full" style={{ height: '800px' }}>
+          <div className="relative w-full">
             <Image
-              src="/The Row Debt Map_Oct 2025.jpg"
+              src={debtMapImage}
               alt="Debt Map"
-              fill
-              style={{ objectFit: 'contain' }}
+              sizes={fullWidthSizes}
+              className="h-auto w-full object-contain"
+              loading="lazy"
             />
           </div>
-          <div className="relative w-full" style={{ height: '800px' }}>
+          <div className="relative w-full">
             <Image
-              src="/Debt After Amazon Transaction.jpg"
+              src={debtAfterAmazonSaleImage}
               alt="Debt after Amazon Sale"
-              fill
-              style={{ objectFit: 'contain' }}
+              sizes={fullWidthSizes}
+              className="h-auto w-full object-contain"
+              loading="lazy"
             />
           </div>
         </div>
