@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "title": "The Row Monthly Update",
+    "month": "December 2025",
+    "status": "Active",
+    "scenario": "Base",
+    "lastUpdated": "2025-12-18"
+  },
+  "execSnapshot": [
+    "53 acres under contract with Amazon; PSA progressing toward non-refundable in March 2026.",
+    "Block 2 Retail shovel-ready; tenant negotiations and equity raise advancing.",
+    "Del Via lease-up ongoing; occupancy at 14.3% with elevated concessions."
+  ],
+  "kpis": {
+    "netLandProceeds": 0,
+    "unreimbursedInfra": 0,
+    "cumulativeTIRZ": 0,
+    "amazonAcres": 53,
+    "occupancy": 14.3
+  },
+  "milestones": [
+    { "label": "Amazon non-refundable", "date": "2026-03-27", "status": "pending" },
+    { "label": "Amazon closing target", "date": "2026-06-30", "status": "pending" },
+    { "label": "Retail Core permits expected", "date": "2026-04-01", "status": "in_progress" }
+  ],
+  "overview": {
+    "summary": [
+      "Amazon and substation land monetization remain the primary near-term value drivers.",
+      "Retail and multifamily verticals continue to progress in parallel.",
+      "Permitting and site readiness milestones keep the Retail Core and Block 2 positioned for quick mobilization."
+    ],
+    "details": [
+      "Amazon: PSA executed 9/28/2025 with $500k earnest money; diligence and end-user site plan in progress; prelim plan submitted and under review.",
+      "Amazon: Additional 25-acre LOI for a distribution facility (countered at $14.5/land sf).",
+      "Austin Energy Substation: Awaiting final transmission route to start survey/appraisal; estimated closing Q4 2026.",
+      "Block 2 Retail: Shovel-ready; negotiating with Shiner Smokehouse to replace Portillo's; 22,000 SF inline prospects engaged; lender ready and equity raise progressing.",
+      "Retail Core & Master Plan: Design and permitting on track; permits expected April 2026.",
+      "Del Via: Occupancy 14.33%; Leased 19.21%; Market Rent $2.19/sf | $1,796/unit; Concessions 6–10 weeks free (12.5%–20.8%)."
+    ]
+  },
+  "sections": {
+    "landSales": {
+      "title": "Amazon Land Sale",
+      "statusSnapshot": {
+        "title": "Status Snapshot",
+        "items": [
+          "Status: Under Contract",
+          "Acreage: 53 acres",
+          "Non-refundable target: Mar 27, 2026",
+          "Expected closing: Jun 30, 2026",
+          "Additional LOI: 25 acres (countered at $14.5/land sf)"
+        ]
+      },
+      "commentary": [
+        "PSA executed with $500k earnest money; diligence and end-user site plan underway.",
+        "City review pacing toward the March non-refundable date and June closing target.",
+        "Additional 25-acre LOI reinforces monetization momentum."
+      ],
+      "visuals": [
+        {
+          "title": "Amazon tract and LOI context",
+          "image": "/Amazon.jpg",
+          "caption": "Acreage under contract and adjacent LOI parcel within the broader site plan."
+        }
+      ]
+    },
+    "retail": {
+      "title": "Block 2 Retail",
+      "statusSnapshot": {
+        "title": "Status Snapshot",
+        "items": [
+          "Readiness: Shovel-ready",
+          "Anchor: Negotiating with Shiner Smokehouse (replacing Portillo's)",
+          "Inline space: 22,000 SF active negotiations",
+          "Capital: Construction lender ready; equity raise progressing with two groups"
+        ]
+      },
+      "commentary": [
+        "Negotiations advancing with Shiner Smokehouse for anchor replacement; inline prospects engaged for 22,000 SF.",
+        "Lender is ready to close; equity raise moving forward with two strong investor groups.",
+        "Site is fully prepped, allowing rapid mobilization once anchors and capital stack finalize."
+      ],
+      "visuals": [
+        {
+          "title": "Block 2 retail plan",
+          "image": "/Block 2 Retail.jpg",
+          "caption": "Block 2 retail layout, pad readiness, and anchor/inline tenant positioning."
+        }
+      ]
+    },
+    "multifamily": {
+      "title": "Del Via Multifamily",
+      "statusSnapshot": {
+        "title": "Metrics Snapshot",
+        "items": [
+          "Occupancy: 14.3%",
+          "Leased: 19.21%",
+          "Market Rent: $2.19/sf | $1,796/unit",
+          "Concessions: 6–10 weeks free (12.5%–20.8%)",
+          "Status: Lease-up underway; retail activation supports absorption"
+        ]
+      },
+      "commentary": [
+        "Lease-up continues with concessions supporting early absorption while retail activation advances.",
+        "Stabilization depends on synchronized retail delivery and sustained employer-driven demand."
+      ],
+      "visuals": [
+        {
+          "title": "Del Via lease-up",
+          "image": "/Del Via Multifamily.jpg",
+          "caption": "Current lease-up positioning and unit delivery phasing for Del Via."
+        }
+      ]
+    }
+  },
+  "risks": [
+    "Amazon PSA not yet non-refundable; dates dependent on diligence and city review.",
+    "TIRZ reimbursement timing dependent on collections.",
+    "Retail anchor/in-line leasing still in negotiation; capital stack timing linked to leasing."
+  ],
+  "appendix": [
+    "Regional & Macro Context provided for reference and not directly tied to underwriting.",
+    "Tesla: 20,000+ employees on ~10M SF built, 5M SF underway; robotaxi launch scaling; Optimus factory and AI chip partnership anchoring Austin.",
+    "NVIDIA: Doubling Austin presence with ~100k SF lease; >1M SF U.S. manufacturing capacity for AI supercomputers/Blackwell chips.",
+    "Samsung: $40B+ Taylor campus nearing late-2026 operations; $250M state grant; first phase moving ~1,000 employees by late 2025.",
+    "ABIA: $4–6B Journey With AUS expansion toward new 20+ gate Concourse B (early 2030s target).",
+    "Apple: $600B U.S. investment plan with Austin expansion; second campus under construction; Riata rezoning signals mixed-use potential.",
+    "Compal/Pegatron: Localization of device assembly and electronics manufacturing adding ~1,000+ jobs regionally."
+  ]
+}

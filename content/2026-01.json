@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "title": "The Row Monthly Update",
+    "month": "January 2026",
+    "status": "Active",
+    "scenario": "Base",
+    "lastUpdated": "2026-01-20"
+  },
+  "execSnapshot": [
+    "Carried-forward: Amazon PSA under contract; non-refundable milestone still targeted for March 2026.",
+    "Block 2 Retail capital stack nearing finalization pending anchor confirmation.",
+    "Del Via lease-up continues with concessions supporting absorption."
+  ],
+  "kpis": {
+    "netLandProceeds": 0,
+    "unreimbursedInfra": 0,
+    "cumulativeTIRZ": 0,
+    "amazonAcres": 53,
+    "occupancy": 15.0
+  },
+  "milestones": [
+    { "label": "Amazon non-refundable", "date": "2026-03-27", "status": "pending" },
+    { "label": "Amazon closing target", "date": "2026-06-30", "status": "pending" },
+    { "label": "Retail Core permits expected", "date": "2026-04-01", "status": "in_progress" }
+  ],
+  "overview": {
+    "summary": [
+      "Amazon diligence remains the primary near-term milestone; closing targeted for mid-2026.",
+      "Retail and multifamily workstreams continue in lockstep; focus on anchor confirmation and absorption.",
+      "Permitting cadence remains aligned to support rapid mobilization."
+    ],
+    "details": [
+      "Amazon: PSA active; diligence and plan review ongoing; non-refundable still aimed for March 2026.",
+      "Land: Additional 25-acre LOI remains in negotiation for distribution use.",
+      "Retail: Block 2 shovel-ready; anchor and inline prospects engaged; lender prepared to close pending leasing.",
+      "Retail Core: Permitting on track with April 2026 target.",
+      "Del Via: Lease-up progressing with concessions; retail activation expected to aid velocity."
+    ]
+  },
+  "sections": {
+    "landSales": {
+      "title": "Amazon Land Sale",
+      "statusSnapshot": {
+        "title": "Status Snapshot",
+        "items": [
+          "Status: Under Contract",
+          "Acreage: 53 acres",
+          "Non-refundable target: Mar 27, 2026",
+          "Expected closing: Jun 30, 2026",
+          "Additional LOI: 25 acres (distribution, in negotiation)"
+        ]
+      },
+      "commentary": [
+        "Diligence and city review continue; tracking to non-refundable and closing targets.",
+        "LOI expansion remains additive to monetization potential."
+      ],
+      "visuals": [
+        {
+          "title": "Amazon tract context",
+          "image": "/Amazon.jpg",
+          "caption": "Acreage under contract and adjacent LOI parcel."
+        }
+      ]
+    },
+    "retail": {
+      "title": "Block 2 Retail",
+      "statusSnapshot": {
+        "title": "Status Snapshot",
+        "items": [
+          "Readiness: Shovel-ready",
+          "Anchor: Negotiations active; lender ready",
+          "Inline space: 22,000 SF in discussion",
+          "Capital: Equity raise advancing with two groups"
+        ]
+      },
+      "commentary": [
+        "Anchor confirmation is the gating item for immediate closing on the capital stack.",
+        "Inline negotiations progress in parallel to bolster pre-leasing coverage."
+      ],
+      "visuals": [
+        {
+          "title": "Block 2 retail plan",
+          "image": "/Block 2 Retail.jpg",
+          "caption": "Block 2 layout and tenant positioning."
+        }
+      ]
+    },
+    "multifamily": {
+      "title": "Del Via Multifamily",
+      "statusSnapshot": {
+        "title": "Metrics Snapshot",
+        "items": [
+          "Occupancy: 15.0%",
+          "Leased: 20.0% (illustrative)",
+          "Market Rent: $2.19/sf | $1,796/unit",
+          "Concessions: 6–10 weeks free",
+          "Status: Lease-up continues; retail activation expected to aid absorption"
+        ]
+      },
+      "commentary": [
+        "Concessions remain elevated while absorption builds momentum.",
+        "Retail activation remains the key support for velocity and stabilization."
+      ],
+      "visuals": [
+        {
+          "title": "Del Via lease-up",
+          "image": "/Del Via Multifamily.jpg",
+          "caption": "Lease-up status and unit delivery phasing."
+        }
+      ]
+    }
+  },
+  "risks": [
+    "Non-refundable milestone not yet achieved.",
+    "Capital stack timing linked to anchor confirmation.",
+    "Absorption pace dependent on retail activation and employer momentum."
+  ],
+  "appendix": [
+    "Regional & Macro Context provided for reference and not directly tied to underwriting."
+  ]
+}
