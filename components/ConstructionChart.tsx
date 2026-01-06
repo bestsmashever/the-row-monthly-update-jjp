@@ -7,7 +7,8 @@ import submarketImage from '@/public/Submarket.jpg'
 export default function ConstructionChart() {
   return (
     <section className="mb-12">
-      <ChartContainer title="Submarket">
+      <h3 className="section-title">Submarket</h3>
+      <ChartContainer>
         <Image
           src={submarketImage}
           alt="Submarket"
