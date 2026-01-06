@@ -1,10 +1,9 @@
 import Image from 'next/image'
 
+import { FULL_WIDTH_SIZES } from '@/constants/media'
 import block2RetailImage from '@/public/Block 2 Retail.jpg'
 
 export default function Block2Retail() {
-  const fullWidthSizes = '(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px'
-
   return (
     <section className="mb-8 sm:mb-10 md:mb-12">
       <h3 className="section-title">Block 2 Retail</h3>
@@ -13,7 +12,7 @@ export default function Block2Retail() {
         <Image
           src={block2RetailImage}
           alt="Block 2 Retail"
-          sizes={fullWidthSizes}
+          sizes={FULL_WIDTH_SIZES}
           className="h-auto w-full rounded-lg object-contain"
           loading="lazy"
         />

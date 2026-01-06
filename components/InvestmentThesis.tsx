@@ -2,13 +2,12 @@
 
 import Image from 'next/image'
 import Block2Retail from '@/components/Block2Retail'
+import { FULL_WIDTH_SIZES } from '@/constants/media'
 import amazonImage from '@/public/Amazon.jpg'
 import debtAfterAmazonSaleImage from '@/public/Debt After Amazon Transaction.jpg'
 import debtMapImage from '@/public/The Row Debt Map_Oct 2025.jpg'
 
 export default function InvestmentThesis() {
-  const fullWidthSizes = '(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px'
-
   return (
     <section className="mb-8 sm:mb-10 md:mb-12">
       <h3 className="section-title">Overview</h3>
@@ -62,7 +61,7 @@ export default function InvestmentThesis() {
         <Image
           src={amazonImage}
           alt="Amazon"
-          sizes={fullWidthSizes}
+          sizes={FULL_WIDTH_SIZES}
           className="h-auto w-full rounded-lg object-contain"
           loading="lazy"
         />
@@ -74,7 +73,7 @@ export default function InvestmentThesis() {
             <Image
               src={debtMapImage}
               alt="Debt Map"
-              sizes={fullWidthSizes}
+              sizes={FULL_WIDTH_SIZES}
               className="h-auto w-full object-contain"
               loading="lazy"
             />
@@ -83,7 +82,7 @@ export default function InvestmentThesis() {
             <Image
               src={debtAfterAmazonSaleImage}
               alt="Debt after Amazon Sale"
-              sizes={fullWidthSizes}
+              sizes={FULL_WIDTH_SIZES}
               className="h-auto w-full object-contain"
               loading="lazy"
             />
