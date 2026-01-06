@@ -59,7 +59,7 @@ export default function MarketFundamentals() {
           title: "Tesla Diner: Expanding Austin's Lifestyle Footprint",
           emoji: '🍽️',
           paragraphs: [
-            'Tesla is reportedly exploring a new "Tesla Diner" location near its Austin campus — a retro-futuristic restaurant concept with Supercharger stalls, drive-in movie screens, and ordering via Tesla vehicle interfaces. While it remains an announced intention rather than a confirmed build-out, the diner concept reinforces Tesla's strategy of making its Austin footprint more than just manufacturing — it is becoming a consumer-facing and lifestyle anchor as well.',
+            "Tesla is reportedly exploring a new \"Tesla Diner\" location near its Austin campus — a retro-futuristic restaurant concept with Supercharger stalls, drive-in movie screens, and ordering via Tesla vehicle interfaces. While it remains an announced intention rather than a confirmed build-out, the diner concept reinforces Tesla's strategy of making its Austin footprint more than just manufacturing — it is becoming a consumer-facing and lifestyle anchor as well.",
           ],
           images: [{ src: teslaDinerImage, alt: 'Tesla Diner' }],
         },
