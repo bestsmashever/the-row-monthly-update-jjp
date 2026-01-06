@@ -10,17 +10,16 @@ type ImageItem = {
 }
 
 type ImageSectionProps = {
-  title?: string
   images: ImageItem[]
   className?: string
 }
 
-export default function ImageSection({ title, images, className }: ImageSectionProps) {
+export default function ImageSection({ images, className }: ImageSectionProps) {
   const sectionClassName = ['mb-8 sm:mb-10 md:mb-12', className].filter(Boolean).join(' ')
 
   return (
     <section className={sectionClassName}>
-      <ChartContainer title={title}>
+      <ChartContainer>
         {images.map(({ src, alt, className: imageClass }, index) => (
           <Image
             key={`${alt}-${index}`}

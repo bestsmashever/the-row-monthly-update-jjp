@@ -22,7 +22,7 @@ export default function InvestmentThesis() {
               <ul className="list-none mt-2 space-y-2 ml-6">
                 <li className="flex">
                   <span className="mr-2 text-primary-500 font-bold">▶</span>
-                  <span><strong>Under Contract (53 Acres):</strong> Officially under contract with the PSA executed on 9/28/2025; $500k in earnest money was confirmed received by Chicago Title on 10/6/2025; Seller is working through due diligence and developing their site plan with the end user. The preliminary plan has been formally submitted for review after receiving an approved completeness check submission. Our anticipated timeline for Amazon to go non-refundable is 3/27/2026, and the timeline for our prelim plan to be approved (allowing for closing) is 6/30/2026.</span>
+                  <span><strong>Under Contract (53 Acres):</strong> PSA executed with due diligence in progress and the end user&apos;s site plan under review. The preliminary plan has been formally submitted; targeting 3/27/2026 for non-refundable status and 6/30/2026 for prelim plan approval to enable closing.</span>
                 </li>
                 <li className="flex">
                   <span className="mr-2 text-primary-500 font-bold">▶</span>
@@ -39,7 +39,7 @@ export default function InvestmentThesis() {
           <strong>Retail Update</strong>
           <ul className="list-disc list-inside mt-2 space-y-3 ml-6">
             <li>
-              <strong>Block 2 Retail:</strong> Site is shovel ready and we are negotiating with Shiner Smokehouse, a smoked meat and live music concept from Shiner, TX, to replace Portllo's. We are also negotiating terms with a few other potential tenants for the 22,000 inline space. The construction lender is ready to close. We've made meaningful progress on the equity raise and expect to have firmer details in the next couple of weeks. Two groups have shown strong interest.
+              <strong>Block 2 Retail:</strong> Site is shovel ready and we are negotiating with Shiner Smokehouse, a smoked meat and live music concept from Shiner, TX, to replace Portllo&apos;s. We are also negotiating terms with a few other potential tenants for the 22,000 inline space. The construction lender is ready to close, and the equity raise is advancing with two groups in active discussions.
             </li>
             <li>
               <strong>Other Site Retail:</strong> Continuing conversations with a C-store/gas station concept and hotel operator for Block 1 (HEB). Conversations ongoing with other activator tenants, including pickleball, spas, MLB, brewery/bar, BBQ, etc.
