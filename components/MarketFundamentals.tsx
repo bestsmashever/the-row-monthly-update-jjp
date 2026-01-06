@@ -1,20 +1,36 @@
 import Image from 'next/image'
 
+import abiaImage from '@/public/ABIA.png'
+import appleCampusImage from '@/public/Apple Campus Austin.jpg'
+import compalImage from '@/public/Compal.webp'
+import delViaMultifamilyImage from '@/public/Del Via Multifamily.jpg'
+import nvidiaImage from '@/public/NVIDIA AI Supercomputer.jpg'
+import pegatronImage from '@/public/Pegatron.jpg'
+import samsungPlantTaylorImage from '@/public/Samsung Plant Taylor.png'
+import tdemInteriorImage from '@/public/TDEM Interior.jpg'
+import tdemRenderingImage from '@/public/TDEM rendering.jpeg'
+import teslaAiChipImage from '@/public/Tesla AI5 Chip.jpg'
+import teslaDinerImage from '@/public/Tesla Diner.png'
+import teslaGigaFactoryImage from '@/public/Tesla Giga Factory.png'
+import teslaOptimusImage from '@/public/Tesla Optimus.jpg'
+import teslaRobotaxiImage from '@/public/Tesla Robotaxi.jpg'
+
 export default function MarketFundamentals() {
+  const fullWidthSizes = '(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px'
+  const halfWidthSizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 640px'
+
   return (
     <section className="mb-8 sm:mb-10 md:mb-12">
       <h3 className="section-title">Del Via Multifamily</h3>
       
       <div className="chart-container mb-4">
-        <div className="relative w-full" style={{ height: '450px' }}>
-          <Image
-            src="/Del Via Multifamily.jpg"
-            alt="Del Via Multifamily"
-            fill
-            style={{ objectFit: 'contain' }}
-            className="rounded-lg"
-          />
-        </div>
+        <Image
+          src={delViaMultifamilyImage}
+          alt="Del Via Multifamily"
+          sizes={fullWidthSizes}
+          className="h-auto w-full rounded-lg object-contain"
+          loading="lazy"
+        />
       </div>
       
       <h3 className="section-title mt-4 sm:mt-6 md:mt-8">Employer Expansion & Economic Momentum</h3>
@@ -35,12 +51,13 @@ export default function MarketFundamentals() {
                   Tesla's footprint in Austin is massive and still accelerating. Giga Texas already spans roughly 10 million square feet, making it one of the largest manufacturing facilities in the world — and Tesla is now adding another 5 million square feet of new production and support space. This continued expansion reinforces Austin as a core hub for Tesla's long-term growth, innovation, and workforce scale.
                 </p>
               </div>
-              <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-80 xl:h-auto min-h-[192px] sm:min-h-[224px] md:min-h-[256px] lg:min-h-[320px]">
+              <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-80 xl:h-auto min-h-[192px] sm:min-h-[224px] md:min-h-[256px] lg:min-h-[320px] overflow-hidden rounded-b-xl md:rounded-bl-none md:rounded-br-xl">
                 <Image
-                  src="/Tesla Giga Factory.png"
+                  src={teslaGigaFactoryImage}
                   alt="Tesla Giga Factory"
-                  fill
-                  style={{ objectFit: 'cover' }}
+                  sizes={halfWidthSizes}
+                  className="h-full w-full object-cover"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -58,12 +75,13 @@ export default function MarketFundamentals() {
                   Tesla is preparing a dedicated manufacturing facility at Giga Texas for its humanoid robot Optimus, a multi-billion-dollar bet that positions Austin at the center of robotics and AI-driven automation.
                 </p>
               </div>
-              <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-80 xl:h-auto min-h-[192px] sm:min-h-[224px] md:min-h-[256px] lg:min-h-[320px]">
+              <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-80 xl:h-auto min-h-[192px] sm:min-h-[224px] md:min-h-[256px] lg:min-h-[320px] overflow-hidden rounded-b-xl md:rounded-bl-none md:rounded-br-xl">
                 <Image
-                  src="/Tesla Optimus.jpg"
+                  src={teslaOptimusImage}
                   alt="Tesla Optimus Robot"
-                  fill
-                  style={{ objectFit: 'cover', objectPosition: 'center 30%' }}
+                  sizes={halfWidthSizes}
+                  className="h-full w-full object-cover"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -81,12 +99,13 @@ export default function MarketFundamentals() {
                   In June 2025, Tesla launched its first robotaxi fleet in Austin — with plans to scale to 500+ autonomous vehicles by year-end and remove safety drivers in select zones.
                 </p>
               </div>
-              <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-80 xl:h-auto min-h-[192px] sm:min-h-[224px] md:min-h-[256px] lg:min-h-[320px]">
+              <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-80 xl:h-auto min-h-[192px] sm:min-h-[224px] md:min-h-[256px] lg:min-h-[320px] overflow-hidden rounded-b-xl md:rounded-bl-none md:rounded-br-xl">
                 <Image
-                  src="/Tesla Robotaxi.jpg"
+                  src={teslaRobotaxiImage}
                   alt="Tesla Robotaxi"
-                  fill
-                  style={{ objectFit: 'cover' }}
+                  sizes={halfWidthSizes}
+                  className="h-full w-full object-cover"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -104,12 +123,13 @@ export default function MarketFundamentals() {
                   In a groundbreaking $16.5B deal, Tesla selected Samsung's new Taylor, TX fab to produce its next-generation AI6 chips — cementing Austin's position as a national hub for AI semiconductor manufacturing and reshoring.
                 </p>
               </div>
-              <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-80 xl:h-auto min-h-[192px] sm:min-h-[224px] md:min-h-[256px] lg:min-h-[320px]">
+              <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-80 xl:h-auto min-h-[192px] sm:min-h-[224px] md:min-h-[256px] lg:min-h-[320px] overflow-hidden rounded-b-xl md:rounded-bl-none md:rounded-br-xl">
                 <Image
-                  src="/Tesla AI5 Chip.jpg"
+                  src={teslaAiChipImage}
                   alt="Tesla AI Chip"
-                  fill
-                  style={{ objectFit: 'cover' }}
+                  sizes={halfWidthSizes}
+                  className="h-full w-full object-cover"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -127,12 +147,13 @@ export default function MarketFundamentals() {
                   Tesla is reportedly exploring a new "Tesla Diner" location near its Austin campus — a retro-futuristic restaurant concept with Supercharger stalls, drive-in movie screens, and ordering via Tesla vehicle interfaces. While it remains an announced intention rather than a confirmed build-out, the diner concept reinforces Tesla's strategy of making its Austin footprint more than just manufacturing — it's becoming a consumer-facing and lifestyle anchor as well.
                 </p>
               </div>
-              <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-80 xl:h-auto min-h-[192px] sm:min-h-[224px] md:min-h-[256px] lg:min-h-[320px]">
+              <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-80 xl:h-auto min-h-[192px] sm:min-h-[224px] md:min-h-[256px] lg:min-h-[320px] overflow-hidden rounded-b-xl md:rounded-bl-none md:rounded-br-xl">
                 <Image
-                  src="/Tesla Diner.png"
+                  src={teslaDinerImage}
                   alt="Tesla Diner"
-                  fill
-                  style={{ objectFit: 'cover' }}
+                  sizes={halfWidthSizes}
+                  className="h-full w-full object-cover"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -153,20 +174,22 @@ export default function MarketFundamentals() {
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-0">
-                <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-80 xl:h-auto min-h-[192px] sm:min-h-[224px] md:min-h-[256px] lg:min-h-[320px]">
+                <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-80 xl:h-auto min-h-[192px] sm:min-h-[224px] md:min-h-[256px] lg:min-h-[320px] overflow-hidden">
                   <Image
-                    src="/TDEM Interior.jpg"
+                    src={tdemInteriorImage}
                     alt="TDEM Interior"
-                    fill
-                    style={{ objectFit: 'cover' }}
+                    sizes={halfWidthSizes}
+                    className="h-full w-full object-cover"
+                    loading="lazy"
                   />
                 </div>
-                <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-80 xl:h-auto min-h-[192px] sm:min-h-[224px] md:min-h-[256px] lg:min-h-[320px]">
+                <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-80 xl:h-auto min-h-[192px] sm:min-h-[224px] md:min-h-[256px] lg:min-h-[320px] overflow-hidden">
                   <Image
-                    src="/TDEM rendering.jpeg"
+                    src={tdemRenderingImage}
                     alt="TDEM Rendering"
-                    fill
-                    style={{ objectFit: 'cover' }}
+                    sizes={halfWidthSizes}
+                    className="h-full w-full object-cover"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -190,12 +213,13 @@ export default function MarketFundamentals() {
                   </p>
                 </div>
               </div>
-              <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-80 xl:h-auto min-h-[192px] sm:min-h-[224px] md:min-h-[256px] lg:min-h-[320px]">
+              <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-80 xl:h-auto min-h-[192px] sm:min-h-[224px] md:min-h-[256px] lg:min-h-[320px] overflow-hidden rounded-b-xl md:rounded-bl-none md:rounded-br-xl">
                 <Image
-                  src="/ABIA.png"
+                  src={abiaImage}
                   alt="ABIA"
-                  fill
-                  style={{ objectFit: 'cover' }}
+                  sizes={halfWidthSizes}
+                  className="h-full w-full object-cover"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -221,12 +245,13 @@ export default function MarketFundamentals() {
                   </p>
                 </div>
               </div>
-              <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-80 xl:h-auto min-h-[192px] sm:min-h-[224px] md:min-h-[256px] lg:min-h-[320px]">
+              <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-80 xl:h-auto min-h-[192px] sm:min-h-[224px] md:min-h-[256px] lg:min-h-[320px] overflow-hidden rounded-b-xl md:rounded-bl-none md:rounded-br-xl">
                 <Image
-                  src="/NVIDIA AI Supercomputer.jpg"
+                  src={nvidiaImage}
                   alt="NVIDIA AI Supercomputer"
-                  fill
-                  style={{ objectFit: 'cover' }}
+                  sizes={halfWidthSizes}
+                  className="h-full w-full object-cover"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -252,12 +277,13 @@ export default function MarketFundamentals() {
                   </p>
                 </div>
               </div>
-              <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-80 xl:h-auto min-h-[192px] sm:min-h-[224px] md:min-h-[256px] lg:min-h-[320px]">
+              <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-80 xl:h-auto min-h-[192px] sm:min-h-[224px] md:min-h-[256px] lg:min-h-[320px] overflow-hidden rounded-b-xl md:rounded-bl-none md:rounded-br-xl">
                 <Image
-                  src="/Apple Campus Austin.jpg"
+                  src={appleCampusImage}
                   alt="Apple Campus Austin"
-                  fill
-                  style={{ objectFit: 'cover' }}
+                  sizes={halfWidthSizes}
+                  className="h-full w-full object-cover"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -283,12 +309,13 @@ export default function MarketFundamentals() {
                   </p>
                 </div>
               </div>
-              <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-80 xl:h-auto min-h-[192px] sm:min-h-[224px] md:min-h-[256px] lg:min-h-[320px]">
+              <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-80 xl:h-auto min-h-[192px] sm:min-h-[224px] md:min-h-[256px] lg:min-h-[320px] overflow-hidden rounded-b-xl md:rounded-bl-none md:rounded-br-xl">
                 <Image
-                  src="/Samsung Plant Taylor.png"
+                  src={samsungPlantTaylorImage}
                   alt="Samsung Plant Taylor"
-                  fill
-                  style={{ objectFit: 'cover' }}
+                  sizes={halfWidthSizes}
+                  className="h-full w-full object-cover"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -314,12 +341,13 @@ export default function MarketFundamentals() {
                   </p>
                 </div>
               </div>
-              <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-80 xl:h-auto min-h-[192px] sm:min-h-[224px] md:min-h-[256px] lg:min-h-[320px]">
+              <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-80 xl:h-auto min-h-[192px] sm:min-h-[224px] md:min-h-[256px] lg:min-h-[320px] overflow-hidden rounded-b-xl md:rounded-bl-none md:rounded-br-xl">
                 <Image
-                  src="/Compal.webp"
+                  src={compalImage}
                   alt="Compal USA Technology"
-                  fill
-                  style={{ objectFit: 'cover' }}
+                  sizes={halfWidthSizes}
+                  className="h-full w-full object-cover"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -345,12 +373,13 @@ export default function MarketFundamentals() {
                   </p>
                 </div>
               </div>
-              <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-80 xl:h-auto min-h-[192px] sm:min-h-[224px] md:min-h-[256px] lg:min-h-[320px]">
+              <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-80 xl:h-auto min-h-[192px] sm:min-h-[224px] md:min-h-[256px] lg:min-h-[320px] overflow-hidden rounded-b-xl md:rounded-bl-none md:rounded-br-xl">
                 <Image
-                  src="/Pegatron.jpg"
+                  src={pegatronImage}
                   alt="Pegatron Corporation"
-                  fill
-                  style={{ objectFit: 'cover' }}
+                  sizes={halfWidthSizes}
+                  className="h-full w-full object-cover"
+                  loading="lazy"
                 />
               </div>
             </div>
