@@ -1,6 +1,7 @@
 import Image, { type StaticImageData } from 'next/image'
 
 import { FULL_WIDTH_SIZES } from '@/constants/media'
+import ChartContainer from '@/components/layout/ChartContainer'
 
 type ImageItem = {
   src: StaticImageData | string
@@ -19,8 +20,7 @@ export default function ImageSection({ title, images, className }: ImageSectionP
 
   return (
     <section className={sectionClassName}>
-      <div className="chart-container">
-        {title ? <h4>{title}</h4> : null}
+      <ChartContainer title={title}>
         {images.map(({ src, alt, className: imageClass }, index) => (
           <Image
             key={`${alt}-${index}`}
@@ -31,7 +31,7 @@ export default function ImageSection({ title, images, className }: ImageSectionP
             loading="lazy"
           />
         ))}
-      </div>
+      </ChartContainer>
     </section>
   )
 }
