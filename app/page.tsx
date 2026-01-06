@@ -2,12 +2,10 @@
 
 import Header from '@/components/Header'
 import InvestmentThesis from '@/components/InvestmentThesis'
-import MasterPlan from '@/components/MasterPlan'
-import RetailDestination from '@/components/RetailDestination'
-import RetailCorePhasing from '@/components/RetailCorePhasing'
-import RetailCoreRendering from '@/components/RetailCoreRendering'
 import MarketFundamentals from '@/components/MarketFundamentals'
 import Footer from '@/components/Footer'
+import ImageSection from '@/components/ImageSection'
+import { homeSections } from '@/app/data/sections'
 
 export default function Home() {
   return (
@@ -15,13 +13,9 @@ export default function Home() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Header />
         <InvestmentThesis />
-        <MasterPlan />
-        <RetailDestination />
-        <section className="mb-8 sm:mb-10 md:mb-12">
-          <h3 className="section-title">RETAIL CORE</h3>
-        </section>
-        <RetailCorePhasing />
-        <RetailCoreRendering />
+        {homeSections.map((section) => (
+          <ImageSection key={section.id} {...section} />
+        ))}
         <MarketFundamentals />
         <Footer />
       </div>
