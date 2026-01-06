@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
-import { FULL_WIDTH_SIZES } from '@/constants/media'
+import { FULL_WIDTH_SIZES, HALF_WIDTH_SIZES } from '@/constants/media'
+import ChartContainer from '@/components/layout/ChartContainer'
 import abiaImage from '@/public/ABIA.png'
 import appleCampusImage from '@/public/Apple Campus Austin.jpg'
 import compalImage from '@/public/Compal.webp'
@@ -17,13 +18,11 @@ import teslaOptimusImage from '@/public/Tesla Optimus.jpg'
 import teslaRobotaxiImage from '@/public/Tesla Robotaxi.jpg'
 
 export default function MarketFundamentals() {
-  const halfWidthSizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 640px'
-
   return (
     <section className="mb-8 sm:mb-10 md:mb-12">
       <h3 className="section-title">Del Via Multifamily</h3>
       
-      <div className="chart-container mb-4">
+      <ChartContainer className="mb-4">
         <Image
           src={delViaMultifamilyImage}
           alt="Del Via Multifamily"
@@ -31,7 +30,7 @@ export default function MarketFundamentals() {
           className="h-auto w-full rounded-lg object-contain"
           loading="lazy"
         />
-      </div>
+      </ChartContainer>
       
       <h3 className="section-title mt-4 sm:mt-6 md:mt-8">Employer Expansion & Economic Momentum</h3>
       
@@ -55,7 +54,7 @@ export default function MarketFundamentals() {
                 <Image
                   src={teslaGigaFactoryImage}
                   alt="Tesla Giga Factory"
-                  sizes={halfWidthSizes}
+                  sizes={HALF_WIDTH_SIZES}
                   className="h-full w-full object-cover"
                   loading="lazy"
                 />
@@ -79,7 +78,7 @@ export default function MarketFundamentals() {
                 <Image
                   src={teslaOptimusImage}
                   alt="Tesla Optimus Robot"
-                  sizes={halfWidthSizes}
+                  sizes={HALF_WIDTH_SIZES}
                   className="h-full w-full object-cover"
                   loading="lazy"
                 />
@@ -103,7 +102,7 @@ export default function MarketFundamentals() {
                 <Image
                   src={teslaRobotaxiImage}
                   alt="Tesla Robotaxi"
-                  sizes={halfWidthSizes}
+                  sizes={HALF_WIDTH_SIZES}
                   className="h-full w-full object-cover"
                   loading="lazy"
                 />
@@ -127,7 +126,7 @@ export default function MarketFundamentals() {
                 <Image
                   src={teslaAiChipImage}
                   alt="Tesla AI Chip"
-                  sizes={halfWidthSizes}
+                  sizes={HALF_WIDTH_SIZES}
                   className="h-full w-full object-cover"
                   loading="lazy"
                 />
@@ -151,7 +150,7 @@ export default function MarketFundamentals() {
                 <Image
                   src={teslaDinerImage}
                   alt="Tesla Diner"
-                  sizes={halfWidthSizes}
+                  sizes={HALF_WIDTH_SIZES}
                   className="h-full w-full object-cover"
                   loading="lazy"
                 />
@@ -178,7 +177,7 @@ export default function MarketFundamentals() {
                   <Image
                     src={tdemInteriorImage}
                     alt="TDEM Interior"
-                    sizes={halfWidthSizes}
+                    sizes={HALF_WIDTH_SIZES}
                     className="h-full w-full object-cover"
                     loading="lazy"
                   />
@@ -187,7 +186,7 @@ export default function MarketFundamentals() {
                   <Image
                     src={tdemRenderingImage}
                     alt="TDEM Rendering"
-                    sizes={halfWidthSizes}
+                    sizes={HALF_WIDTH_SIZES}
                     className="h-full w-full object-cover"
                     loading="lazy"
                   />
@@ -217,7 +216,7 @@ export default function MarketFundamentals() {
                 <Image
                   src={abiaImage}
                   alt="ABIA"
-                  sizes={halfWidthSizes}
+                  sizes={HALF_WIDTH_SIZES}
                   className="h-full w-full object-cover"
                   loading="lazy"
                 />
@@ -249,7 +248,7 @@ export default function MarketFundamentals() {
                 <Image
                   src={nvidiaImage}
                   alt="NVIDIA AI Supercomputer"
-                  sizes={halfWidthSizes}
+                  sizes={HALF_WIDTH_SIZES}
                   className="h-full w-full object-cover"
                   loading="lazy"
                 />
@@ -281,7 +280,7 @@ export default function MarketFundamentals() {
                 <Image
                   src={appleCampusImage}
                   alt="Apple Campus Austin"
-                  sizes={halfWidthSizes}
+                  sizes={HALF_WIDTH_SIZES}
                   className="h-full w-full object-cover"
                   loading="lazy"
                 />
@@ -313,7 +312,7 @@ export default function MarketFundamentals() {
                 <Image
                   src={samsungPlantTaylorImage}
                   alt="Samsung Plant Taylor"
-                  sizes={halfWidthSizes}
+                  sizes={HALF_WIDTH_SIZES}
                   className="h-full w-full object-cover"
                   loading="lazy"
                 />
@@ -345,7 +344,7 @@ export default function MarketFundamentals() {
                 <Image
                   src={compalImage}
                   alt="Compal USA Technology"
-                  sizes={halfWidthSizes}
+                  sizes={HALF_WIDTH_SIZES}
                   className="h-full w-full object-cover"
                   loading="lazy"
                 />
@@ -377,7 +376,7 @@ export default function MarketFundamentals() {
                 <Image
                   src={pegatronImage}
                   alt="Pegatron Corporation"
-                  sizes={halfWidthSizes}
+                  sizes={HALF_WIDTH_SIZES}
                   className="h-full w-full object-cover"
                   loading="lazy"
                 />

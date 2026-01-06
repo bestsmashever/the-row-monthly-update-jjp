@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import Block2Retail from '@/components/Block2Retail'
 import { FULL_WIDTH_SIZES } from '@/constants/media'
+import ChartContainer from '@/components/layout/ChartContainer'
 import amazonImage from '@/public/Amazon.jpg'
 import debtAfterAmazonSaleImage from '@/public/Debt After Amazon Transaction.jpg'
 import debtMapImage from '@/public/The Row Debt Map_Oct 2025.jpg'
@@ -57,7 +58,7 @@ export default function InvestmentThesis() {
       </ul>
       
       <h3 className="section-title">Amazon</h3>
-      <div className="chart-container mb-8 sm:mb-10 md:mb-12">
+      <ChartContainer className="mb-8 sm:mb-10 md:mb-12">
         <Image
           src={amazonImage}
           alt="Amazon"
@@ -65,7 +66,7 @@ export default function InvestmentThesis() {
           className="h-auto w-full rounded-lg object-contain"
           loading="lazy"
         />
-      </div>
+      </ChartContainer>
       
       <div className="bg-white border-2 border-primary-500 p-0 shadow-lg mb-8 sm:mb-10 md:mb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
