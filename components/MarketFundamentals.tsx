@@ -1,5 +1,6 @@
 import Image from 'next/image'
 
+import { FULL_WIDTH_SIZES } from '@/constants/media'
 import abiaImage from '@/public/ABIA.png'
 import appleCampusImage from '@/public/Apple Campus Austin.jpg'
 import compalImage from '@/public/Compal.webp'
@@ -16,7 +17,6 @@ import teslaOptimusImage from '@/public/Tesla Optimus.jpg'
 import teslaRobotaxiImage from '@/public/Tesla Robotaxi.jpg'
 
 export default function MarketFundamentals() {
-  const fullWidthSizes = '(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px'
   const halfWidthSizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 640px'
 
   return (
@@ -27,7 +27,7 @@ export default function MarketFundamentals() {
         <Image
           src={delViaMultifamilyImage}
           alt="Del Via Multifamily"
-          sizes={fullWidthSizes}
+          sizes={FULL_WIDTH_SIZES}
           className="h-auto w-full rounded-lg object-contain"
           loading="lazy"
         />
