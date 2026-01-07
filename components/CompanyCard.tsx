@@ -14,6 +14,7 @@ type CompanyCardProps = {
   reverseOnDesktop?: boolean
   title: string
   useDualImages?: boolean
+  variant?: 'default' | 'agora'
 }
 
 export default function CompanyCard({
@@ -23,7 +24,58 @@ export default function CompanyCard({
   reverseOnDesktop = false,
   title,
   useDualImages = false,
+  variant = 'default',
 }: CompanyCardProps) {
+  if (variant === 'agora') {
+    const cleanParagraphs = paragraphs.filter((p) => p.trim().length > 0)
+    return (
+      <div className="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
+        <div className="grid md:grid-cols-2 gap-0">
+          <div className={`p-5 sm:p-6 ${reverseOnDesktop ? 'md:order-2' : ''}`}>
+            <h5 className="text-base sm:text-lg font-semibold text-gray-900 mb-2 tracking-wide">
+              {title}
+            </h5>
+            <div className="space-y-2">
+              {cleanParagraphs.map((paragraph, index) => (
+                <p key={index} className="text-sm sm:text-base leading-relaxed text-gray-700">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          </div>
+
+          {useDualImages ? (
+            <div className={`grid grid-cols-2 gap-0 ${reverseOnDesktop ? 'md:order-1' : ''}`}>
+              {images.map(({ alt, src }) => (
+                <div key={alt} className="relative w-full aspect-[16/10] overflow-hidden">
+                  <Image
+                    src={src}
+                    alt={alt}
+                    fill
+                    sizes={HALF_WIDTH_SIZES}
+                    className="object-cover"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className={`relative w-full aspect-[16/10] overflow-hidden ${reverseOnDesktop ? 'md:order-1' : ''}`}>
+              <Image
+                src={images[0].src}
+                alt={images[0].alt}
+                fill
+                sizes={HALF_WIDTH_SIZES}
+                className="object-cover"
+                loading="lazy"
+              />
+            </div>
+          )}
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className="bg-white border-2 border-gray-200 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
       <div className="grid md:grid-cols-2 gap-0 company-card-grid">

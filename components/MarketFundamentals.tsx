@@ -5,6 +5,7 @@ import ChartContainer from '@/components/layout/ChartContainer'
 import CompanyCard from '@/components/CompanyCard'
 import abiaImage from '@/public/ABIA.png'
 import appleCampusImage from '@/public/Apple Campus Austin.jpg'
+import austinSurfClubImage from '@/public/Austin Surf Club.jpg'
 import compalImage from '@/public/Compal.webp'
 import delViaMultifamilyImage from '@/public/Del Via Multifamily.jpg'
 import nvidiaImage from '@/public/NVIDIA AI Supercomputer.jpg'
@@ -18,7 +19,22 @@ import teslaGigaFactoryImage from '@/public/Tesla Giga Factory.png'
 import teslaOptimusImage from '@/public/Tesla Optimus.jpg'
 import teslaRobotaxiImage from '@/public/Tesla Robotaxi.jpg'
 
-export default function MarketFundamentals() {
+type MarketFundamentalsProps = {
+  anchors?: {
+    delViaId?: string
+    austinMarketId?: string
+  }
+  austinMarketTitle?: string
+  variant?: 'default' | 'agora'
+  includeAustinSurfClub?: boolean
+}
+
+export default function MarketFundamentals({
+  anchors,
+  austinMarketTitle = 'Employer Expansion & Economic Momentum',
+  variant = 'default',
+  includeAustinSurfClub = false,
+}: MarketFundamentalsProps) {
   const companySections = [
     {
       heading: "Tesla: Anchoring Austin's Next Innovation Wave",
@@ -96,6 +112,24 @@ export default function MarketFundamentals() {
         },
       ],
     },
+    ...(includeAustinSurfClub
+      ? [
+          {
+            heading: 'Austin Surf Club',
+            cards: [
+              {
+                title: 'Austin Surf Club',
+                paragraphs: [
+                  'Austin Surf Club is a surf-centric luxury residential community being developed in Del Valle by Discovery Land Company, in partnership with professional surfer Kelly Slater. The project spans more than 330 acres and includes 140 condominiums, along with a private clubhouse, brewery, and restaurant, anchored by a 2,220-square-foot surf basin powered by Kelly Slater Wave Company technology.',
+                  'By late 2025, dozens of homes and memberships had reportedly been presold, with home prices generally ranging from the low-$2MMs to $4MM+, depending on size and surf-basin frontage. Surf Club memberships are structured separately, with initiation fees reported in the low six figures plus annual dues.',
+                  'High-profile early buyers and members are widely reported to include Matthew McConaughey, Tony Hawk, and Drew Brees. The project is located in Del Valle, approximately 3–5 miles (7–10 minutes by car) from The Row.',
+                ],
+                images: [{ src: austinSurfClubImage, alt: 'Austin Surf Club' }],
+              },
+            ],
+          },
+        ]
+      : []),
     {
       heading: 'NVIDIA',
       containerClass: 'mt-8 sm:mt-12 md:mt-16',
@@ -176,6 +210,7 @@ export default function MarketFundamentals() {
 
   return (
     <section className="mb-8 sm:mb-10 md:mb-12">
+      {anchors?.delViaId ? <div id={anchors.delViaId} className="scroll-mt-24" /> : null}
       <h3 className="section-title">Del Via Multifamily</h3>
       
       <ChartContainer className="mb-4">
@@ -188,17 +223,24 @@ export default function MarketFundamentals() {
         />
       </ChartContainer>
       
-      <h3 className="section-title mt-4 sm:mt-6 md:mt-8">Employer Expansion & Economic Momentum</h3>
+      {anchors?.austinMarketId ? <div id={anchors.austinMarketId} className="scroll-mt-24" /> : null}
+      <h3 className="section-title mt-4 sm:mt-6 md:mt-8">{austinMarketTitle}</h3>
 
       <div className="mt-6 sm:mt-8 md:mt-10">
         {companySections.map(({ cards, containerClass, heading }) => (
           <div key={heading} className={containerClass ?? 'mt-6 sm:mt-8 md:mt-10'}>
-            <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary-700 mb-4 sm:mb-6 md:mb-8 lg:mb-10 text-center">
-              {heading}
-            </h4>
+            {variant === 'agora' ? (
+              <h4 className="text-sm sm:text-base font-semibold text-gray-900 mb-3 sm:mb-4">
+                {heading}
+              </h4>
+            ) : (
+              <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary-700 mb-4 sm:mb-6 md:mb-8 lg:mb-10 text-center">
+                {heading}
+              </h4>
+            )}
             <div className="space-y-4 sm:space-y-6 md:space-y-8 lg:space-y-10">
               {cards.map((card) => (
-                <CompanyCard key={card.title} {...card} />
+                <CompanyCard key={card.title} {...card} variant={variant} />
               ))}
             </div>
           </div>

@@ -1,42 +1,7 @@
-'use client'
+import { redirect } from 'next/navigation'
 
-import Header from '@/components/Header'
-import InvestmentThesis from '@/components/InvestmentThesis'
-import MasterPlan from '@/components/MasterPlan'
-import RetailDestination from '@/components/RetailDestination'
-import RetailCorePhasing from '@/components/RetailCorePhasing'
-import RetailCoreRendering from '@/components/RetailCoreRendering'
-import MarketFundamentals from '@/components/MarketFundamentals'
-import Footer from '@/components/Footer'
+import { LATEST_UPDATE } from '@/constants/monthlyUpdates'
 
 export default function Home() {
-  return (
-    <div className="min-h-screen bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Header />
-        <InvestmentThesis />
-        <MasterPlan />
-        <RetailDestination />
-        <section className="mb-8 sm:mb-10 md:mb-12">
-          <h3 className="section-title">RETAIL CORE</h3>
-          <div className="space-y-8 sm:space-y-10 md:space-y-12">
-            <div>
-              <h4 className="text-primary-500 text-lg mb-5 font-bold uppercase tracking-wide text-center">
-                Retail Core Phasing
-              </h4>
-              <RetailCorePhasing />
-            </div>
-            <div>
-              <h4 className="text-primary-500 text-lg mb-5 font-bold uppercase tracking-wide text-center">
-                Retail Core Rendering
-              </h4>
-              <RetailCoreRendering />
-            </div>
-          </div>
-        </section>
-        <MarketFundamentals />
-        <Footer />
-      </div>
-    </div>
-  )
+  redirect(LATEST_UPDATE.href)
 }

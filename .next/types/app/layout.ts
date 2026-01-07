@@ -1,4 +1,4 @@
-// File: C:\Users\sdong\Desktop\The Row Monthly Update_JJP\app\layout.tsx
+// File: C:\Users\sdong\Desktop\the-row-monthly-update-jjp\app\layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

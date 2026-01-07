@@ -5,8 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'The Row Monthly Update - Dec 2025',
-  description: 'December 2025 Market Intelligence Report - Strategic positioning at market inflection point',
+  title: 'The Row Monthly Update',
+  description: 'Monthly market intelligence report',
 }
 
 export default function RootLayout({
@@ -16,7 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+      </body>
     </html>
   )
 }

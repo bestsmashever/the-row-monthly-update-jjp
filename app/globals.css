@@ -22,6 +22,141 @@
 }
 
 @layer components {
+  /* Jan 2026 "Agora-like" theme (scoped) */
+  .agora-theme {
+    color: #111827;
+  }
+
+  /* Jan 2026 Agora: content typography normalization (do not affect the blue header) */
+  .agora-theme .agora-content {
+    font-size: 16px;
+    line-height: 1.65;
+    color: #111827;
+  }
+
+  .agora-theme .agora-content .uppercase {
+    text-transform: none !important;
+  }
+
+  .agora-theme .agora-content .tracking-wide,
+  .agora-theme .agora-content .tracking-wider,
+  .agora-theme .agora-content .tracking-widest {
+    letter-spacing: 0 !important;
+  }
+
+  .agora-theme .agora-content h4,
+  .agora-theme .agora-content h5 {
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
+  /* Neutralize brand blues inside the themed page */
+  .agora-theme :not(.site-header).text-primary-500,
+  .agora-theme :not(.site-header).text-primary-600,
+  .agora-theme :not(.site-header).text-primary-700,
+  .agora-theme :not(.site-header) .text-primary-500,
+  .agora-theme :not(.site-header) .text-primary-600,
+  .agora-theme :not(.site-header) .text-primary-700 {
+    color: #111827 !important;
+  }
+
+  .agora-theme :not(.site-header).border-primary-500,
+  .agora-theme :not(.site-header).border-primary-600,
+  .agora-theme :not(.site-header).border-primary-700,
+  .agora-theme :not(.site-header) .border-primary-500,
+  .agora-theme :not(.site-header) .border-primary-600,
+  .agora-theme :not(.site-header) .border-primary-700 {
+    border-color: #e5e7eb !important;
+  }
+
+  /* Keep the header in original "financial blue"; neutralize brand fills elsewhere */
+  .agora-theme :not(.site-header).bg-primary-500,
+  .agora-theme :not(.site-header).bg-primary-600,
+  .agora-theme :not(.site-header) .bg-primary-500,
+  .agora-theme :not(.site-header) .bg-primary-600 {
+    background-color: #111827 !important;
+  }
+
+  /* Core components: simplify, reduce chrome */
+  .agora-theme .section-title {
+    @apply text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-900 mb-6 sm:mb-8 tracking-normal border-b border-gray-200 pb-2 sm:pb-3;
+  }
+
+  .agora-theme .chart-container {
+    @apply bg-white border border-gray-200 p-4 sm:p-6 shadow-sm rounded-lg;
+  }
+
+  .agora-theme .metric-card {
+    @apply bg-white text-gray-900 border border-gray-200 shadow-sm hover:shadow-sm hover:bg-white hover:text-gray-900;
+  }
+
+  .agora-theme .fundamental-item {
+    @apply border border-gray-200 shadow-sm hover:shadow-sm hover:-translate-y-0 hover:border-gray-200;
+  }
+
+  .agora-theme .comparison-table-container {
+    @apply border border-gray-200 shadow-sm rounded-lg;
+  }
+
+  .agora-theme .comparison-table th {
+    @apply bg-gray-100 text-gray-900 border-gray-200;
+  }
+
+  .agora-theme .total-row {
+    @apply bg-gray-100 text-gray-900;
+  }
+
+  .agora-theme .total-row td,
+  .agora-theme .total-row td span {
+    @apply text-gray-900 border-gray-200;
+  }
+
+  /* Company cards: reduce emphasis and remove blue accents */
+  .agora-theme .company-card-grid h5 {
+    @apply text-gray-900;
+  }
+
+  .agora-theme .section-nav {
+    @apply rounded-lg border border-gray-200 bg-white/90 p-4 shadow-sm backdrop-blur;
+  }
+
+  /* Agora: unify Overview bullet typography + spacing */
+  .agora-theme .overview-list {
+    font-size: 16px !important;
+    line-height: 1.65 !important;
+    color: #111827;
+    padding-left: 0 !important;
+  }
+
+  .agora-theme .overview-list strong {
+    font-weight: 600;
+    color: #111827;
+  }
+
+  /* Make bullets align cleanly and wrap nicely */
+  .agora-theme .overview-list ul {
+    list-style-position: outside !important;
+    padding-left: 1.25rem !important;
+    margin-top: 0.5rem;
+    margin-left: 0 !important;
+  }
+
+  .agora-theme .overview-list li {
+    margin-top: 0.5rem;
+  }
+
+  /* Inner "▶" bullets: consistent alignment */
+  .agora-theme .overview-list .bullet-arrow {
+    width: 1.25rem;
+    flex: 0 0 1.25rem;
+    margin-right: 0.5rem !important;
+  }
+
+  /* Reduce random Tailwind spacing from list-inside patterns */
+  .agora-theme .overview-list .list-inside {
+    list-style-position: outside !important;
+  }
+
   .section-title {
     @apply text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-6 sm:mb-8 uppercase tracking-wide border-b-3 border-primary-500 pb-2 sm:pb-3;
   }
