@@ -121,8 +121,8 @@ export default function MarketFundamentals({
                 title: 'Austin Surf Club',
                 paragraphs: [
                   'Austin Surf Club is a surf-centric luxury residential community being developed in Del Valle by Discovery Land Company, in partnership with professional surfer Kelly Slater. The project spans more than 330 acres and includes 140 condominiums, along with a private clubhouse, brewery, and restaurant, anchored by a 2,220-square-foot surf basin powered by Kelly Slater Wave Company technology.',
-                  'By late 2025, dozens of homes and memberships had reportedly been presold, with home prices generally ranging from the low-$2MMs to $4MM+, depending on size and surf-basin frontage. Surf Club memberships are structured separately, with initiation fees reported in the low six figures plus annual dues.',
-                  'High-profile early buyers and members are widely reported to include Matthew McConaughey, Tony Hawk, and Drew Brees. The project is located in Del Valle, approximately 3–5 miles (7–10 minutes by car) from The Row.',
+                  'By late 2025, dozens of homes and memberships had reportedly been presold, with residential pricing generally ranging from the low-$2MMs to $4MM+, depending on unit type and proximity to the surf basin. Memberships are structured separately, with initiation fees reported in the low six figures, plus annual dues.',
+                  'High-profile early buyers and members are widely reported to include Matthew McConaughey, Tony Hawk, and Drew Brees. The site is located approximately 3–5 miles (7–10 minutes by car) from The Row.',
                 ],
                 images: [{ src: austinSurfClubImage, alt: 'Austin Surf Club' }],
               },

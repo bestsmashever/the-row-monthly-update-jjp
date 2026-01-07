@@ -4,7 +4,7 @@ import RetailDestination from '@/components/RetailDestination'
 import RetailCorePhasing from '@/components/RetailCorePhasing'
 import RetailCoreRendering from '@/components/RetailCoreRendering'
 import MarketFundamentals from '@/components/MarketFundamentals'
-import potentialLandSalesMapImage from '@/public/Potential Land Sales Map.jpg'
+import amazonAndAeMapImage from '@/public/Amazon and AE Map.jpg'
 import rowDebtMapJan2026Image from '@/public/The Row Debt Map_Jan 2026.jpg'
 import AmazonTransactionsTable from '@/components/updates/2026-01/AmazonTransactionsTable'
 
@@ -17,15 +17,6 @@ export default function Jan2026Body() {
           landSalesId: 'potential-land-sales',
           block2RetailId: 'block-2-retail',
         }}
-        landSalesExtraItems={
-          <li>
-            <strong>SMT Energy:</strong> In search of sites for an existing data
-            center partner. Particularly looking for sustainable energy sources
-            for long term power. Will pay for all interconnect studies through
-            Austin Energy and ERCOT during an extended feasibility period (2
-            years). They are interested in 30-50 acres at $15.00/sf.
-          </li>
-        }
         retailUpdateContent={
           <ul className="list-disc list-inside mt-2 space-y-3 ml-6">
             <li>
@@ -33,9 +24,8 @@ export default function Jan2026Body() {
               talking with Starbucks, Pluckers, and a local coffee/cocktail
               concept to replace Portllo&apos;s as the pad user. We are also
               negotiating terms with a few other potential tenants for the
-              22,000 inline space. The construction lender is ready to close,
-              and the equity raise is advancing with two groups in active
-              discussions.
+              22,000 inline space. The construction lender is ready to close, 
+              and the equity raise is advancing with one group.
             </li>
             <li>
               <strong>Other Site Retail:</strong>
@@ -68,8 +58,8 @@ export default function Jan2026Body() {
           </ul>
         }
         amazonSectionTitle="Potential Land Sales"
-        amazonHeroImage={potentialLandSalesMapImage}
-        amazonHeroAlt="Potential Land Sales Map"
+        amazonHeroImage={amazonAndAeMapImage}
+        amazonHeroAlt="Amazon and Austin Energy Map"
         debtMapTone="neutral"
         debtMapTitle="The Row Debt Map"
         debtMapPrimaryImage={rowDebtMapJan2026Image}
@@ -97,8 +87,8 @@ export default function Jan2026Body() {
             .
           </>
         }
-        additional25AcresLoiLabel="Additional 25 Acres - LOI Executed by Presidium"
-        additional25AcresLoiText="offer is for a SDD (same-day delivery) facility; price is $13.5/land sf and we are waiting for Amazon's signature."
+        additional25AcresLoiLabel="Additional 25 Acres – LOI Under Negotiation"
+        additional25AcresLoiText="offer is for a SDD (same-day delivery) facility; aiming for $13.5/land sf and shared infrastructure."
         delViaSummaryText="Occupancy 16.28% | Leased 20.52%; Market Rent: $2.19/sf | $1,796/unit; Concession: 6-10 weeks free (12.5% to 20.8% off)"
       />
 
