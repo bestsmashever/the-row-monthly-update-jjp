@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import type { ReactNode } from 'react'
 
 import { FULL_WIDTH_SIZES } from '@/constants/media'
 import ChartContainer from '@/components/layout/ChartContainer'
@@ -25,14 +26,18 @@ type MarketFundamentalsProps = {
     austinMarketId?: string
   }
   austinMarketTitle?: string
+  beforeAustinMarketContent?: ReactNode
   variant?: 'default' | 'agora'
+  includeDelVia?: boolean
   includeAustinSurfClub?: boolean
 }
 
 export default function MarketFundamentals({
   anchors,
   austinMarketTitle = 'Employer Expansion & Economic Momentum',
+  beforeAustinMarketContent,
   variant = 'default',
+  includeDelVia = true,
   includeAustinSurfClub = false,
 }: MarketFundamentalsProps) {
   const companySections = [
@@ -210,23 +215,31 @@ export default function MarketFundamentals({
 
   return (
     <section className="mb-8 sm:mb-10 md:mb-12">
-      {anchors?.delViaId ? <div id={anchors.delViaId} className="scroll-mt-24" /> : null}
-      <h3 className="section-title">Del Via Multifamily</h3>
-      
-      <ChartContainer className="mb-4">
-        <Image
-          src={delViaMultifamilyImage}
-          alt="Del Via Multifamily"
-          sizes={FULL_WIDTH_SIZES}
-          className="h-auto w-full rounded-lg object-contain"
-          loading="lazy"
-        />
-      </ChartContainer>
-      
-      {anchors?.austinMarketId ? <div id={anchors.austinMarketId} className="scroll-mt-24" /> : null}
-      <h3 className="section-title mt-4 sm:mt-6 md:mt-8">{austinMarketTitle}</h3>
+      {includeDelVia ? (
+        <>
+          {anchors?.delViaId ? <div id={anchors.delViaId} className="scroll-mt-24" /> : null}
+          <h3 className="section-title">Del Via Multifamily</h3>
 
-      <div className="mt-6 sm:mt-8 md:mt-10">
+          <ChartContainer className="mb-4">
+            <Image
+              src={delViaMultifamilyImage}
+              alt="Del Via Multifamily"
+              sizes={FULL_WIDTH_SIZES}
+              className="h-auto w-full rounded-lg object-contain"
+              loading="lazy"
+            />
+          </ChartContainer>
+        </>
+      ) : null}
+
+      {anchors?.austinMarketId ? <div id={anchors.austinMarketId} className="scroll-mt-24" /> : null}
+      <h3 className={['section-title', includeDelVia ? 'mt-4 sm:mt-6 md:mt-8' : ''].filter(Boolean).join(' ')}>
+        {austinMarketTitle}
+      </h3>
+
+      {beforeAustinMarketContent ? <div className="mt-4 sm:mt-6 md:mt-8">{beforeAustinMarketContent}</div> : null}
+
+      <div className={['mt-6 sm:mt-8 md:mt-10', beforeAustinMarketContent ? '' : ''].filter(Boolean).join(' ')}>
         {companySections.map(({ cards, containerClass, heading }) => (
           <div key={heading} className={containerClass ?? 'mt-6 sm:mt-8 md:mt-10'}>
             {variant === 'agora' ? (

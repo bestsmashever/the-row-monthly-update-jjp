@@ -7,6 +7,7 @@ export type MonthlyUpdate = {
 
 // Keep this list in reverse-chronological order (latest first).
 export const MONTHLY_UPDATES: MonthlyUpdate[] = [
+  { id: '2026-03', label: 'Mar 2026', href: '/updates/2026-03' },
   { id: '2026-02', label: 'Feb 2026', href: '/updates/2026-02' },
   { id: '2026-01', label: 'Jan 2026', href: '/updates/2026-01' },
   { id: '2025-12', label: 'Dec 2025', href: '/updates/2025-12' },
