@@ -110,7 +110,10 @@ export default function InvestmentThesis({
               </ul>
             </li>
             <li>
-              <strong>Austin Energy Substation (7 Acres and 7 acres of Easement):</strong> We are awaiting final substation design which is dependent on the adjacent landowner (Austin Community College) to finalize the transmission route. The final transmission route is needed in order to finalize the substation design. We have executed a permission to survey the property once the substation design is finalized, this will officially kick off the appraisals process. Estimated closing time is Q4 2026.
+              <strong>Austin Energy Substation (7 Acres and 7 acres of Easement):</strong>{' '}
+              Austin Energy is finalizing the boundaries of the substation and
+              transmission route. Thereafter, they will officially kick off the appraisals process.
+              Estimated closing time is Q2 2027.
             </li>
             {landSalesExtraItems}
           </ul>
@@ -122,7 +125,13 @@ export default function InvestmentThesis({
           ) : (
             <ul className="list-disc list-inside mt-2 space-y-3 ml-6">
               <li>
-                <strong>Block 2 Retail:</strong> Site is shovel ready and we are negotiating with Shiner Smokehouse, a smoked meat and live music concept from Shiner, TX, to replace Portllo&apos;s. We are also negotiating terms with a few other potential tenants for the 22,000 inline space. The construction lender is ready to close, and the equity raise is advancing with two groups in active discussions.
+                <strong>Block 2 Retail:</strong> Site is shovel ready and we are
+                talking with Starbucks, Pluckers, and a local coffee/cocktail
+                concept to replace Portllo&apos;s as the pad user. We are also
+                negotiating terms with a few other potential tenants for the
+                22,000 inline space. Sunflower, lender, is reapproving the deal,
+                and XL funding is committed to $4M out of the total $5.5M equity
+                required.
               </li>
               <li>
                 <strong>Other Site Retail:</strong> Continuing conversations with a C-store/gas station concept and hotel operator for Block 1 (HEB). Conversations ongoing with other activator tenants, including pickleball, spas, MLB, brewery/bar, BBQ, etc.
@@ -134,7 +143,8 @@ export default function InvestmentThesis({
           )}
         </li>
         <li>
-          <strong>Retail Core & Master Plan:</strong> Design and permitting for the Retail Core are progressing as planned. We remain on track with the site plan review process, and permits are expected by April 2026.
+          <strong>Retail Core & Master Plan:</strong> Site development permits are
+          informally approved in April 2026.
         </li>
         <li>
           <strong>Del Via:</strong> {delViaSummaryText}

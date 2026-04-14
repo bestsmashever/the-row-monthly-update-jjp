@@ -26,7 +26,7 @@ function KeyIndicatorCard({
   )
 }
 
-export default function Mar2026Body() {
+export default function Apr2026Body() {
   return (
     <>
       <InvestmentThesis
@@ -42,7 +42,9 @@ export default function Mar2026Body() {
               talking with Starbucks, Pluckers, and a local coffee/cocktail
               concept to replace Portllo&apos;s as the pad user. We are also
               negotiating terms with a few other potential tenants for the
-              22,000 inline space.
+              22,000 inline space. Sunflower, lender, is reapproving the deal,
+              and XL funding is committed to $4M out of the total $5.5M equity
+              required.
               <ul className="list-none mt-2 space-y-2 ml-6">
                 <li className="flex">
                   <span className="bullet-arrow mr-2 text-primary-500 font-bold">
@@ -122,11 +124,9 @@ export default function Mar2026Body() {
         showMasterPlanHeading={false}
         underContract53AcresText={
           <>
-            PSA executed with due diligence in progress and the end user&apos;s
-            site plan under review. The preliminary plan has been formally
-            submitted. We are targeting non-refundable status by 3/27/2026,
-            preliminary plan approval by 4/22/2026, and final plat approval by
-            7/21/2026 to support closing. Closing timeline link{' '}
+            $700k went hard as of 4/9. Preliminary plan informal approved. We are
+            targeting final plat approval by 7/21/2026 to support closing.
+            Closing timeline link{' '}
             <a
               href="https://amazon1-psa-timeline.vercel.app/"
               target="_blank"
@@ -140,7 +140,7 @@ export default function Mar2026Body() {
         }
         additional25AcresLoiLabel="Additional 25 Acres – PSA Under Negotiation"
         additional25AcresLoiText="offer is for a SDD (same-day delivery) facility; aiming for $13.5/land sf and shared infrastructure."
-        delViaSummaryText="Occupancy 21.49% | Leased 27.68%; Market Rent: $2.19/sf | $1,796/unit; Concession: 6-10 weeks free (12.5% to 20.8% off)"
+        delViaSummaryText="Occupancy 29.64% | Leased 34.52%; Market Rent: $2.06/sf | $1,691/unit; Concession: 6-10 weeks free (12.5% to 20.8% off)"
       />
 
       <div id="retail-core-master-plan" className="scroll-mt-24" />
@@ -200,4 +200,3 @@ export default function Mar2026Body() {
     </>
   )
 }
-
