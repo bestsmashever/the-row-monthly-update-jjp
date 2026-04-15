@@ -75,7 +75,15 @@ export default function Apr2026Body() {
                     <strong>Huy Bao Ngo:</strong> We negotiated the LOI for
                     1,919 SF at a rent of $41/SF, with a 3% annual increase and
                     a $60/SF tenant improvement allowance. Currently awaiting
-                    their signature.
+                    their signature.{' '}
+                    <a
+                      href="https://theholicpho.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary-600 underline hover:no-underline"
+                    >
+                      The Holic Pho
+                    </a>
                   </span>
                 </li>
               </ul>
