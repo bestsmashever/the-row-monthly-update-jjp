@@ -72,8 +72,10 @@ export default function Apr2026Body() {
                     ▶
                   </span>
                   <span>
-                    <strong>Singa&apos;s Pizza</strong> is reviewing the site for
-                    approx. 1,900sf
+                    <strong>Huy Bao Ngo:</strong> We negotiated the LOI for
+                    1,919 SF at a rent of $41/SF, with a 3% annual increase and
+                    a $60/SF tenant improvement allowance. Currently awaiting
+                    their signature.
                   </span>
                 </li>
               </ul>
