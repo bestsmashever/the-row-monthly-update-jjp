@@ -36,69 +36,43 @@ export default function Mar2026Body() {
           block2RetailId: 'block-2-retail',
         }}
         retailUpdateContent={
-          <ul className="list-disc list-inside mt-2 space-y-3 ml-6">
+          <ul className="overview-section-list mt-2 space-y-3">
             <li>
               <strong>Block 2 Retail:</strong> Site is shovel ready and we are
               talking with Starbucks, Pluckers, and a local coffee/cocktail
               concept to replace Portllo&apos;s as the pad user. We are also
               negotiating terms with a few other potential tenants for the
               22,000 inline space.
-              <ul className="list-none mt-2 space-y-2 ml-6">
-                <li className="flex">
-                  <span className="bullet-arrow mr-2 text-primary-500 font-bold">
-                    ▶
-                  </span>
-                  <span>
-                    <strong>Starbucks:</strong> engaged corporate brokers to
-                    investigate site for corporate location for Suite 100
-                    (Portillo&apos;s pad). Open to licensing the location if
-                    corporate decides to pass.
-                  </span>
+              <ul className="overview-depth-block mt-2 space-y-2">
+                <li>
+                  <strong>Starbucks:</strong> engaged corporate brokers to
+                  investigate site for corporate location for Suite 100
+                  (Portillo&apos;s pad). Open to licensing the location if
+                  corporate decides to pass.
                 </li>
-                <li className="flex">
-                  <span className="bullet-arrow mr-2 text-primary-500 font-bold">
-                    ▶
-                  </span>
-                  <span>
-                    <strong>Keke&apos;s Breakfast</strong> (under the Denny&apos;s
-                    umbrella) has approved the location and is working through
-                    franchise documents
-                  </span>
+                <li>
+                  <strong>Keke&apos;s Breakfast</strong> (under the Denny&apos;s
+                  umbrella) has approved the location and is working through
+                  franchise documents
                 </li>
-                <li className="flex">
-                  <span className="bullet-arrow mr-2 text-primary-500 font-bold">
-                    ▶
-                  </span>
-                  <span>
-                    <strong>Singa&apos;s Pizza</strong> is reviewing the site for
-                    approx. 1,900sf
-                  </span>
+                <li>
+                  <strong>Singa&apos;s Pizza</strong> is reviewing the site for
+                  approx. 1,900sf
                 </li>
               </ul>
             </li>
             <li>
               <strong>Other Site Retail:</strong>
-              <ul className="list-none mt-2 space-y-2 ml-6">
-                <li className="flex">
-                  <span className="bullet-arrow mr-2 text-primary-500 font-bold">
-                    ▶
-                  </span>
-                  <span>
-                    Presidium is continuing to explore opportunities for
-                    HEB&apos;s replacement. Weitzman has re-engaged early
-                    conversations with Target.
-                  </span>
+              <ul className="overview-depth-block mt-2 space-y-2">
+                <li>
+                  Presidium is continuing to explore opportunities for
+                  HEB&apos;s replacement. Weitzman has re-engaged early
+                  conversations with Target.
                 </li>
-                <li className="flex">
-                  <span className="bullet-arrow mr-2 text-primary-500 font-bold">
-                    ▶
-                  </span>
-                  <span>
-                    We are exploring an opportunity for a JV with local retail
-                    developer TOPO for a mixed-use approach to Block 1,
-                    including additional MF, Retail (pads and restaurants) and
-                    a hotel.
-                  </span>
+                <li>
+                  We are exploring an opportunity for a JV with local retail
+                  developer TOPO for a mixed-use approach to Block 1, including
+                  additional MF, Retail (pads and restaurants) and a hotel.
                 </li>
               </ul>
             </li>

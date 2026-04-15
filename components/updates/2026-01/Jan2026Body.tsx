@@ -18,7 +18,7 @@ export default function Jan2026Body() {
           block2RetailId: 'block-2-retail',
         }}
         retailUpdateContent={
-          <ul className="list-disc list-inside mt-2 space-y-3 ml-6">
+          <ul className="overview-section-list mt-2 space-y-3">
             <li>
               <strong>Block 2 Retail:</strong> Site is shovel ready and we are
               talking with Starbucks, Pluckers, and a local coffee/cocktail
@@ -29,22 +29,16 @@ export default function Jan2026Body() {
             </li>
             <li>
               <strong>Other Site Retail:</strong>
-              <ul className="list-none mt-2 space-y-2 ml-6">
-                <li className="flex">
-                  <span className="bullet-arrow mr-2 text-primary-500 font-bold">▶</span>
-                  <span>
-                    Continuing conversations with a C-store/gas station concept
-                    and hotel operator for Block 1 (HEB). Conversations ongoing
-                    with other activator tenants, including pickleball, spas,
-                    MLB, brewery/bar, BBQ, etc.
-                  </span>
+              <ul className="overview-depth-block mt-2 space-y-2">
+                <li>
+                  Continuing conversations with a C-store/gas station concept
+                  and hotel operator for Block 1 (HEB). Conversations ongoing
+                  with other activator tenants, including pickleball, spas, MLB,
+                  brewery/bar, BBQ, etc.
                 </li>
-                <li className="flex">
-                  <span className="bullet-arrow mr-2 text-primary-500 font-bold">▶</span>
-                  <span>
-                    Executed an exclusivity agreement with another local
-                    developer to explore purchasing Lot 1.
-                  </span>
+                <li>
+                  Executed an exclusivity agreement with another local developer
+                  to explore purchasing Lot 1.
                 </li>
               </ul>
             </li>

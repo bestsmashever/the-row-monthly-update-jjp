@@ -145,16 +145,62 @@
     margin-top: 0.5rem;
   }
 
-  /* Inner "▶" bullets: consistent alignment */
-  .agora-theme .overview-list .bullet-arrow {
-    width: 1.25rem;
-    flex: 0 0 1.25rem;
-    margin-right: 0.5rem !important;
-  }
-
   /* Reduce random Tailwind spacing from list-inside patterns */
   .agora-theme .overview-list .list-inside {
     list-style-position: outside !important;
+  }
+
+  /* Overview: first-level bullets under each section heading (Land Sales, Retail, etc.) */
+  .agora-theme .overview-list .overview-section-list {
+    margin-top: 0.5rem;
+    margin-left: 0 !important;
+    padding-left: 1.25rem !important;
+    list-style-type: disc;
+    list-style-position: outside !important;
+  }
+
+  /* Overview: subordinate facts — institutional memo rail (no secondary bullets) */
+  .agora-theme .overview-list ul.overview-depth-block {
+    margin-top: 0.5rem !important;
+    margin-left: 0 !important;
+    padding-left: 0.875rem !important;
+    padding-top: 0.125rem;
+    padding-bottom: 0.125rem;
+    border-left: 1px solid #d1d5db;
+    list-style: none !important;
+    list-style-type: none !important;
+  }
+
+  .agora-theme .overview-list ul.overview-depth-block li {
+    padding-left: 0.5rem;
+    margin-top: 0.5rem;
+    text-align: left;
+  }
+
+  .agora-theme .overview-list ul.overview-depth-block li:first-child {
+    margin-top: 0;
+  }
+
+  /* Nested line that should read as a classic bullet (e.g. Retail Core sub-fact) */
+  .agora-theme .overview-list ul.overview-depth-disc {
+    margin-top: 0.5rem !important;
+    margin-left: 0 !important;
+    padding-left: 1.25rem !important;
+    list-style-type: disc !important;
+    list-style-position: outside !important;
+    border-left: none;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .agora-theme .overview-list ul.overview-depth-disc li {
+    padding-left: 0.125rem;
+    margin-top: 0.35rem;
+    text-align: left;
+  }
+
+  .agora-theme .overview-list ul.overview-depth-disc li:first-child {
+    margin-top: 0;
   }
 
   .section-title {

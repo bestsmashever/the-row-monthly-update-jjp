@@ -35,6 +35,8 @@ type InvestmentThesisProps = {
   additional25AcresLoiLabel?: string
   additional25AcresLoiText?: string
   delViaSummaryText?: string
+  austinEnergySubstationSuffix?: string
+  retailCoreMasterPlanContent?: React.ReactNode
 }
 
 const DEFAULT_UNDER_CONTRACT_53_ACRES_TEXT =
@@ -47,6 +49,8 @@ const DEFAULT_ADDITIONAL_25_ACRES_LOI_TEXT =
 
 const DEFAULT_DEL_VIA_SUMMARY_TEXT =
   'Occupancy 14.33% | Leased 19.21%; Market Rent: $2.19/sf | $1,796/unit; Concession: 6-10 weeks free (12.5% to 20.8% off)'
+
+const DEFAULT_AUSTIN_ENERGY_SUBSTATION_SUFFIX = ' Estimated closing time is Q2 2027.'
 
 export default function InvestmentThesis({
   anchors,
@@ -70,6 +74,8 @@ export default function InvestmentThesis({
   additional25AcresLoiLabel = DEFAULT_ADDITIONAL_25_ACRES_LOI_LABEL,
   additional25AcresLoiText = DEFAULT_ADDITIONAL_25_ACRES_LOI_TEXT,
   delViaSummaryText = DEFAULT_DEL_VIA_SUMMARY_TEXT,
+  austinEnergySubstationSuffix = DEFAULT_AUSTIN_ENERGY_SUBSTATION_SUFFIX,
+  retailCoreMasterPlanContent,
 }: InvestmentThesisProps) {
   const debtHeadingClassName =
     debtMapTone === 'neutral'
@@ -89,23 +95,17 @@ export default function InvestmentThesis({
       <ul className="overview-list text-base sm:text-lg leading-relaxed mb-6 sm:mb-7 text-gray-700 pl-4 sm:pl-5 space-y-4 sm:space-y-5">
         <li>
           <strong>Potential Land Sales</strong>
-          <ul className="list-disc list-inside mt-2 space-y-3 ml-6">
+          <ul className="overview-section-list mt-2 space-y-3">
             <li>
               <strong>Amazon:</strong>
-              <ul className="list-none mt-2 space-y-2 ml-6">
-                <li className="flex">
-                  <span className="bullet-arrow mr-2 text-primary-500 font-bold">▶</span>
-                  <span>
-                    <strong>Under Contract (53 Acres):</strong>{' '}
-                    {underContract53AcresText}
-                  </span>
+              <ul className="overview-depth-block mt-2 space-y-2">
+                <li>
+                  <strong>Under Contract (53 Acres):</strong>{' '}
+                  {underContract53AcresText}
                 </li>
-                <li className="flex">
-                  <span className="bullet-arrow mr-2 text-primary-500 font-bold">▶</span>
-                  <span>
-                    <strong>{additional25AcresLoiLabel}:</strong>{' '}
-                    {additional25AcresLoiText}
-                  </span>
+                <li>
+                  <strong>{additional25AcresLoiLabel}:</strong>{' '}
+                  {additional25AcresLoiText}
                 </li>
               </ul>
             </li>
@@ -113,7 +113,7 @@ export default function InvestmentThesis({
               <strong>Austin Energy Substation (7 Acres and 7 acres of Easement):</strong>{' '}
               Austin Energy is finalizing the boundaries of the substation and
               transmission route. Thereafter, they will officially kick off the appraisals process.
-              Estimated closing time is Q2 2027.
+              {austinEnergySubstationSuffix}
             </li>
             {landSalesExtraItems}
           </ul>
@@ -123,7 +123,7 @@ export default function InvestmentThesis({
           {retailUpdateContent ? (
             retailUpdateContent
           ) : (
-            <ul className="list-disc list-inside mt-2 space-y-3 ml-6">
+            <ul className="overview-section-list mt-2 space-y-3">
               <li>
                 <strong>Block 2 Retail:</strong> Site is shovel ready and we are
                 talking with Starbucks, Pluckers, and a local coffee/cocktail
@@ -143,8 +143,12 @@ export default function InvestmentThesis({
           )}
         </li>
         <li>
-          <strong>Retail Core & Master Plan:</strong> Site development permits are
-          informally approved in April 2026.
+          {retailCoreMasterPlanContent ?? (
+            <>
+              <strong>Retail Core & Master Plan:</strong> Site development permits are
+              informally approved in April 2026.
+            </>
+          )}
         </li>
         <li>
           <strong>Del Via:</strong> {delViaSummaryText}

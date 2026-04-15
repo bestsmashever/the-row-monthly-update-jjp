@@ -36,87 +36,55 @@ export default function Apr2026Body() {
           block2RetailId: 'block-2-retail',
         }}
         retailUpdateContent={
-          <ul className="list-disc list-inside mt-2 space-y-3 ml-6">
+          <ul className="overview-section-list mt-2 space-y-3">
             <li>
               <strong>Block 2 Retail:</strong> Site is shovel ready and we are
               talking with Starbucks, Pluckers, and a local coffee/cocktail
               concept to replace Portllo&apos;s as the pad user. We are also
               negotiating terms with a few other potential tenants for the
-              22,000 inline space. Sunflower, lender, is reapproving the deal,
-              and XL funding is committed to $4M out of the total $5.5M equity
-              required.
-              <ul className="list-none mt-2 space-y-2 ml-6">
-                <li className="flex">
-                  <span className="bullet-arrow mr-2 text-primary-500 font-bold">
-                    ▶
-                  </span>
-                  <span>
-                    <strong>Starbucks:</strong> engaged corporate brokers to
-                    investigate site for corporate location for Suite 100
-                    (Portillo&apos;s pad). Open to licensing the location if
-                    corporate decides to pass.
-                  </span>
+              22,000 inline space. Sunflower, lender, is in the process of
+              reapproving the deal, and XL funding is committed to $4M out of the
+              total $5.5M equity required. We are attempting to raise the balance
+              of $1.5mm of equity from retail investors.
+              <ul className="overview-depth-block mt-2 space-y-2">
+                <li>
+                  <strong>Starbucks:</strong> engaged corporate brokers to
+                  investigate site for corporate location for Suite 100
+                  (Portillo&apos;s pad). Open to licensing the location if
+                  corporate decides to pass.
                 </li>
-                <li className="flex">
-                  <span className="bullet-arrow mr-2 text-primary-500 font-bold">
-                    ▶
-                  </span>
-                  <span>
-                    <strong>Keke&apos;s Breakfast</strong> (under the Denny&apos;s
-                    umbrella) has approved the location and is working through
-                    franchise documents
-                  </span>
+                <li>
+                  <strong>Keke&apos;s Breakfast</strong> (under the Denny&apos;s
+                  umbrella) has approved the location and is working through
+                  franchise documents
                 </li>
-                <li className="flex">
-                  <span className="bullet-arrow mr-2 text-primary-500 font-bold">
-                    ▶
-                  </span>
-                  <span>
-                    <strong>Huy Bao Ngo:</strong> We negotiated the LOI for
-                    1,919 SF at a rent of $41/SF, with a 3% annual increase and
-                    a $60/SF tenant improvement allowance. Currently awaiting
-                    their signature.{' '}
-                    <a
-                      href="https://theholicpho.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-primary-600 underline hover:no-underline"
-                    >
-                      The Holic Pho
-                    </a>
-                  </span>
+                <li>
+                  <strong>Singa&apos;s Pizza</strong> is reviewing the site for
+                  approx. 1,900sf
+                </li>
+                <li>
+                  <strong>Holic Pho</strong> – negotiating LOI for 1,900 sf
+                </li>
+                <li>
+                  <strong>Kilwin&apos;s Ice Cream</strong> – expression of
+                  interest from broker
                 </li>
               </ul>
             </li>
             <li>
               <strong>Other Site Retail:</strong>
-              <ul className="list-none mt-2 space-y-2 ml-6">
-                <li className="flex">
-                  <span className="bullet-arrow mr-2 text-primary-500 font-bold">
-                    ▶
-                  </span>
-                  <span>
-                    Presidium is continuing to explore opportunities for
-                    HEB&apos;s replacement. Weitzman has re-engaged early
-                    conversations with Target.
-                  </span>
+              <ul className="overview-depth-block mt-2 space-y-2">
+                <li>
+                  Presidium is continuing to explore opportunities for
+                  HEB&apos;s replacement. Weitzman has re-engaged early
+                  conversations with Target and Costco.
                 </li>
-                <li className="flex">
-                  <span className="bullet-arrow mr-2 text-primary-500 font-bold">
-                    ▶
-                  </span>
-                  <span>
-                    We are exploring an opportunity for a JV with local retail
-                    developer TOPO for a mixed-use approach to Block 1,
-                    including additional MF, Retail (pads and restaurants) and
-                    a hotel.
-                  </span>
+                <li>
+                  We are exploring an opportunity for a JV with local retail
+                  developer TOPO for a mixed-use approach to Block 1, including
+                  additional MF, Retail (pads and restaurants) and a hotel.
                 </li>
               </ul>
-            </li>
-            <li>
-              <strong>New Leasing Agent:</strong> After a prolonged interview
-              process with several retail brokerages, we&apos;ve engaged Weitzman Group.
             </li>
           </ul>
         }
@@ -132,11 +100,25 @@ export default function Apr2026Body() {
         debtMapSecondaryContent={<AmazonTransactionsTable />}
         debtMapSecondaryContentPadding={false}
         showMasterPlanHeading={false}
+        austinEnergySubstationSuffix=""
+        retailCoreMasterPlanContent={
+          <>
+            <strong>Retail Core & Master Plan:</strong> Site development permits
+            were informally approved in April 2026.
+            <ul className="overview-depth-disc mt-2 space-y-2">
+              <li>
+                <strong>AC Hotel Developer (Merritt)</strong> identified a
+                restaurant group for the hotel (Southerleigh), and is gaining
+                traction with equity.
+              </li>
+            </ul>
+          </>
+        }
         underContract53AcresText={
           <>
-            $700k went hard as of 4/9. Preliminary plan informal approved. We are
-            targeting final plat approval by 7/21/2026 to support closing.
-            Closing timeline link{' '}
+            $700k went non-refundable as of 4/9 and was released to us.
+            Preliminary plan informal approved. We are targeting final plat
+            approval by 7/21/2026 to support closing. Closing timeline link{' '}
             <a
               href="https://amazon1-psa-timeline.vercel.app/"
               target="_blank"
