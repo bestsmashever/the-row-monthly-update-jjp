@@ -79,12 +79,12 @@ export default function InvestmentThesis({
 }: InvestmentThesisProps) {
   const debtHeadingClassName =
     debtMapTone === 'neutral'
-      ? 'text-gray-900 text-lg mb-5 font-semibold tracking-wide text-center'
+      ? 'report-subtitle'
       : 'text-primary-500 text-lg mb-5 font-bold uppercase tracking-wide text-center'
 
   const debtBoxClassName =
     debtMapTone === 'neutral'
-      ? 'bg-white border border-gray-200 p-0 shadow-sm mb-8 sm:mb-10 md:mb-12'
+      ? 'report-media-frame mb-8 sm:mb-10 md:mb-12'
       : 'bg-white border-2 border-primary-500 p-0 shadow-lg mb-8 sm:mb-10 md:mb-12'
 
   return (
@@ -92,68 +92,70 @@ export default function InvestmentThesis({
       {anchors?.overviewId ? <div id={anchors.overviewId} className="scroll-mt-24" /> : null}
       <h3 className="section-title">Overview</h3>
       
-      <ul className="overview-list text-base sm:text-lg leading-relaxed mb-6 sm:mb-7 text-gray-700 pl-4 sm:pl-5 space-y-4 sm:space-y-5">
-        <li>
-          <strong>Potential Land Sales</strong>
-          <ul className="overview-section-list mt-2 space-y-3">
-            <li>
-              <strong>Amazon:</strong>
-              <ul className="overview-depth-block mt-2 space-y-2">
-                <li>
-                  <strong>Under Contract (53 Acres):</strong>{' '}
-                  {underContract53AcresText}
-                </li>
-                <li>
-                  <strong>{additional25AcresLoiLabel}:</strong>{' '}
-                  {additional25AcresLoiText}
-                </li>
-              </ul>
-            </li>
-            <li>
-              <strong>Austin Energy Substation (7 Acres and 7 acres of Easement):</strong>{' '}
-              Austin Energy is finalizing the boundaries of the substation and
-              transmission route. Thereafter, they will officially kick off the appraisals process.
-              {austinEnergySubstationSuffix}
-            </li>
-            {landSalesExtraItems}
-          </ul>
-        </li>
-        <li>
-          <strong>Retail Update</strong>
-          {retailUpdateContent ? (
-            retailUpdateContent
-          ) : (
+      <div className="report-panel report-copy-block">
+        <ul className="overview-list text-base sm:text-lg leading-relaxed text-gray-700 pl-4 sm:pl-5 space-y-4 sm:space-y-5">
+          <li>
+            <strong>Potential Land Sales</strong>
             <ul className="overview-section-list mt-2 space-y-3">
               <li>
-                <strong>Block 2 Retail:</strong> Site is shovel ready and we are
-                talking with Starbucks, Pluckers, and a local coffee/cocktail
-                concept to replace Portllo&apos;s as the pad user. We are also
-                negotiating terms with a few other potential tenants for the
-                22,000 inline space. Sunflower, lender, is reapproving the deal,
-                and XL funding is committed to $4M out of the total $5.5M equity
-                required.
+                <strong>Amazon:</strong>
+                <ul className="overview-depth-block mt-2 space-y-2">
+                  <li>
+                    <strong>Under Contract (53 Acres):</strong>{' '}
+                    {underContract53AcresText}
+                  </li>
+                  <li>
+                    <strong>{additional25AcresLoiLabel}:</strong>{' '}
+                    {additional25AcresLoiText}
+                  </li>
+                </ul>
               </li>
               <li>
-                <strong>Other Site Retail:</strong> Continuing conversations with a C-store/gas station concept and hotel operator for Block 1 (HEB). Conversations ongoing with other activator tenants, including pickleball, spas, MLB, brewery/bar, BBQ, etc.
+                <strong>Austin Energy Substation (7 Acres and 7 acres of Easement):</strong>{' '}
+                Austin Energy is finalizing the boundaries of the substation and
+                transmission route. Thereafter, they will officially kick off the appraisals process.
+                {austinEnergySubstationSuffix}
               </li>
-              <li>
-                <strong>New Leasing Agent:</strong> We're hoping to bring on a new leasing agent for the site in early 2026.
-              </li>
+              {landSalesExtraItems}
             </ul>
-          )}
-        </li>
-        <li>
-          {retailCoreMasterPlanContent ?? (
-            <>
-              <strong>Retail Core & Master Plan:</strong> Site development permits are
-              informally approved in April 2026.
-            </>
-          )}
-        </li>
-        <li>
-          <strong>Del Via:</strong> {delViaSummaryText}
-        </li>
-      </ul>
+          </li>
+          <li>
+            <strong>Retail Update</strong>
+            {retailUpdateContent ? (
+              retailUpdateContent
+            ) : (
+              <ul className="overview-section-list mt-2 space-y-3">
+                <li>
+                  <strong>Block 2 Retail:</strong> Site is shovel ready and we are
+                  talking with Starbucks, Pluckers, and a local coffee/cocktail
+                  concept to replace Portllo&apos;s as the pad user. We are also
+                  negotiating terms with a few other potential tenants for the
+                  22,000 inline space. Sunflower, lender, is reapproving the deal,
+                  and XL funding is committed to $4M out of the total $5.5M equity
+                  required.
+                </li>
+                <li>
+                  <strong>Other Site Retail:</strong> Continuing conversations with a C-store/gas station concept and hotel operator for Block 1 (HEB). Conversations ongoing with other activator tenants, including pickleball, spas, MLB, brewery/bar, BBQ, etc.
+                </li>
+                <li>
+                  <strong>New Leasing Agent:</strong> We're hoping to bring on a new leasing agent for the site in early 2026.
+                </li>
+              </ul>
+            )}
+          </li>
+          <li>
+            {retailCoreMasterPlanContent ?? (
+              <>
+                <strong>Retail Core & Master Plan:</strong> Site development permits are
+                informally approved in April 2026.
+              </>
+            )}
+          </li>
+          <li>
+            <strong>Del Via:</strong> {delViaSummaryText}
+          </li>
+        </ul>
+      </div>
       
       {anchors?.landSalesId ? <div id={anchors.landSalesId} className="scroll-mt-24" /> : null}
       <h3 className="section-title">{amazonSectionTitle}</h3>

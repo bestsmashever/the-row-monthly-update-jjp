@@ -362,6 +362,879 @@
     @apply text-white font-bold;
   }
 
+  /* Institutional report theme for monthly-update pages */
+  .agora-theme {
+    min-height: 100vh;
+    background:
+      linear-gradient(90deg, #0b1524 0, #0b1524 292px, transparent 292px),
+      #eef1f4;
+    color: #172033;
+  }
+
+  .agora-shell {
+    max-width: 1760px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+
+  .agora-shell--with-rail {
+    display: grid;
+    grid-template-columns: 268px minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .agora-rail {
+    min-width: 0;
+  }
+
+  .agora-document {
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #d8dde5;
+    border-radius: 8px;
+    box-shadow: 0 20px 55px rgba(15, 23, 42, 0.08);
+  }
+
+  .agora-content {
+    padding: 28px 30px 36px;
+  }
+
+  .site-header--agora {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 28px;
+    padding: 30px 30px 24px;
+    background: #ffffff;
+    border-bottom: 1px solid #c9a66b;
+  }
+
+  .site-header--agora h1 {
+    max-width: 900px;
+    color: #101827;
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: 700;
+    line-height: 1.08;
+  }
+
+  .site-header--agora p {
+    margin-top: 10px;
+    color: #5c6676;
+    font-size: 0.92rem;
+    line-height: 1.5;
+  }
+
+  .site-header--agora a {
+    color: #243f65;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .report-meta {
+    flex: 0 0 auto;
+    min-width: 190px;
+    padding-left: 24px;
+    border-left: 1px solid #d8dde5;
+    text-align: right;
+  }
+
+  .report-meta dt {
+    color: #6b7280;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .report-meta dd {
+    margin-top: 6px;
+    color: #a0612b;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .agora-footer {
+    height: 26px;
+    border-top: 1px solid #d8dde5;
+    background: #fbfcfd;
+  }
+
+  .agora-mobile-nav {
+    padding: 18px 18px 0;
+  }
+
+  .agora-theme .section-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    padding: 22px;
+    color: #e6edf7;
+    background: linear-gradient(180deg, #111c2d 0%, #08111f 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 18px 45px rgba(3, 7, 18, 0.2);
+  }
+
+  .section-nav-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .section-nav-brand-mark {
+    color: #ffffff;
+    font-size: 1.55rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .section-nav-brand-meta {
+    color: #c99a54;
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+
+  .section-nav-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .section-nav-label {
+    color: #96a3b7;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .section-nav-list {
+    display: grid;
+    gap: 4px;
+    list-style: none;
+  }
+
+  .section-nav-link {
+    display: grid;
+    grid-template-columns: 28px minmax(0, 1fr);
+    align-items: center;
+    gap: 8px;
+    min-height: 38px;
+    padding: 8px 10px;
+    color: #cbd5e1;
+    border-left: 3px solid transparent;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease;
+  }
+
+  .section-nav-link:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+    border-left-color: rgba(201, 154, 84, 0.45);
+  }
+
+  .section-nav-link.is-active {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.08);
+    border-left-color: #c99a54;
+  }
+
+  .section-nav-index {
+    color: #8090a7;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.72rem;
+  }
+
+  .section-nav-link.is-active .section-nav-index {
+    color: #c99a54;
+  }
+
+  .section-nav-updates {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding-top: 16px;
+  }
+
+  .section-nav-updates summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    list-style: none;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  .section-nav-updates summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .section-nav-chevron {
+    width: 8px;
+    height: 8px;
+    border-right: 1px solid currentColor;
+    border-bottom: 1px solid currentColor;
+    transform: rotate(45deg);
+    transition: transform 160ms ease;
+  }
+
+  .section-nav-updates[open] .section-nav-chevron {
+    transform: rotate(225deg);
+  }
+
+  .section-nav-update-list {
+    display: grid;
+    gap: 2px;
+    margin-top: 12px;
+  }
+
+  .section-nav-update {
+    display: block;
+    padding: 8px 10px;
+    color: #cbd5e1;
+    border-radius: 6px;
+    text-decoration: none;
+  }
+
+  .section-nav-update:hover,
+  .section-nav-update.is-current {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .agora-theme .section-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 18px;
+    padding: 0 0 12px;
+    color: #101827;
+    border-bottom: 1px solid #d8dde5;
+    font-size: clamp(1.35rem, 2vw, 2rem);
+    font-weight: 700;
+    line-height: 1.15;
+    text-transform: none;
+  }
+
+  .agora-theme .section-title::before {
+    content: "";
+    width: 34px;
+    height: 2px;
+    flex: 0 0 auto;
+    background: #c99a54;
+  }
+
+  .agora-theme .agora-content > section {
+    margin-bottom: 42px;
+  }
+
+  .report-panel {
+    background: #ffffff;
+    border: 1px solid #d8dde5;
+    border-radius: 8px;
+    box-shadow: 0 8px 28px rgba(15, 23, 42, 0.045);
+  }
+
+  .report-media-frame {
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #d8dde5;
+    border-radius: 8px;
+    box-shadow: 0 8px 28px rgba(15, 23, 42, 0.045);
+  }
+
+  .report-copy-block {
+    margin-bottom: 28px;
+    padding: 22px 24px;
+  }
+
+  .report-subtitle {
+    margin: 0 0 14px;
+    color: #172033;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.35;
+    text-align: left;
+  }
+
+  .report-subtitle--compact {
+    margin-top: 26px;
+  }
+
+  .report-lede {
+    max-width: 780px;
+    color: #4c596d;
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .company-section-title {
+    margin: 0 0 14px;
+    padding-bottom: 8px;
+    color: #172033;
+    border-bottom: 1px solid #e2e6ec;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  .agora-theme .overview-list {
+    margin: 0;
+    padding-left: 0 !important;
+    color: #243044;
+    font-size: 0.98rem !important;
+    line-height: 1.72 !important;
+    list-style: none;
+  }
+
+  .agora-theme .overview-list > li {
+    margin: 0;
+    padding: 16px 0;
+    border-top: 1px solid #e6e9ef;
+  }
+
+  .agora-theme .overview-list > li:first-child {
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .agora-theme .overview-list > li:last-child {
+    padding-bottom: 0;
+  }
+
+  .agora-theme .overview-list > li > strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #101827;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .agora-theme .overview-list strong {
+    color: #101827;
+    font-weight: 700;
+  }
+
+  .agora-theme .overview-list .overview-section-list {
+    margin-top: 8px;
+    padding-left: 1rem !important;
+    list-style: disc;
+  }
+
+  .agora-theme .overview-list .overview-section-list > li {
+    margin-top: 9px;
+    padding-left: 0.2rem;
+  }
+
+  .agora-theme .overview-list ul.overview-depth-block {
+    margin-top: 8px !important;
+    padding: 0 0 0 14px !important;
+    border-left: 2px solid #d8dde5;
+    list-style: none !important;
+  }
+
+  .agora-theme .overview-list ul.overview-depth-block li {
+    margin-top: 8px;
+    padding-left: 8px;
+  }
+
+  .agora-theme .overview-list ul.overview-depth-disc {
+    margin-top: 8px !important;
+    padding-left: 1rem !important;
+    border-left: 0;
+    list-style: disc !important;
+  }
+
+  .agora-theme .chart-container {
+    overflow: hidden;
+    margin-bottom: 28px;
+    padding: 14px;
+    background: #ffffff;
+    border: 1px solid #d8dde5;
+    border-radius: 8px;
+    box-shadow: 0 8px 28px rgba(15, 23, 42, 0.045);
+  }
+
+  .agora-theme .chart-container img {
+    border-radius: 4px;
+  }
+
+  .agora-theme .metric-card {
+    min-height: 144px;
+    padding: 18px;
+    text-align: left;
+    background: #ffffff;
+    border: 1px solid #d8dde5;
+    border-left: 3px solid #c99a54;
+    border-radius: 8px;
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.045);
+    transform: none;
+  }
+
+  .agora-theme .metric-card:hover {
+    color: #101827;
+    background: #ffffff;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+    transform: none;
+  }
+
+  .agora-theme .metric-value {
+    margin-bottom: 8px;
+    color: #10213a;
+    font-size: clamp(1.65rem, 2.4vw, 2.25rem);
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .agora-theme .metric-label {
+    margin-bottom: 6px;
+    color: #1c283a;
+    font-size: 0.92rem;
+    font-weight: 700;
+    text-transform: none;
+  }
+
+  .agora-theme .metric-context {
+    color: #687386;
+    font-size: 0.85rem;
+    line-height: 1.45;
+  }
+
+  .agora-theme .metric-card:hover .metric-value,
+  .agora-theme .metric-card:hover .metric-label {
+    color: #10213a;
+  }
+
+  .agora-theme .metric-card:hover .metric-context {
+    color: #687386;
+  }
+
+  .agora-theme .company-card--agora {
+    border-color: #d8dde5;
+    border-radius: 8px;
+    box-shadow: 0 8px 28px rgba(15, 23, 42, 0.045);
+  }
+
+  .agora-theme .company-card--agora h5 {
+    color: #101827;
+    font-size: 1.02rem;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  .agora-theme .company-card--agora p {
+    color: #435066;
+    font-size: 0.94rem;
+    line-height: 1.65;
+  }
+
+  .agora-theme table {
+    border-color: #d8dde5;
+  }
+
+  .agora-theme th {
+    background: #f3f5f8 !important;
+    color: #263348 !important;
+    border-color: #d8dde5 !important;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+  }
+
+  .agora-theme td {
+    border-color: #e2e6ec !important;
+  }
+
+  .agora-theme a {
+    color: #244f7d;
+    text-underline-offset: 3px;
+  }
+
+  .agora-theme .section-nav a {
+    color: #cbd5e1;
+  }
+
+  .agora-theme .section-nav a:hover,
+  .agora-theme .section-nav a.is-active,
+  .agora-theme .section-nav a.is-current {
+    color: #ffffff;
+  }
+
+  @media (max-width: 1023px) {
+    .agora-theme {
+      background: #eef1f4;
+    }
+
+    .agora-shell,
+    .agora-shell--with-rail {
+      display: block;
+      padding: 14px;
+    }
+
+    .site-header--agora {
+      flex-direction: column;
+      padding: 24px 20px 20px;
+    }
+
+    .report-meta {
+      width: 100%;
+      min-width: 0;
+      padding: 14px 0 0;
+      border-top: 1px solid #d8dde5;
+      border-left: 0;
+      text-align: left;
+    }
+
+    .agora-content {
+      padding: 22px 18px 28px;
+    }
+
+    .agora-theme .section-nav {
+      box-shadow: none;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .site-header--agora h1 {
+      font-size: 2rem;
+    }
+
+    .agora-content {
+      padding: 20px 14px 26px;
+    }
+
+    .report-copy-block {
+      padding: 18px;
+    }
+
+    .agora-theme .chart-container {
+      padding: 8px;
+    }
+  }
+
+  /* April polish pass: less admin dashboard, more investor memo */
+  .agora-theme {
+    background: #f5f6f8;
+  }
+
+  .agora-shell {
+    max-width: 1500px;
+    padding: 24px 28px;
+  }
+
+  .agora-shell--with-rail {
+    grid-template-columns: 224px minmax(0, 1180px);
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .agora-document {
+    border-color: #e1e6ee;
+    border-radius: 12px;
+    box-shadow: 0 14px 36px rgba(21, 31, 48, 0.08);
+  }
+
+  .agora-content {
+    padding: 24px 32px 42px;
+  }
+
+  .site-header--agora {
+    align-items: center;
+    padding: 26px 32px;
+    background: linear-gradient(180deg, #ffffff 0%, #fdfcf9 100%);
+    border-bottom: 1px solid #dfbd78;
+  }
+
+  .site-header--agora h1 {
+    max-width: 760px;
+    font-size: clamp(2rem, 2.45vw, 2.75rem);
+    letter-spacing: 0;
+  }
+
+  .site-header--agora p {
+    margin-top: 8px;
+    font-size: 0.9rem;
+  }
+
+  .report-meta {
+    min-width: 170px;
+  }
+
+  .agora-theme .section-nav {
+    gap: 18px;
+    padding: 16px;
+    color: #1f2937;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid #dfe5ee;
+    border-radius: 12px;
+    box-shadow: 0 10px 28px rgba(21, 31, 48, 0.07);
+  }
+
+  .section-nav-brand {
+    padding: 2px 2px 14px;
+    border-bottom: 1px solid #e5e9f0;
+  }
+
+  .section-nav-brand-mark {
+    color: #101827;
+    font-size: 1.35rem;
+  }
+
+  .section-nav-brand-meta {
+    color: #9b642f;
+  }
+
+  .section-nav-label {
+    color: #7a8493;
+    font-size: 0.68rem;
+  }
+
+  .section-nav-link {
+    grid-template-columns: 24px minmax(0, 1fr);
+    min-height: 34px;
+    padding: 7px 9px;
+    color: #4b5563;
+    border-left: 2px solid transparent;
+    border-radius: 7px;
+    font-size: 0.88rem;
+  }
+
+  .section-nav-index {
+    color: #9aa5b5;
+  }
+
+  .section-nav-link:hover {
+    color: #101827;
+    background: #f2f5f8;
+    border-left-color: #d7a557;
+  }
+
+  .section-nav-link.is-active {
+    color: #ffffff;
+    background: #14243b;
+    border-left-color: #d7a557;
+  }
+
+  .section-nav-link.is-active .section-nav-index {
+    color: #e3bd78;
+  }
+
+  .section-nav-updates {
+    border-top: 1px solid #e5e9f0;
+    padding-top: 14px;
+  }
+
+  .section-nav-updates summary {
+    color: #182235;
+    font-size: 0.86rem;
+  }
+
+  .section-nav-update {
+    color: #4b5563;
+    font-size: 0.86rem;
+  }
+
+  .section-nav-update:hover,
+  .section-nav-update.is-current {
+    color: #101827;
+    background: #f2f5f8;
+  }
+
+  .agora-theme .section-nav a {
+    color: #4b5563;
+  }
+
+  .agora-theme .section-nav a:hover {
+    color: #101827;
+  }
+
+  .agora-theme .section-nav a.is-active {
+    color: #ffffff;
+  }
+
+  .agora-theme .section-nav a.is-current {
+    color: #101827;
+  }
+
+  .executive-summary {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.8fr) minmax(0, 2.2fr);
+    gap: 18px;
+    margin-bottom: 30px;
+    padding: 22px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #101827 0%, #1a2a42 62%, #7d4e22 100%);
+    border-radius: 12px;
+    box-shadow: 0 16px 32px rgba(21, 31, 48, 0.12);
+  }
+
+  .executive-summary-copy h2 {
+    max-width: 320px;
+    color: #ffffff;
+    font-size: 1.35rem;
+    font-weight: 700;
+    line-height: 1.18;
+  }
+
+  .executive-summary-copy p {
+    margin-top: 12px;
+    max-width: 330px;
+    color: #d7dee9;
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+
+  .executive-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .executive-summary-card {
+    min-height: 132px;
+    padding: 14px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 10px;
+  }
+
+  .summary-label {
+    color: #d9b56f;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .summary-value {
+    margin-top: 10px;
+    color: #ffffff;
+    font-size: 1.35rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .executive-summary-card p {
+    margin-top: 10px;
+    color: #dbe3ee;
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+
+  .agora-theme .section-title {
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    font-size: clamp(1.25rem, 1.55vw, 1.7rem);
+  }
+
+  .agora-theme .section-title::before {
+    width: 28px;
+  }
+
+  .report-panel,
+  .report-media-frame,
+  .agora-theme .chart-container,
+  .agora-theme .company-card--agora {
+    border-color: #e1e6ee;
+    border-radius: 10px;
+    box-shadow: none;
+  }
+
+  .report-copy-block {
+    margin-bottom: 26px;
+    padding: 20px 22px;
+    background: #ffffff;
+  }
+
+  .agora-theme .overview-list {
+    color: #253145;
+    font-size: 0.93rem !important;
+    line-height: 1.68 !important;
+  }
+
+  .agora-theme .overview-list > li {
+    padding: 14px 0;
+  }
+
+  .agora-theme .overview-list > li > strong {
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+  }
+
+  .agora-theme .overview-list ul.overview-depth-block {
+    border-left: 2px solid #e0c28a;
+  }
+
+  .agora-theme .chart-container {
+    padding: 10px;
+    background: #fbfcfd;
+  }
+
+  .report-subtitle,
+  .company-section-title {
+    font-size: 0.95rem;
+  }
+
+  .agora-theme .metric-card {
+    min-height: 126px;
+    padding: 16px;
+    border-left-color: #d7a557;
+    box-shadow: none;
+  }
+
+  .agora-theme .metric-value {
+    font-size: clamp(1.45rem, 2vw, 1.95rem);
+  }
+
+  @media (max-width: 1200px) {
+    .executive-summary,
+    .executive-summary-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .agora-shell,
+    .agora-shell--with-rail {
+      padding: 14px;
+    }
+
+    .agora-mobile-nav {
+      padding: 16px 16px 0;
+    }
+
+    .executive-summary {
+      grid-template-columns: 1fr;
+      margin: 20px 16px 28px;
+    }
+
+    .executive-summary-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 640px) {
+    .site-header--agora h1 {
+      font-size: 1.8rem;
+    }
+
+    .executive-summary {
+      margin: 18px 12px 24px;
+      padding: 18px;
+    }
+
+    .executive-summary-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .executive-summary-card {
+      min-height: auto;
+    }
+
+    .report-copy-block {
+      padding: 16px;
+    }
+  }
+
   /* Professional scrollbar */
   ::-webkit-scrollbar {
     width: 8px;

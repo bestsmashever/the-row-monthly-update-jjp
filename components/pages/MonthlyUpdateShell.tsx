@@ -21,10 +21,30 @@ export default function MonthlyUpdateShell({
   sideNav,
 }: MonthlyUpdateShellProps) {
   const themeClassName = theme === 'agora' ? `agora-theme ${plexSans.className}` : ''
-  const containerClassName =
-    theme === 'agora'
-      ? 'max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-10'
-      : 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'
+
+  if (theme === 'agora') {
+    return (
+      <div className={['min-h-screen', themeClassName].filter(Boolean).join(' ')}>
+        <div className={sideNav ? 'agora-shell agora-shell--with-rail' : 'agora-shell'}>
+          {sideNav ? (
+            <aside className="agora-rail hidden lg:block">
+              <div className="sticky top-6">{sideNav}</div>
+            </aside>
+          ) : null}
+
+          <div className="agora-document min-w-0">
+            <Header title={headerTitle} theme="agora" />
+            <div id="top" className="scroll-mt-24" />
+            {sideNav ? <div className="agora-mobile-nav lg:hidden">{sideNav}</div> : null}
+            <main className="agora-content">{children}</main>
+            <Footer theme="agora" />
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  const containerClassName = 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'
 
   return (
     <div className={['min-h-screen bg-white', themeClassName].filter(Boolean).join(' ')}>
@@ -32,19 +52,17 @@ export default function MonthlyUpdateShell({
         <Header title={headerTitle} />
         <div id="top" className="scroll-mt-24" />
         {sideNav ? (
-          <div className={['lg:grid lg:grid-cols-[240px_1fr] lg:gap-10', theme === 'agora' ? 'agora-content' : ''].filter(Boolean).join(' ')}>
+          <div className="lg:grid lg:grid-cols-[240px_1fr] lg:gap-10">
             <aside className="hidden lg:block">
               <div className="sticky top-6">{sideNav}</div>
             </aside>
             <main className="min-w-0">{children}</main>
           </div>
         ) : (
-          <div className={theme === 'agora' ? 'agora-content' : undefined}>{children}</div>
+          <div>{children}</div>
         )}
         <Footer />
       </div>
     </div>
   )
 }
-
-

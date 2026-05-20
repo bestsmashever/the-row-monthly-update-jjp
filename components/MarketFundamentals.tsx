@@ -243,7 +243,7 @@ export default function MarketFundamentals({
         {companySections.map(({ cards, containerClass, heading }) => (
           <div key={heading} className={containerClass ?? 'mt-6 sm:mt-8 md:mt-10'}>
             {variant === 'agora' ? (
-              <h4 className="text-sm sm:text-base font-semibold text-gray-900 mb-3 sm:mb-4">
+              <h4 className="company-section-title">
                 {heading}
               </h4>
             ) : (

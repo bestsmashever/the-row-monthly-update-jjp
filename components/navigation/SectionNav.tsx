@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
+import { usePathname } from 'next/navigation'
 
 export type NavSection = {
   id: string
@@ -26,6 +27,7 @@ export default function SectionNav({
   monthlyUpdatesLabel = 'Monthly Updates',
 }: SectionNavProps) {
   const [activeId, setActiveId] = useState<string>(sections[0]?.id ?? '')
+  const pathname = usePathname()
 
   const sectionIds = useMemo(() => sections.map((s) => s.id), [sections])
 
@@ -36,72 +38,88 @@ export default function SectionNav({
 
     if (!elements.length) return
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        // pick the top-most visible entry
-        const visible = entries
-          .filter((e) => e.isIntersecting)
-          .sort((a, b) => (a.boundingClientRect.top ?? 0) - (b.boundingClientRect.top ?? 0))[0]
-        if (visible?.target?.id) setActiveId(visible.target.id)
-      },
-      {
-        root: null,
-        // Bias toward picking the section as it reaches the top-ish area
-        rootMargin: '-20% 0px -70% 0px',
-        threshold: [0, 0.1, 0.25],
-      },
-    )
+    let frame = 0
 
-    elements.forEach((el) => observer.observe(el))
-    return () => observer.disconnect()
+    const updateActiveSection = () => {
+      frame = 0
+      const activationOffset = 150
+      const current = elements.reduce((active, element) => {
+        return element.getBoundingClientRect().top <= activationOffset ? element.id : active
+      }, elements[0].id)
+
+      setActiveId(current)
+    }
+
+    const scheduleUpdate = () => {
+      if (frame) return
+      frame = window.requestAnimationFrame(updateActiveSection)
+    }
+
+    updateActiveSection()
+    window.addEventListener('scroll', scheduleUpdate, { passive: true })
+    window.addEventListener('resize', scheduleUpdate)
+
+    return () => {
+      if (frame) window.cancelAnimationFrame(frame)
+      window.removeEventListener('scroll', scheduleUpdate)
+      window.removeEventListener('resize', scheduleUpdate)
+    }
   }, [sectionIds])
 
   return (
-    <nav className="section-nav">
-      <div className="text-xs tracking-wide text-gray-500 mb-3 uppercase">Navigation</div>
+    <nav className="section-nav" aria-label="Report navigation">
+      <a className="section-nav-brand" href="#top" aria-label="Back to report top">
+        <span className="section-nav-brand-mark">The Row</span>
+        <span className="section-nav-brand-meta">Austin, Texas</span>
+      </a>
+
+      <div className="section-nav-group">
+        <div className="section-nav-label">Report Sections</div>
+        <ul className="section-nav-list">
+          {sections.map(({ id, label }, index) => {
+            const active = activeId === id
+            return (
+              <li key={id}>
+                <a
+                  href={`#${id}`}
+                  className={active ? 'section-nav-link is-active' : 'section-nav-link'}
+                >
+                  <span className="section-nav-index">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                  <span>{label}</span>
+                </a>
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+
       {monthlyUpdates?.length ? (
-        <details className="mb-3 rounded-md border border-gray-200 bg-white">
-          <summary className="cursor-pointer list-none px-3 py-2 text-sm font-semibold text-gray-900 flex items-center justify-between">
+        <details className="section-nav-updates">
+          <summary>
             <span>{monthlyUpdatesLabel}</span>
-            <span className="text-gray-500">▾</span>
+            <span className="section-nav-chevron" aria-hidden="true" />
           </summary>
-          <div className="border-t border-gray-200 py-2">
-            {monthlyUpdates.map(({ href, label, rel, target }) => (
-              <a
-                key={href}
-                href={href}
-                target={target}
-                rel={rel}
-                className="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900"
-              >
-                {label}
-              </a>
-            ))}
+          <div className="section-nav-update-list">
+            {monthlyUpdates.map(({ href, label, rel, target }) => {
+              const isCurrent = pathname === href
+
+              return (
+                <a
+                  key={href}
+                  href={href}
+                  target={target}
+                  rel={rel}
+                  className={isCurrent ? 'section-nav-update is-current' : 'section-nav-update'}
+                >
+                  {label}
+                </a>
+              )
+            })}
           </div>
         </details>
       ) : null}
-      <ul className="space-y-1">
-        {sections.map(({ id, label }) => {
-          const active = activeId === id
-          return (
-            <li key={id}>
-              <a
-                href={`#${id}`}
-                className={[
-                  'block rounded-md px-3 py-2 text-sm transition-colors',
-                  active
-                    ? 'bg-gray-100 text-gray-900 font-semibold'
-                    : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900',
-                ].join(' ')}
-              >
-                {label}
-              </a>
-            </li>
-          )
-        })}
-      </ul>
     </nav>
   )
 }
-
-

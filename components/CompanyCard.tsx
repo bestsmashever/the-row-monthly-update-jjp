@@ -29,7 +29,7 @@ export default function CompanyCard({
   if (variant === 'agora') {
     const cleanParagraphs = paragraphs.filter((p) => p.trim().length > 0)
     return (
-      <div className="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
+      <div className="company-card company-card--agora bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
         <div className="grid md:grid-cols-2 gap-0">
           <div className={`p-5 sm:p-6 ${reverseOnDesktop ? 'md:order-2' : ''}`}>
             <h5 className="text-base sm:text-lg font-semibold text-gray-900 mb-2 tracking-wide">

@@ -7,6 +7,9 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'The Row Monthly Update',
   description: 'Monthly market intelligence report',
+  icons: {
+    icon: '/favicon.svg',
+  },
 }
 
 export default function RootLayout({

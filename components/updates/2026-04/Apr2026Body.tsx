@@ -26,9 +26,57 @@ function KeyIndicatorCard({
   )
 }
 
+function ExecutiveSummary() {
+  const summaryItems = [
+    {
+      label: 'Land Sales',
+      value: '$700k',
+      detail: 'Amazon 53-acre deposit went non-refundable and was released on 4/9.',
+    },
+    {
+      label: 'Block 2 Retail',
+      value: '$4M',
+      detail: 'XL funding committed toward the $5.5M equity requirement; tenant discussions remain active.',
+    },
+    {
+      label: 'Retail Core',
+      value: 'Approved',
+      detail: 'Site development permits were informally approved in April 2026.',
+    },
+    {
+      label: 'Del Via',
+      value: '34.52%',
+      detail: 'Leased, with 29.64% occupancy and market rent at $2.06/sf.',
+    },
+  ]
+
+  return (
+    <section className="executive-summary" aria-label="Executive summary">
+      <div className="executive-summary-copy">
+        <h2>April Executive Summary</h2>
+        <p>
+          Current focus remains on land-sale execution, retail capital formation,
+          Block 2 tenant momentum, and Del Via lease-up.
+        </p>
+      </div>
+      <div className="executive-summary-grid">
+        {summaryItems.map(({ detail, label, value }) => (
+          <div key={label} className="executive-summary-card">
+            <div className="summary-label">{label}</div>
+            <div className="summary-value">{value}</div>
+            <p>{detail}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  )
+}
+
 export default function Apr2026Body() {
   return (
     <>
+      <ExecutiveSummary />
+
       <InvestmentThesis
         anchors={{
           overviewId: 'overview',
@@ -145,15 +193,11 @@ export default function Apr2026Body() {
       <section className="mb-8 sm:mb-10 md:mb-12">
         <div className="space-y-8 sm:space-y-10 md:space-y-12">
           <div>
-            <h4 className="text-primary-500 text-lg mb-5 font-bold uppercase tracking-wide text-center">
-              Retail Core Phasing
-            </h4>
+            <h4 className="report-subtitle">Retail Core Phasing</h4>
             <RetailCorePhasing />
           </div>
           <div>
-            <h4 className="text-primary-500 text-lg mb-5 font-bold uppercase tracking-wide text-center">
-              Retail Core Rendering
-            </h4>
+            <h4 className="report-subtitle">Retail Core Rendering</h4>
             <RetailCoreRendering />
           </div>
         </div>
@@ -169,14 +213,12 @@ export default function Apr2026Body() {
         includeAustinSurfClub
         beforeAustinMarketContent={
           <>
-            <p className="text-base sm:text-lg text-gray-700 max-w-4xl">
+            <p className="report-lede">
               Employer expansion and major capital investment continue to shape demand across Austin.
             </p>
 
             <div id="key-indicators" className="scroll-mt-24" />
-            <h4 className="text-sm sm:text-base font-semibold text-gray-900 mb-3 sm:mb-4 mt-6 sm:mt-8">
-              Key Indicators
-            </h4>
+            <h4 className="report-subtitle report-subtitle--compact">Key Indicators</h4>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               <KeyIndicatorCard value="20,000+" label="Tesla employees" context="Austin workforce scale (approx.)" />
