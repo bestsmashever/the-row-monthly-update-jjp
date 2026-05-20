@@ -31,6 +31,7 @@ type InvestmentThesisProps = {
   debtMapSecondaryTitle?: string
   debtMapSecondaryContent?: React.ReactNode
   debtMapSecondaryContentPadding?: boolean
+  underContract53AcresLabel?: string
   underContract53AcresText?: React.ReactNode
   additional25AcresLoiLabel?: string
   additional25AcresLoiText?: string
@@ -41,6 +42,8 @@ type InvestmentThesisProps = {
 
 const DEFAULT_UNDER_CONTRACT_53_ACRES_TEXT =
   "PSA executed with due diligence in progress and the end user's site plan under review. The preliminary plan has been formally submitted; targeting 3/27/2026 for non-refundable status and 6/30/2026 for prelim plan approval to enable closing."
+
+const DEFAULT_UNDER_CONTRACT_53_ACRES_LABEL = 'Under Contract (53 Acres)'
 
 const DEFAULT_ADDITIONAL_25_ACRES_LOI_LABEL = 'Additional 25 Acres - LOI Received'
 
@@ -70,6 +73,7 @@ export default function InvestmentThesis({
   debtMapSecondaryTitle,
   debtMapSecondaryContent,
   debtMapSecondaryContentPadding = true,
+  underContract53AcresLabel = DEFAULT_UNDER_CONTRACT_53_ACRES_LABEL,
   underContract53AcresText = DEFAULT_UNDER_CONTRACT_53_ACRES_TEXT,
   additional25AcresLoiLabel = DEFAULT_ADDITIONAL_25_ACRES_LOI_LABEL,
   additional25AcresLoiText = DEFAULT_ADDITIONAL_25_ACRES_LOI_TEXT,
@@ -101,7 +105,7 @@ export default function InvestmentThesis({
                 <strong>Amazon:</strong>
                 <ul className="overview-depth-block mt-2 space-y-2">
                   <li>
-                    <strong>Under Contract (53 Acres):</strong>{' '}
+                    <strong>{underContract53AcresLabel}:</strong>{' '}
                     {underContract53AcresText}
                   </li>
                   <li>
