@@ -670,13 +670,23 @@
   }
 
   .company-section-title {
-    margin: 0 0 14px;
-    padding-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 12px;
+    padding-bottom: 0;
     color: #172033;
-    border-bottom: 1px solid #e2e6ec;
     font-size: 1rem;
     font-weight: 700;
     line-height: 1.35;
+  }
+
+  .company-section-title::before {
+    content: "";
+    width: 28px;
+    height: 2px;
+    flex: 0 0 auto;
+    background: #c99a54;
   }
 
   .agora-theme .overview-list {
@@ -816,6 +826,23 @@
     box-shadow: 0 8px 28px rgba(15, 23, 42, 0.045);
   }
 
+  .agora-theme .company-card--agora .company-card-layout {
+    min-height: 300px;
+  }
+
+  .agora-theme .company-card--agora .company-card-copy {
+    background: #ffffff;
+  }
+
+  .agora-theme .company-card--agora .company-card-media {
+    background: #f3f6f9;
+    border-top: 1px solid #e2e6ec;
+  }
+
+  .agora-theme .company-card--agora .company-card-media img {
+    filter: saturate(0.96) contrast(1.02);
+  }
+
   .agora-theme .company-card--agora h5 {
     color: #101827;
     font-size: 1.02rem;
@@ -827,6 +854,13 @@
     color: #435066;
     font-size: 0.94rem;
     line-height: 1.65;
+  }
+
+  @media (min-width: 768px) {
+    .agora-theme .company-card--agora .company-card-media {
+      border-top: 0;
+      border-left: 1px solid #e2e6ec;
+    }
   }
 
   .agora-theme table {

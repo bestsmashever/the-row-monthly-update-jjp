@@ -4,9 +4,9 @@ import RetailDestination from '@/components/RetailDestination'
 import RetailCorePhasing from '@/components/RetailCorePhasing'
 import RetailCoreRendering from '@/components/RetailCoreRendering'
 import MarketFundamentals from '@/components/MarketFundamentals'
-import amazonAndAeMapImage from '@/public/Amazon and AE Map.jpg'
-import rowDebtMapJan2026Image from '@/public/The Row Debt Map_Jan 2026.jpg'
-import AmazonTransactionsTable from '@/components/updates/2026-02/AmazonTransactionsTable'
+import amazonAndAeMapImage from '@/public/Amazon and AE Map_May 2026.jpg'
+import rowDebtMapMayImage from '@/public/The Row Debt Map.jpg'
+import AmazonTransactionsTable from '@/components/updates/2026-05/AmazonTransactionsTable'
 
 function KeyIndicatorCard({
   value,
@@ -146,8 +146,8 @@ export default function May2026Body() {
         amazonHeroAlt="Amazon and Austin Energy Map"
         debtMapTone="neutral"
         debtMapTitle="The Row Debt Map"
-        debtMapPrimaryImage={rowDebtMapJan2026Image}
-        debtMapPrimaryAlt="The Row Debt Map - Jan 2026"
+        debtMapPrimaryImage={rowDebtMapMayImage}
+        debtMapPrimaryAlt="The Row Debt Map"
         debtMapSecondaryPlacement="nextBox"
         debtMapSecondaryTitle="Amazon Transactions"
         debtMapSecondaryContent={<AmazonTransactionsTable />}
@@ -220,19 +220,22 @@ export default function May2026Body() {
         beforeAustinMarketContent={
           <>
             <p className="report-lede">
-              Employer expansion and major capital investment continue to shape demand across Austin.
+              Recent 2026 announcements point to a broader demand base across Austin:
+              aviation jobs at AUS, semiconductor investment east of the city, life
+              sciences expansion, and grid infrastructure are all adding institutional
+              capital and skilled employment to the region.
             </p>
 
             <div id="key-indicators" className="scroll-mt-24" />
             <h4 className="report-subtitle report-subtitle--compact">Key Indicators</h4>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-              <KeyIndicatorCard value="20,000+" label="Tesla employees" context="Austin workforce scale (approx.)" />
-              <KeyIndicatorCard value="10M SF" label="Giga Texas built" context="Plus ~5M SF planned expansion" />
-              <KeyIndicatorCard value="$16.5B" label="AI chip partnership" context="Tesla × Samsung (Taylor, TX)" />
-              <KeyIndicatorCard value="$4–6B" label="ABIA expansion" context="“Journey With AUS” program" />
-              <KeyIndicatorCard value="$423M" label="TDEM headquarters" context="Opening August 2026" />
-              <KeyIndicatorCard value="$2–4M" label="Austin Surf Club homes" context="Typical home pricing (approx.)" />
+              <KeyIndicatorCard value="2,000" label="Southwest AUS jobs" context="Crew base and command center" />
+              <KeyIndicatorCard value="26 gates" label="AUS Concourse B" context="Journey With AUS capacity project" />
+              <KeyIndicatorCard value="$71M" label="Arm Austin expansion" context="320+ semiconductor and AI jobs" />
+              <KeyIndicatorCard value="$280M" label="SpaceX Bastrop expansion" context="400+ advanced packaging jobs" />
+              <KeyIndicatorCard value="40 MW" label="Local battery storage" context="Austin Energy x Base Power" />
+              <KeyIndicatorCard value="200" label="3billion Austin jobs" context="$8.1M genomics expansion" />
             </div>
           </>
         }

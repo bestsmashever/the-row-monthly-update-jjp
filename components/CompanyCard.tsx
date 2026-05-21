@@ -30,12 +30,12 @@ export default function CompanyCard({
     const cleanParagraphs = paragraphs.filter((p) => p.trim().length > 0)
     return (
       <div className="company-card company-card--agora bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
-        <div className="grid md:grid-cols-2 gap-0">
-          <div className={`p-5 sm:p-6 ${reverseOnDesktop ? 'md:order-2' : ''}`}>
-            <h5 className="text-base sm:text-lg font-semibold text-gray-900 mb-2 tracking-wide">
+        <div className="company-card-layout grid md:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] gap-0 items-stretch">
+          <div className={`company-card-copy flex flex-col justify-center p-5 sm:p-6 lg:p-7 ${reverseOnDesktop ? 'md:order-2' : ''}`}>
+            <h5 className="text-base sm:text-lg font-semibold text-gray-900 mb-3 tracking-wide">
               {title}
             </h5>
-            <div className="space-y-2">
+            <div className="space-y-3">
               {cleanParagraphs.map((paragraph, index) => (
                 <p key={index} className="text-sm sm:text-base leading-relaxed text-gray-700">
                   {paragraph}
@@ -45,9 +45,9 @@ export default function CompanyCard({
           </div>
 
           {useDualImages ? (
-            <div className={`grid grid-cols-2 gap-0 ${reverseOnDesktop ? 'md:order-1' : ''}`}>
+            <div className={`company-card-media company-card-media--dual grid grid-cols-2 gap-0 h-64 md:h-auto min-h-[240px] ${reverseOnDesktop ? 'md:order-1' : ''}`}>
               {images.map(({ alt, src }) => (
-                <div key={alt} className="relative w-full aspect-[16/10] overflow-hidden">
+                <div key={alt} className="relative w-full min-h-full overflow-hidden">
                   <Image
                     src={src}
                     alt={alt}
@@ -60,7 +60,7 @@ export default function CompanyCard({
               ))}
             </div>
           ) : (
-            <div className={`relative w-full aspect-[16/10] overflow-hidden ${reverseOnDesktop ? 'md:order-1' : ''}`}>
+            <div className={`company-card-media relative w-full h-64 md:h-auto min-h-[240px] overflow-hidden ${reverseOnDesktop ? 'md:order-1' : ''}`}>
               <Image
                 src={images[0].src}
                 alt={images[0].alt}
