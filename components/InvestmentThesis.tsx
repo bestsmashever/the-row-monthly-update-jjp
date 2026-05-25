@@ -6,7 +6,6 @@ import Block2Retail from '@/components/Block2Retail'
 import { FULL_WIDTH_SIZES } from '@/constants/media'
 import ChartContainer from '@/components/layout/ChartContainer'
 import amazonImage from '@/public/Amazon.jpg'
-import debtAfterAmazonSaleImage from '@/public/Debt After Amazon Transaction.jpg'
 import debtMapImage from '@/public/The Row Debt Map_Oct 2025.jpg'
 
 type InvestmentThesisProps = {
@@ -38,6 +37,11 @@ type InvestmentThesisProps = {
   delViaSummaryText?: string
   austinEnergySubstationSuffix?: string
   retailCoreMasterPlanContent?: React.ReactNode
+  block2RetailImages?: Array<{
+    alt: string
+    src: ImageProps['src']
+  }>
+  block2RetailTitle?: string
 }
 
 const DEFAULT_UNDER_CONTRACT_53_ACRES_TEXT =
@@ -67,7 +71,7 @@ export default function InvestmentThesis({
   debtMapTitle,
   debtMapPrimaryImage = debtMapImage,
   debtMapPrimaryAlt = 'Debt Map',
-  debtMapSecondaryImage = debtAfterAmazonSaleImage,
+  debtMapSecondaryImage,
   debtMapSecondaryAlt = 'Debt after Amazon Sale',
   debtMapSecondaryPlacement = 'sameBox',
   debtMapSecondaryTitle,
@@ -80,6 +84,8 @@ export default function InvestmentThesis({
   delViaSummaryText = DEFAULT_DEL_VIA_SUMMARY_TEXT,
   austinEnergySubstationSuffix = DEFAULT_AUSTIN_ENERGY_SUBSTATION_SUFFIX,
   retailCoreMasterPlanContent,
+  block2RetailImages,
+  block2RetailTitle,
 }: InvestmentThesisProps) {
   const debtHeadingClassName =
     debtMapTone === 'neutral'
@@ -116,8 +122,8 @@ export default function InvestmentThesis({
               </li>
               <li>
                 <strong>Austin Energy Substation (7 Acres and 7 acres of Easement):</strong>{' '}
-                Austin Energy is finalizing the boundaries of the substation and
-                transmission route. Thereafter, they will officially kick off the appraisals process.
+                Austin Energy is reviewing the survey exhibits for final approval
+                to kick start the 3rd party appraisals.
                 {austinEnergySubstationSuffix}
               </li>
               {landSalesExtraItems}
@@ -214,7 +220,7 @@ export default function InvestmentThesis({
             </div>
           </div>
 
-          {debtMapSecondaryImage ? (
+          {debtMapSecondaryImage || debtMapSecondaryContent ? (
             <>
               {debtMapSecondaryTitle ? (
                 <h4 className={debtHeadingClassName}>{debtMapSecondaryTitle}</h4>
@@ -226,7 +232,7 @@ export default function InvestmentThesis({
                   ) : (
                     debtMapSecondaryContent
                   )
-                ) : (
+                ) : debtMapSecondaryImage ? (
                   <div className="relative w-full">
                     <Image
                       src={debtMapSecondaryImage}
@@ -236,7 +242,7 @@ export default function InvestmentThesis({
                       loading="lazy"
                     />
                   </div>
-                )}
+                ) : null}
               </div>
             </>
           ) : null}
@@ -244,7 +250,7 @@ export default function InvestmentThesis({
       )}
       
       {anchors?.block2RetailId ? <div id={anchors.block2RetailId} className="scroll-mt-24" /> : null}
-      <Block2Retail />
+      <Block2Retail additionalImages={block2RetailImages} title={block2RetailTitle} />
       
       {showMasterPlanHeading ? (
         <h3 className="section-title mt-8 sm:mt-10 md:mt-12">Master Plan</h3>

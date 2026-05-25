@@ -17,7 +17,7 @@ export default function May2026UpdatePage() {
   const sections: NavSection[] = [
     { id: 'overview', label: 'Overview' },
     { id: 'potential-land-sales', label: 'Potential Land Sales' },
-    { id: 'block-2-retail', label: 'Block 2 Retail' },
+    { id: 'block-2-retail', label: 'Block 2 & Block 1 Retail' },
     { id: 'retail-core-master-plan', label: 'Retail Core & Master Plan' },
     { id: 'del-via-multifamily', label: 'Del Via Multifamily' },
     { id: 'austin-market', label: 'Austin Market' },

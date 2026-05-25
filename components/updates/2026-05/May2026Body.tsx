@@ -6,6 +6,10 @@ import RetailCoreRendering from '@/components/RetailCoreRendering'
 import MarketFundamentals from '@/components/MarketFundamentals'
 import amazonAndAeMapImage from '@/public/Amazon and AE Map_May 2026.jpg'
 import rowDebtMapMayImage from '@/public/The Row Debt Map.jpg'
+import theRowIcsc1Image from '@/public/The Row_ICSC_1.jpg'
+import theRowIcsc2Image from '@/public/The Row_ICSC_2.jpg'
+import theRowIcsc3Image from '@/public/The Row_ICSC_3.jpg'
+import theRowIcsc4Image from '@/public/The Row_ICSC_4.jpg'
 import AmazonTransactionsTable from '@/components/updates/2026-05/AmazonTransactionsTable'
 
 function KeyIndicatorCard({
@@ -43,7 +47,7 @@ function ExecutiveSummary() {
     {
       label: 'Retail Core',
       value: 'Approved',
-      detail: 'Site development permits were informally approved in April 2026.',
+      detail: 'Site development permits for the core are formally approved.',
     },
     {
       label: 'Del Via',
@@ -116,7 +120,7 @@ export default function May2026Body() {
                   approx. 1,900sf
                 </li>
                 <li>
-                  <strong>Holic Pho</strong> – negotiating LOI for 1,900 sf
+                  <strong>Holic Pho</strong> – in lease.
                 </li>
                 <li>
                   <strong>Kilwin&apos;s Ice Cream</strong> – expression of
@@ -154,10 +158,18 @@ export default function May2026Body() {
         debtMapSecondaryContentPadding={false}
         showMasterPlanHeading={false}
         austinEnergySubstationSuffix=""
+        block2RetailImages={[
+          { src: theRowIcsc1Image, alt: 'The Row ICSC 1' },
+          { src: theRowIcsc2Image, alt: 'The Row ICSC 2' },
+          { src: theRowIcsc3Image, alt: 'The Row ICSC 3' },
+          { src: theRowIcsc4Image, alt: 'The Row ICSC 4' },
+        ]}
+        block2RetailTitle="Block 2 & Block 1 Retail"
         retailCoreMasterPlanContent={
           <>
             <strong>Retail Core & Master Plan:</strong> Site development permits
-            were informally approved in April 2026.
+            are approved for the retail core and WW 84” connection. Active
+            permits for infrastructure shared with Amazon remain ongoing.
             <ul className="overview-depth-disc mt-2 space-y-2">
               <li>
                 <strong>AC Hotel Developer (Merritt)</strong> identified a
