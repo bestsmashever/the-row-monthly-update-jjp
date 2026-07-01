@@ -93,56 +93,21 @@ export default function Jun2026Body() {
         retailUpdateContent={
           <ul className="overview-section-list mt-2 space-y-3">
             <li>
-              <strong>Block 2 Retail:</strong> Site is shovel ready and we are
-              talking with Starbucks, Pluckers, and a local coffee/cocktail
-              concept to replace Portllo&apos;s as the pad user. We are also
-              negotiating terms with a few other potential tenants for the
-              22,000 inline space.
-              <p className="mt-2">
-                Sunflower turned down the deal and we are active seeking a
-                different lender. XL funding is committed to $4M out of the
-                total $5.5M equity required. We are attempting to raise the
-                balance of $1.5mm of equity from retail investors.
-              </p>
-              <ul className="overview-depth-block mt-2 space-y-2">
-                <li>
-                  <strong>Starbucks:</strong> engaged corporate brokers to
-                  investigate site for corporate location for Suite 100
-                  (Portillo&apos;s pad). Open to licensing the location if
-                  corporate decides to pass.
-                </li>
-                <li>
-                  <strong>Keke&apos;s Breakfast</strong> (under the Denny&apos;s
-                  umbrella) has approved the location and is working through
-                  franchise documents
-                </li>
-                <li>
-                  <strong>Singa&apos;s Pizza</strong> is reviewing the site for
-                  approx. 1,900sf
-                </li>
-                <li>
-                  <strong>Holic Pho</strong> – in lease.
-                </li>
-                <li>
-                  <strong>Kilwin&apos;s Ice Cream</strong> – expression of
-                  interest from broker
-                </li>
-              </ul>
+              <strong>Block 2:</strong> Site is shovel ready. We are looking for
+              a lender for the vertical development since Sunflower fell out.
+              Leasing efforts continue on the pad site and 22,000 inline space
+              via Weitzman. XL funding committed $4M of equity and we are
+              attempting to raise additional equity from retail investors.
             </li>
             <li>
-              <strong>Other Site Retail:</strong>
-              <ul className="overview-depth-block mt-2 space-y-2">
-                <li>
-                  Presidium is continuing to explore opportunities for
-                  HEB&apos;s replacement. Weitzman has re-engaged early
-                  conversations with Target and Costco.
-                </li>
-                <li>
-                  We are exploring an opportunity for a JV with local retail
-                  developer TOPO for a mixed-use approach to Block 1, including
-                  additional MF, Retail (pads and restaurants) and a hotel.
-                </li>
-              </ul>
+              <strong>Block 1 (HEB):</strong> Weitzman is actively soliciting
+              bids for pad sites along Hwy 71. In discussions with potential
+              small footprint grocers.
+            </li>
+            <li>
+              <strong>Block 3:</strong> We identified a tenant for the hotel
+              restaurant (Southerleigh) and are negotiating an LOI. Other
+              leasing activity has been slow.
             </li>
           </ul>
         }
@@ -158,7 +123,7 @@ export default function Jun2026Body() {
         debtMapSecondaryContent={<AmazonTransactionsTable />}
         debtMapSecondaryContentPadding={false}
         showMasterPlanHeading={false}
-        austinEnergySubstationSuffix=""
+        austinEnergySubstationSuffix=" We should get a sense of pricing by October."
         block2RetailImages={[
           { src: theRowIcsc1Image, alt: 'The Row ICSC 1' },
           { src: theRowIcsc2Image, alt: 'The Row ICSC 2' },
@@ -168,16 +133,10 @@ export default function Jun2026Body() {
         block2RetailTitle="Block 2 & Block 1 Retail"
         retailCoreMasterPlanContent={
           <>
-            <strong>Retail Core & Master Plan:</strong> Site development permits
-            are approved for the retail core and WW 84” connection. Active
-            permits for infrastructure shared with Amazon remain ongoing.
-            <ul className="overview-depth-disc mt-2 space-y-2">
-              <li>
-                <strong>AC Hotel Developer (Merritt)</strong> identified a
-                restaurant group for the hotel (Southerleigh), and is gaining
-                traction with equity.
-              </li>
-            </ul>
+            <strong>HEB Site</strong> We are looking to complete the repurchase
+            of the HEB site by year end. We have programmed the 17-acre site for
+            additional retail pads, a grocer and another phase of MF (see Block
+            2 & Block 1 Retail).
           </>
         }
         underContract53AcresText={
@@ -191,6 +150,13 @@ export default function Jun2026Body() {
         underContract53AcresLabel="1.0 Under Contract (53 Acres)"
         additional25AcresLoiLabel="2.0 Under Contract (25 Acres)"
         additional25AcresLoiText="$13.5/land sf and still investigating infrastructure cost. Outside closing date is 11/25/2026."
+        landSalesExtraItems={
+          <li>
+            <strong>Others:</strong> Continuing to field inquiries from industrial
+            developers.
+          </li>
+        }
+        delViaSummaryLabel="Del Via Lease-Up "
         delViaSummaryText="Occupied 49.18% | Leased 62.21%; Market Rent: $2.06/sf | $1,691/unit. Leasing continues to draw young professionals from our preferred employer base, including 27 occupied units from Austin Airport employees and 74 occupied units from Tesla / SpaceX employees."
       />
 

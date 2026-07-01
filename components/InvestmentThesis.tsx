@@ -35,6 +35,7 @@ type InvestmentThesisProps = {
   additional25AcresLoiLabel?: string
   additional25AcresLoiText?: string
   delViaSummaryText?: string
+  delViaSummaryLabel?: string
   austinEnergySubstationSuffix?: string
   retailCoreMasterPlanContent?: React.ReactNode
   block2RetailImages?: Array<{
@@ -82,6 +83,7 @@ export default function InvestmentThesis({
   additional25AcresLoiLabel = DEFAULT_ADDITIONAL_25_ACRES_LOI_LABEL,
   additional25AcresLoiText = DEFAULT_ADDITIONAL_25_ACRES_LOI_TEXT,
   delViaSummaryText = DEFAULT_DEL_VIA_SUMMARY_TEXT,
+  delViaSummaryLabel = 'Del Via',
   austinEnergySubstationSuffix = DEFAULT_AUSTIN_ENERGY_SUBSTATION_SUFFIX,
   retailCoreMasterPlanContent,
   block2RetailImages,
@@ -96,6 +98,9 @@ export default function InvestmentThesis({
     debtMapTone === 'neutral'
       ? 'report-media-frame mb-8 sm:mb-10 md:mb-12'
       : 'bg-white border-2 border-primary-500 p-0 shadow-lg mb-8 sm:mb-10 md:mb-12'
+  const delViaSummaryPrefix = delViaSummaryLabel.endsWith(' ')
+    ? delViaSummaryLabel.trimEnd()
+    : `${delViaSummaryLabel}:`
 
   return (
     <section className="mb-8 sm:mb-10 md:mb-12">
@@ -162,7 +167,7 @@ export default function InvestmentThesis({
             )}
           </li>
           <li>
-            <strong>Del Via:</strong> {delViaSummaryText}
+            <strong>{delViaSummaryPrefix}</strong> {delViaSummaryText}
           </li>
         </ul>
       </div>
