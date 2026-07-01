@@ -237,12 +237,12 @@ export default function Jun2026Body() {
             <h4 className="report-subtitle report-subtitle--compact">Key Indicators</h4>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-              <KeyIndicatorCard value="2,000" label="Southwest AUS jobs" context="Crew base and command center" />
-              <KeyIndicatorCard value="26 gates" label="AUS Concourse B" context="Journey With AUS capacity project" />
-              <KeyIndicatorCard value="$71M" label="Arm Austin expansion" context="320+ semiconductor and AI jobs" />
-              <KeyIndicatorCard value="$280M" label="SpaceX Bastrop expansion" context="400+ advanced packaging jobs" />
-              <KeyIndicatorCard value="40 MW" label="Local battery storage" context="Austin Energy x Base Power" />
-              <KeyIndicatorCard value="200" label="3billion Austin jobs" context="$8.1M genomics expansion" />
+              <KeyIndicatorCard value="2,000" label="Southwest AUS crew-base jobs" context="New pilot and flight-attendant base" />
+              <KeyIndicatorCard value="26 gates" label="AUS Concourse B" context="New midfield concourse capacity" />
+              <KeyIndicatorCard value="$71M" label="Arm Austin investment" context="320+ semiconductor lab jobs" />
+              <KeyIndicatorCard value="$280M" label="SpaceX Bastrop investment" context="400+ advanced-packaging jobs" />
+              <KeyIndicatorCard value="40 MW" label="Austin Energy storage" context="Base Power residential batteries" />
+              <KeyIndicatorCard value="200" label="Rare-disease genomics jobs" context="3billion US, $8.1M lab" />
             </div>
           </>
         }
