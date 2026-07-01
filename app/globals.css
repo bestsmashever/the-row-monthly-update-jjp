@@ -833,6 +833,7 @@
     padding: 16px 18px;
     border-left-width: 0;
     box-shadow: none;
+    transition: border-color 160ms ease, box-shadow 160ms ease;
   }
 
   .agora-theme .market-indicator-card .metric-value {
@@ -1248,6 +1249,32 @@
     padding: 16px;
     border-left-color: #d7a557;
     box-shadow: none;
+  }
+
+  .agora-theme .market-indicator-card,
+  .agora-theme .market-indicator-card:hover,
+  .agora-theme .market-indicator-card:focus,
+  .agora-theme .market-indicator-card:focus-visible {
+    color: #101827 !important;
+    background: #ffffff !important;
+    transform: none !important;
+  }
+
+  .agora-theme .market-indicator-card:hover {
+    border-color: #d8dde5 !important;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.045) !important;
+  }
+
+  .agora-theme .market-indicator-card:hover .metric-value {
+    color: #10213a !important;
+  }
+
+  .agora-theme .market-indicator-card:hover .metric-label {
+    color: #1c283a !important;
+  }
+
+  .agora-theme .market-indicator-card:hover .metric-context {
+    color: #687386 !important;
   }
 
   .agora-theme .metric-value {
