@@ -183,10 +183,8 @@ export default function Jun2026Body() {
         underContract53AcresText={
           <>
             $700k went non-refundable as of 4/9 and was released to us.
-            Preliminary plan has been informally approved. Final plat approval
-            is expected between 8/7/2026 and 8/25/2026; assuming the buyer is
-            ready to close immediately after approval, closing could occur as
-            early as 8/8/2026, with the outside closing window extending to
+            Our Preliminary Plan has been approved, and the Final plat approval
+            is expected in August. We anticipate an outside closing date of
             9/24/2026.
           </>
         }
