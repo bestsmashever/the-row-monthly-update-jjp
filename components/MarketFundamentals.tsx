@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image, { type StaticImageData } from 'next/image'
 import type { ReactNode } from 'react'
 
 import { FULL_WIDTH_SIZES } from '@/constants/media'
@@ -20,6 +20,21 @@ import teslaGigaFactoryImage from '@/public/Tesla Giga Factory.png'
 import teslaOptimusImage from '@/public/Tesla Optimus.jpg'
 import teslaRobotaxiImage from '@/public/Tesla Robotaxi.jpg'
 
+type CompanySectionCard = {
+  title: string
+  emoji?: string
+  paragraphs: string[]
+  images: { src: StaticImageData; alt: string }[]
+  reverseOnDesktop?: boolean
+  useDualImages?: boolean
+}
+
+type CompanySection = {
+  heading: string
+  cards: CompanySectionCard[]
+  containerClass?: string
+}
+
 type MarketFundamentalsProps = {
   anchors?: {
     delViaId?: string
@@ -30,6 +45,7 @@ type MarketFundamentalsProps = {
   variant?: 'default' | 'agora'
   includeDelVia?: boolean
   includeAustinSurfClub?: boolean
+  marketContentVariant?: 'default' | 'june2026'
 }
 
 export default function MarketFundamentals({
@@ -39,8 +55,9 @@ export default function MarketFundamentals({
   variant = 'default',
   includeDelVia = true,
   includeAustinSurfClub = false,
+  marketContentVariant = 'default',
 }: MarketFundamentalsProps) {
-  const companySections = [
+  const defaultCompanySections: CompanySection[] = [
     {
       heading: "Tesla: Anchoring Austin's Next Innovation Wave",
       cards: [
@@ -212,6 +229,112 @@ export default function MarketFundamentals({
       ],
     },
   ]
+
+  const june2026CompanySections: CompanySection[] = [
+    {
+      heading: 'Airport And Public Infrastructure',
+      cards: [
+        {
+          title: 'Southwest And AUS Are Adding Long-Term Aviation Demand',
+          emoji: '🛫',
+          paragraphs: [
+            'Southwest is establishing a full crew base at AUS, relocating its station Command Center, investing more than $8.4 million in airport improvements, and committing to 2,000 new full-time jobs while retaining 840 existing positions.',
+            'AUS airline agreements now support the multi-billion-dollar Journey With AUS program, including a new 26-gate Concourse B planned for Southwest, United, and domestic common-use gates.',
+          ],
+          images: [{ src: abiaImage, alt: 'ABIA' }],
+        },
+        {
+          title: 'TDEM State Emergency Operations Center Near AUS',
+          emoji: '🏢',
+          paragraphs: [
+            'The Texas A&M University System approved a $370 million TDEM headquarters and State Emergency Operations Center just east of Austin-Bergstrom International Airport.',
+            'The project includes a 295,978-square-foot facility with a 90,068-square-foot State Emergency Operations Center, with substantial completion expected in August 2026.',
+          ],
+          images: [
+            { src: tdemInteriorImage, alt: 'TDEM Interior' },
+            { src: tdemRenderingImage, alt: 'TDEM Rendering' },
+          ],
+          useDualImages: true,
+        },
+      ],
+    },
+    {
+      heading: 'Semiconductor And Advanced Manufacturing',
+      cards: [
+        {
+          title: 'Tesla Remains The Major East Austin Manufacturing Anchor',
+          emoji: '⚡',
+          paragraphs: [
+            'Tesla identifies Giga Texas as its global headquarters and U.S. manufacturing hub for Model Y and Cybertruck, covering 2,500 acres with more than 10 million square feet of factory floor.',
+            'For this June update, we are not using unsupported headcount, robotaxi scale, or diner claims; the market takeaway is the confirmed scale of the Giga Texas manufacturing campus and its role as an employment anchor east of Austin.',
+          ],
+          images: [{ src: teslaGigaFactoryImage, alt: 'Tesla Giga Factory' }],
+        },
+        {
+          title: 'Arm, SpaceX, And Samsung Reinforce The Regional Chip Cluster',
+          emoji: '🧪',
+          paragraphs: [
+            'Arm is expanding its Austin campus with a new semiconductor lab expected to create more than 320 jobs and more than $71 million in capital investment.',
+            'SpaceX received a Texas Semiconductor Innovation Fund grant for a Bastrop semiconductor R&D and advanced-packaging expansion expected to create more than 400 jobs and more than $280 million in capital investment.',
+            'Samsung Austin Semiconductor received a $250 million Texas Semiconductor Innovation Fund grant tied to more than $4.73 billion of capital investment at its Taylor fabrication facility.',
+          ],
+          images: [{ src: samsungPlantTaylorImage, alt: 'Samsung Plant Taylor' }],
+        },
+        {
+          title: 'Supplier Growth Is Extending North Of Austin',
+          emoji: '🏭',
+          paragraphs: [
+            'Pegatron has committed to at least $35 million of capital investment for its Georgetown manufacturing facility and must create 100 full-time jobs within three years of certificate of occupancy under the Williamson County agreement.',
+            'Compal has been reported as leasing major Taylor and Georgetown facilities for device and server-related operations; because investment figures vary by source, the June report treats Compal as a directional supply-chain signal rather than a precise capital-investment metric.',
+          ],
+          images: [{ src: pegatronImage, alt: 'Pegatron Corporation' }],
+        },
+      ],
+    },
+    {
+      heading: 'Life Sciences And Grid Infrastructure',
+      cards: [
+        {
+          title: '3billion US Adds A Rare-Disease Genomics Lab In Austin',
+          emoji: '🧬',
+          paragraphs: [
+            'Austin City Council approved a performance-based agreement for 3billion US, Inc., a rare-disease genomics company launching a 12,994-square-foot genetic testing lab in Austin.',
+            'The project is expected to create 200 full-time jobs with average annual salary above $95,000 and generate approximately $8.1 million of capital investment.',
+          ],
+          images: [{ src: appleCampusImage, alt: 'Austin tech campus' }],
+        },
+        {
+          title: 'Austin Energy Adds Distributed Battery Capacity',
+          emoji: '🔋',
+          paragraphs: [
+            'Austin Energy is contracting with Base Power for up to 40 MW of distribution-connected battery capacity across aggregated residential batteries in its service area.',
+            'The agreement gives Austin Energy operational control over the reserved capacity for system operations, wholesale price-risk mitigation, and local reliability.',
+          ],
+          images: [{ src: nvidiaImage, alt: 'Austin energy and technology infrastructure' }],
+        },
+      ],
+    },
+    ...(includeAustinSurfClub
+      ? [
+          {
+            heading: 'Austin Surf Club',
+            cards: [
+              {
+                title: 'Lifestyle-Led Residential Demand Near Del Valle',
+                paragraphs: [
+                  'Discovery Land Company describes Austin Surf Club as a Kelly Slater partnership built around a roughly 2,200-foot surf basin and private-club residential amenities.',
+                  'Third-party reporting indicates the project includes more than 140 residential units and private membership demand; because pricing and buyer names rely on media reporting, the June update treats those details as market color rather than underwriting-grade evidence.',
+                ],
+                images: [{ src: austinSurfClubImage, alt: 'Austin Surf Club' }],
+              },
+            ],
+          },
+        ]
+      : []),
+  ]
+
+  const companySections =
+    marketContentVariant === 'june2026' ? june2026CompanySections : defaultCompanySections
 
   return (
     <section className="mb-8 sm:mb-10 md:mb-12">

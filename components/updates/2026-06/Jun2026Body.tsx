@@ -224,13 +224,14 @@ export default function Jun2026Body() {
         austinMarketTitle="Austin Market"
         variant="agora"
         includeAustinSurfClub
+        marketContentVariant="june2026"
         beforeAustinMarketContent={
           <>
             <p className="report-lede">
-              Recent 2026 announcements point to a broader demand base across Austin:
-              aviation jobs at AUS, semiconductor investment east of the city, life
-              sciences expansion, and grid infrastructure are all adding institutional
-              capital and skilled employment to the region.
+              Recent announcements and active projects point to a broader demand base
+              across Austin: aviation jobs at AUS, semiconductor investment east and
+              north of the city, life sciences expansion, and grid infrastructure are
+              all adding institutional capital and skilled employment to the region.
             </p>
 
             <div id="key-indicators" className="scroll-mt-24" />
