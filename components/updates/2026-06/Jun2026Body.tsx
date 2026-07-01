@@ -22,7 +22,7 @@ function KeyIndicatorCard({
   context: string
 }) {
   return (
-    <div className="metric-card">
+    <div className="metric-card market-indicator-card">
       <div className="metric-value">{value}</div>
       <div className="metric-label">{label}</div>
       <div className="metric-context">{context}</div>
@@ -227,7 +227,7 @@ export default function Jun2026Body() {
         marketContentVariant="june2026"
         beforeAustinMarketContent={
           <>
-            <p className="report-lede">
+            <p className="report-lede market-lede">
               Recent announcements and active projects point to a broader demand base
               across Austin: aviation jobs at AUS, semiconductor investment east and
               north of the city, life sciences expansion, and grid infrastructure are
@@ -237,7 +237,7 @@ export default function Jun2026Body() {
             <div id="key-indicators" className="scroll-mt-24" />
             <h4 className="report-subtitle report-subtitle--compact">Key Indicators</h4>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+            <div className="market-indicator-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
               <KeyIndicatorCard value="2,000" label="Southwest AUS crew-base jobs" context="New pilot and flight-attendant base" />
               <KeyIndicatorCard value="26 gates" label="AUS Concourse B" context="New midfield concourse capacity" />
               <KeyIndicatorCard value="$71M" label="Arm Austin investment" context="320+ semiconductor lab jobs" />

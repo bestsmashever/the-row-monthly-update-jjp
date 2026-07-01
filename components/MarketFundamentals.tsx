@@ -232,10 +232,10 @@ export default function MarketFundamentals({
 
   const june2026CompanySections: CompanySection[] = [
     {
-      heading: 'Airport And Public Infrastructure',
+      heading: 'Aviation & Civic Infrastructure',
       cards: [
         {
-          title: 'Southwest And AUS Are Adding Long-Term Aviation Demand',
+          title: 'Southwest Expands Its AUS Operating Base',
           emoji: '🛫',
           paragraphs: [
             'Southwest is establishing a full crew base at AUS, relocating its station Command Center, investing more than $8.4 million in airport improvements, and committing to 2,000 new full-time jobs while retaining 840 existing positions.',
@@ -259,7 +259,7 @@ export default function MarketFundamentals({
       ],
     },
     {
-      heading: 'Semiconductor And Advanced Manufacturing',
+      heading: 'Semiconductor and Advanced Manufacturing',
       cards: [
         {
           title: 'Tesla Remains The Major East Austin Manufacturing Anchor',
@@ -271,7 +271,7 @@ export default function MarketFundamentals({
           images: [{ src: teslaGigaFactoryImage, alt: 'Tesla Giga Factory' }],
         },
         {
-          title: 'Arm, SpaceX, And Samsung Reinforce The Regional Chip Cluster',
+          title: 'Arm, SpaceX, and Samsung Reinforce The Regional Chip Cluster',
           emoji: '🧪',
           paragraphs: [
             'Arm is expanding its Austin campus with a new semiconductor lab expected to create more than 320 jobs and more than $71 million in capital investment.',
@@ -292,7 +292,7 @@ export default function MarketFundamentals({
       ],
     },
     {
-      heading: 'Life Sciences And Grid Infrastructure',
+      heading: 'Life Sciences and Grid Infrastructure',
       cards: [
         {
           title: '3billion US Adds A Rare-Disease Genomics Lab In Austin',
