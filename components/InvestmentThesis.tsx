@@ -36,6 +36,7 @@ type InvestmentThesisProps = {
   additional25AcresLoiText?: string
   delViaSummaryText?: string
   delViaSummaryLabel?: string
+  austinEnergySubstationText?: React.ReactNode
   austinEnergySubstationSuffix?: string
   retailCoreMasterPlanContent?: React.ReactNode
   block2RetailImages?: Array<{
@@ -84,6 +85,7 @@ export default function InvestmentThesis({
   additional25AcresLoiText = DEFAULT_ADDITIONAL_25_ACRES_LOI_TEXT,
   delViaSummaryText = DEFAULT_DEL_VIA_SUMMARY_TEXT,
   delViaSummaryLabel = 'Del Via',
+  austinEnergySubstationText,
   austinEnergySubstationSuffix = DEFAULT_AUSTIN_ENERGY_SUBSTATION_SUFFIX,
   retailCoreMasterPlanContent,
   block2RetailImages,
@@ -127,9 +129,13 @@ export default function InvestmentThesis({
               </li>
               <li>
                 <strong>Austin Energy Substation (7 Acres and 7 acres of Easement):</strong>{' '}
-                Austin Energy is reviewing the survey exhibits for final approval
-                to kick start the 3rd party appraisals.
-                {austinEnergySubstationSuffix}
+                {austinEnergySubstationText ?? (
+                  <>
+                    Austin Energy is reviewing the survey exhibits for final approval
+                    to kick start the 3rd party appraisals.
+                    {austinEnergySubstationSuffix}
+                  </>
+                )}
               </li>
               {landSalesExtraItems}
             </ul>
