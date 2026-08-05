@@ -116,7 +116,6 @@ export default function Jul2026Body() {
         amazonHeroImage={amazonAndAeMapImage}
         amazonHeroAlt="Amazon and Austin Energy Map"
         debtMapTone="neutral"
-        debtMapTitle="The Row Debt Map"
         debtMapPrimaryTitle="Current Debt Position"
         debtMapPrimaryImage={rowDebtMapImage}
         debtMapPrimaryAlt="The Row Debt Map"

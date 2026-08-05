@@ -12,17 +12,18 @@ type DebtMapStage = {
 
 const stages: DebtMapStage[] = [
   {
-    title: 'Pro Forma - After Amazon 1.0 Sale',
+    title: 'Illustrative Debt Map – After Amazon 1.0 Sale',
     image: afterAmazonOneImage,
     pdfHref: '/Map_AMZN%201.0%20Sale_209%20acres.pdf',
   },
   {
-    title: 'Pro Forma - After Amazon 1.0 + 2.0 Sales',
+    title: 'Illustrative Debt Map – After Amazon 1.0 + 2.0 Sales',
     image: afterAmazonOneAndTwoImage,
     pdfHref: '/Map_AMZN%202.0%20Sale.pdf',
   },
   {
-    title: 'Pro Forma - After Amazon 1.0 + 2.0 Sales and HEB Site Repurchase',
+    title:
+      'Illustrative Debt Map – After Amazon 1.0 + 2.0 Sales and HEB Site Repurchase',
     image: afterAmazonOneAndTwoAndHebImage,
     pdfHref: '/Map_HEB%20Site%20Repurchase.pdf',
   },
