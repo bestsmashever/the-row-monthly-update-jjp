@@ -5,13 +5,13 @@ import RetailCorePhasing from '@/components/RetailCorePhasing'
 import RetailCoreRendering from '@/components/RetailCoreRendering'
 import MarketFundamentals from '@/components/MarketFundamentals'
 import DebtMapSequence from '@/components/updates/2026-07/DebtMapSequence'
+import ProsperityRefinanceModelLink from '@/components/updates/2026-07/ProsperityRefinanceModelLink'
 import amazonAndAeMapImage from '@/public/Amazon and AE Map_May 2026.jpg'
 import rowDebtMapImage from '@/public/The Row Debt Map.jpg'
 import theRowIcsc1Image from '@/public/The Row_ICSC_1.jpg'
 import theRowIcsc2Image from '@/public/The Row_ICSC_2.jpg'
 import theRowIcsc3Image from '@/public/The Row_ICSC_3.jpg'
 import theRowIcsc4Image from '@/public/The Row_ICSC_4.jpg'
-import AmazonTransactionsTable from '@/components/updates/2026-07/AmazonTransactionsTable'
 
 function KeyIndicatorCard({
   value,
@@ -121,8 +121,8 @@ export default function Jul2026Body() {
         debtMapPrimaryAlt="The Row Debt Map"
         debtMapSequenceContent={<DebtMapSequence />}
         debtMapSecondaryPlacement="nextBox"
-        debtMapSecondaryTitle="Amazon Transactions"
-        debtMapSecondaryContent={<AmazonTransactionsTable />}
+        debtMapSecondaryTitle="Amazon Sale Proceeds & Capital Plan"
+        debtMapSecondaryContent={<ProsperityRefinanceModelLink />}
         debtMapSecondaryContentPadding={false}
         showMasterPlanHeading={false}
         austinEnergySubstationText="Austin Energy has approved the easement surveys and substantially completed its legal review of the easement form and related ownership and lienholder documents. Before execution, Austin Energy will remove references to repairable improvements from the easement form. The appraisal is underway to determine compensation, with reports potentially due in late October 2026. A formal offer, document execution, and payment would follow."
