@@ -4,6 +4,7 @@ import RetailDestination from '@/components/RetailDestination'
 import RetailCorePhasing from '@/components/RetailCorePhasing'
 import RetailCoreRendering from '@/components/RetailCoreRendering'
 import MarketFundamentals from '@/components/MarketFundamentals'
+import DebtMapSequence from '@/components/updates/2026-07/DebtMapSequence'
 import amazonAndAeMapImage from '@/public/Amazon and AE Map_May 2026.jpg'
 import rowDebtMapImage from '@/public/The Row Debt Map.jpg'
 import theRowIcsc1Image from '@/public/The Row_ICSC_1.jpg'
@@ -51,9 +52,9 @@ function ExecutiveSummary() {
     },
     {
       label: 'Del Via',
-      value: '62.21%',
+      value: '71.33%',
       detail:
-        'Leased, with 49.18% occupancy; leasing is supported by young professionals from preferred employers.',
+        'As of 8/2/2026, occupied 63.19% and leased 71.33%, with continued demand from preferred-employer professionals.',
     },
   ]
 
@@ -116,8 +117,10 @@ export default function Jul2026Body() {
         amazonHeroAlt="Amazon and Austin Energy Map"
         debtMapTone="neutral"
         debtMapTitle="The Row Debt Map"
+        debtMapPrimaryTitle="Current Debt Position"
         debtMapPrimaryImage={rowDebtMapImage}
         debtMapPrimaryAlt="The Row Debt Map"
+        debtMapSequenceContent={<DebtMapSequence />}
         debtMapSecondaryPlacement="nextBox"
         debtMapSecondaryTitle="Amazon Transactions"
         debtMapSecondaryContent={<AmazonTransactionsTable />}
@@ -157,7 +160,7 @@ export default function Jul2026Body() {
           </li>
         }
         delViaSummaryLabel="Del Via Lease-Up "
-        delViaSummaryText="Occupied 49.18% | Leased 62.21%; Market Rent: $2.06/sf | $1,691/unit. Leasing continues to draw young professionals from our preferred employer base, including 27 occupied units from Austin Airport employees and 74 occupied units from Tesla / SpaceX employees."
+        delViaSummaryText="As of 8/2/2026, Occupied 63.19% | Leased 71.33%; Market Rent: $2.06/sf | $1,691/unit. Leasing continues to draw young professionals from our preferred employer base, including Austin Airport employees and Tesla / SpaceX employees."
       />
 
       <div id="retail-core-master-plan" className="scroll-mt-24" />

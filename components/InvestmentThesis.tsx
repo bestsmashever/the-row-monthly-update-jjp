@@ -22,8 +22,10 @@ type InvestmentThesisProps = {
   amazonHeroAlt?: string
   debtMapTone?: 'primary' | 'neutral'
   debtMapTitle?: string
+  debtMapPrimaryTitle?: string
   debtMapPrimaryImage?: ImageProps['src']
   debtMapPrimaryAlt?: string
+  debtMapSequenceContent?: React.ReactNode
   debtMapSecondaryImage?: ImageProps['src']
   debtMapSecondaryAlt?: string
   debtMapSecondaryPlacement?: 'sameBox' | 'nextBox'
@@ -71,8 +73,10 @@ export default function InvestmentThesis({
   amazonHeroAlt = 'Amazon',
   debtMapTone = 'primary',
   debtMapTitle,
+  debtMapPrimaryTitle,
   debtMapPrimaryImage = debtMapImage,
   debtMapPrimaryAlt = 'Debt Map',
+  debtMapSequenceContent,
   debtMapSecondaryImage,
   debtMapSecondaryAlt = 'Debt after Amazon Sale',
   debtMapSecondaryPlacement = 'sameBox',
@@ -219,6 +223,9 @@ export default function InvestmentThesis({
         </div>
       ) : (
         <>
+          {debtMapPrimaryTitle ? (
+            <h4 className={debtHeadingClassName}>{debtMapPrimaryTitle}</h4>
+          ) : null}
           <div className={debtBoxClassName}>
             <div className="relative w-full">
               <Image
@@ -230,6 +237,8 @@ export default function InvestmentThesis({
               />
             </div>
           </div>
+
+          {debtMapSequenceContent}
 
           {debtMapSecondaryImage || debtMapSecondaryContent ? (
             <>
