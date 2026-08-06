@@ -190,6 +190,7 @@ export default function Jul2026Body() {
         austinMarketTitle="Austin Market"
         variant="agora"
         includeAustinSurfClub
+        includeSpaceXTerafab
         marketContentVariant="june2026"
         beforeAustinMarketContent={
           <>

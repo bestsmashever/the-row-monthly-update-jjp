@@ -12,6 +12,7 @@ import delViaMultifamilyImage from '@/public/Del Via Multifamily.jpg'
 import nvidiaImage from '@/public/NVIDIA AI Supercomputer.jpg'
 import pegatronImage from '@/public/Pegatron.jpg'
 import samsungPlantTaylorImage from '@/public/Samsung Plant Taylor.png'
+import spaceXTerafabImage from '@/public/SpaceX Terafab Official Rendering.jpg'
 import tdemInteriorImage from '@/public/TDEM Interior.jpg'
 import tdemRenderingImage from '@/public/TDEM rendering.jpeg'
 import teslaAiChipImage from '@/public/Tesla AI5 Chip.jpg'
@@ -45,6 +46,7 @@ type MarketFundamentalsProps = {
   variant?: 'default' | 'agora'
   includeDelVia?: boolean
   includeAustinSurfClub?: boolean
+  includeSpaceXTerafab?: boolean
   marketContentVariant?: 'default' | 'june2026'
 }
 
@@ -55,6 +57,7 @@ export default function MarketFundamentals({
   variant = 'default',
   includeDelVia = true,
   includeAustinSurfClub = false,
+  includeSpaceXTerafab = false,
   marketContentVariant = 'default',
 }: MarketFundamentalsProps) {
   const defaultCompanySections: CompanySection[] = [
@@ -280,6 +283,19 @@ export default function MarketFundamentals({
           ],
           images: [{ src: samsungPlantTaylorImage, alt: 'Samsung Plant Taylor' }],
         },
+        ...(includeSpaceXTerafab
+          ? [
+              {
+                title: "SpaceX Terafab Extends Texas' Semiconductor Corridor",
+                emoji: '🚀',
+                paragraphs: [
+                  'On August 6, 2026, SpaceX announced that it will construct Terafab, a vertically integrated semiconductor fabrication plant in Grimes County. The first phase represents more than $16.8 billion in capital investment and 3,000 new jobs, supported by a $30 million Texas Enterprise Fund grant.',
+                  "Although the site is well outside the core Austin commuter market, the project broadens Texas' semiconductor and advanced-manufacturing ecosystem and could deepen supplier, engineering, and institutional-investment linkages across Central and Southeast Texas. It should be viewed as a long-term regional industry signal rather than a direct near-term demand driver for The Row.",
+                ],
+                images: [{ src: spaceXTerafabImage, alt: 'Official rendering of the SpaceX Terafab campus' }],
+              },
+            ]
+          : []),
         {
           title: 'Supplier Growth Is Extending North Of Austin',
           emoji: '🏭',
